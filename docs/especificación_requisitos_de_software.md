@@ -2660,24 +2660,23 @@ ESTRUCTURA DE UN CASO DE USO:
 | **Flujos de Excepción** | **3a**. Si [error]:<br>  3a1. [Manejo del error]<br>  3a2. [Fin del caso de uso o recuperación] |
 | **Requisitos Relacionados** | [RF-XXX, RF-YYY] |
 
-**Ejemplo Completo:**
+**Punto 6**
 -->
 
-
-**CU-001: Realizar Préstamo de Material**
+**CU-001: Resturante unicafe**
 
 | Campo | Descripción |
 |-------|-------------|
-| **ID** | CU-001 |
-| **Nombre** | Realizar Préstamo de Material |
-| **Actores** | Bibliotecario (primario), Usuario de biblioteca (secundario), Sistema de gestión BiblioTech |
-| **Descripción** | Permite al bibliotecario registrar el préstamo de uno o más materiales bibliográficos a un usuario de la biblioteca. |
-| **Precondiciones** | 1. El bibliotecario ha iniciado sesión en el sistema<br>2. El usuario está registrado en el sistema<br>3. El usuario NO está suspendido ni tiene multas vencidas<br>4. Los materiales están disponibles para préstamo |
-| **Postcondiciones** | 1. El préstamo queda registrado en el sistema<br>2. Los materiales cambian a estado "Prestado"<br>3. Se genera comprobante de préstamo<br>4. El usuario recibe notificación por correo (opcional) |
-| **Flujo Principal** | 1. El bibliotecario selecciona la opción "Nuevo Préstamo"<br>2. El sistema solicita identificación del usuario<br>3. El bibliotecario escanea el carnet del usuario o ingresa número de carnet manualmente<br>4. El sistema valida el carnet y muestra información del usuario<br>5. El sistema muestra si el usuario tiene préstamos activos, multas pendientes, o está suspendido<br>6. El bibliotecario escanea código de barras del material a prestar<br>7. El sistema valida que el material está disponible y lo agrega a la lista de préstamos<br>8. El bibliotecario repite paso 6-7 para cada material adicional (hasta el límite permitido)<br>9. El bibliotecario confirma el préstamo<br>10. El sistema calcula fecha de devolución según política de préstamo<br>11. El sistema registra el préstamo en la base de datos<br>12. El sistema muestra resumen del préstamo y opción de imprimir comprobante<br>13. El bibliotecario imprime comprobante y lo entrega al usuario<br>14. Fin del caso de uso |
-| **Flujos Alternativos** | **4a. Usuario no encontrado**:<br>  4a1. El sistema muestra mensaje "Usuario no encontrado"<br>  4a2. El sistema ofrece opción "Registrar nuevo usuario"<br>  4a3. Si el bibliotecario selecciona registrar, ir a CU-010 (Registrar Usuario)<br>  4a4. Si el bibliotecario cancela, volver al paso 2<br><br>**7a. Material no disponible**:<br>  7a1. El sistema muestra mensaje "Material no disponible. Estado: [Prestado/En reparación/Perdido]"<br>  7a2. Si está prestado, el sistema ofrece opción "Crear reserva"<br>  7a3. El sistema NO agrega el material a la lista<br>  7a4. Volver al paso 6<br><br>**8a. Límite de materiales alcanzado**:<br>  8a1. El sistema muestra mensaje "El usuario ha alcanzado el límite de [X] materiales simultáneos"<br>  8a2. El sistema NO permite agregar más materiales<br>  8a3. Continuar al paso 9 |
-| **Flujos de Excepción** | **5a. Usuario suspendido o con multas vencidas**:<br>  5a1. El sistema muestra advertencia "Usuario suspendido" o "Usuario tiene multas vencidas por $[monto]"<br>  5a2. El sistema NO permite continuar con el préstamo<br>  5a3. El sistema ofrece opción "Registrar pago de multa"<br>  5a4. Fin del caso de uso<br><br>**11a. Error al registrar préstamo (error de BD)**:<br>  11a1. El sistema muestra mensaje "Error al procesar préstamo. Intente nuevamente"<br>  11a2. El sistema registra el error en log con detalles técnicos<br>  11a3. NO se registra el préstamo<br>  11a4. NO se cambia el estado de los materiales<br>  11a5. El bibliotecario puede reintentar desde el paso 9 o cancelar<br>  11a6. Fin del caso de uso |
-| **Requisitos Relacionados** | RF-030 (Registro de préstamo)<br>RF-031 (Validación de disponibilidad)<br>RF-032 (Validación de estado de usuario)<br>RF-033 (Generación de comprobante)<br>RNF-004 (Integridad transaccional)<br>RNFR-001 (Tiempo de respuesta) |
+| *ID* | CU-001 |
+| *Nombre* | mirar menu|
+| *Actores* | chef (primario), Usuario del restaurante (secundario) |
+| *Descripción* | permite al usuario visualizar el menú semanal, para posteriormente realizar tareas como hacer pedido|
+| *Precondiciones* | 1. Al usuario se le válido el carnet<br>2. El usuario NO está suspendido ni tiene multas |
+| *Postcondiciones* | 1. La página debe redirigir al usuario a una nueva pagina<br>2. la nueva página debe contener el menú semanal  |
+| *Flujo Principal* | 1. El sistema solicita identificarse,mediante un carnet<br>2. El usuario escanea su carnet <br>3. el sistema valida el carnet<br>4. El usuario escanea el código QR<br>5. El sistema redirige al usuario a una nueva pestańa <br>6. El usuario visualiza el menú semanal<br>7. El usuario hace su pedido |
+| *Flujos Alternativos* | *4a. carnet no valido:<br>  4a1. El sistema muestra mensaje "carted invalido"<br>  4a2. El sistema ofrece opción "llamar su soporte"<br>  4a3. Si el usuario selecciona llamar, ir a (llamar a soporte)<br>  4a4. Si el usuario cancela, volver al paso 2<br><br>7a. error en la pagina*:<br>  7a1.  El sistema nuestra un mensaje "error"<br>  7a2. Si esto sucede, el sistema ofrece opción "reportar problema"<br>  7a3. un usuario de soporte será alertado <bro> 7a4. se soluciona el problema |
+| *Flujos de Excepción* | *5a. Usuario suspendido o con multas vencidas*:<br>  5a1. El sistema muestra advertencia "Usuario suspendido" o "Usuario tiene multas vencidas por $[monto]"<br>  5a2. El sistema NO permite continuar con la venta<br>  5a3. Fin del caso de uso<br>  |
+| *Requisitos Relacionados* | CU-01 (visualizar menu)<br>CU-02 (Escanear QR)<br>CU-03 (consulta menú semanal) |
 <br>
 
 <!--
