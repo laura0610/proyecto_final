@@ -474,17 +474,21 @@ medibles y verificables van en la Sección 3.
 
 <!-- 
 OBJETIVO DE ESTA SUBSECCIÓN:
-Es un sistema nuevo para el restaurante,  el cual cumpla con los requisitos que generan, implementado un sistema nuevo el cual permita una buena organizaciòn en los procesos que reiza esta empresa, ayudando a resolver de manera eficaz los problemas que afronta. 
+Situar el sistema en su contexto más amplio: ¿Es un sistema completamente nuevo?
+¿Reemplaza un sistema existente? ¿Es parte de un sistema mayor? ¿Cómo se relaciona
+con otros sistemas?
 
 QUÉ DEBE INCLUIR:
 
 1. CONTEXTO DEL SISTEMA:
-Es una aplicaciòn la cual su objetivo es mejorar la atenciòn de los clientes, manejar el consumo y desperdicio de los alimentos y el tema de los subsidios. Esto, mediante un sistema tecnològico eficaz y adecuado, que esta compuesto por turnos en la fila de manera digital, organizaciòn de subsidio y manejo de inventario. 
+  - Si es un nuevo producto independiente, reemplazo de sistema legacy, o 
+    componente de un sistema mayor
+  - Relación con otros sistemas existentes en la organización
 
 2. INTERFACES DEL SISTEMA (Vista general):
- - Interfaz con los usuarios (Visualizaciòn del menù, turnos y registro)
- - Interfaz con los empleados (Gestion de menù, inventario y subsidios)
- - Interfaz con el sistema de subsidios (comprobar el subsidio dependiendo ddel rol del cliente)
+  - Interfaces con sistemas externos (NO detalles, solo mención)
+  - Interfaces con hardware específico
+  - Interfaces con otros componentes de software
 
 3. DIAGRAMA DE CONTEXTO (Altamente recomendado):
   Un diagrama simple que muestre:
@@ -495,29 +499,48 @@ Es una aplicaciòn la cual su objetivo es mejorar la atenciòn de los clientes, 
 EJEMPLO ACADÉMICO:
 
 **Contexto del Sistema:**
-sistecafe es un sistema el cual organiza de manera digital los procesos que realiza el restaurante manualmente, esto permite una buena estructura del desarrollo de cada paso de la empresa, analizando de la misma manera, los requisitos que se generan para asì poder realizar que el sistema cumpla con la perspetiva a la que se quiere llegar.  
+
+BiblioTech es un sistema de información nuevo que reemplazará completamente el 
+actual sistema manual de gestión bibliotecaria basado en tarjetas físicas y hojas 
+de cálculo Excel. El sistema operará como una aplicación independiente pero 
+compartirá cierta información con sistemas externos de la biblioteca.
+
+BiblioTech NO es un subsistema de un sistema mayor, sino una aplicación completa 
+y autónoma diseñada específicamente para las necesidades de la Biblioteca Municipal 
+Central. Sin embargo, el sistema deberá integrarse con:
+
+- Sistema de identificación de usuarios de la municipalidad (para validar datos 
+  de ciudadanos)
+- Sistema de correo electrónico institucional (para envío de notificaciones)
+- Sistema de respaldo centralizado de la municipalidad (para backup automático)
+
 **Relación con Sistemas Existentes:**
 
-El sistema actual que sistecafe reemplazará consiste en:
-- Sistema de filas, por turnos digitales
-- Manejo de subsidios segùn el rol del cliente
-- Sistema de inventario
-- Registro de consumo, contabilizando la estadistica del consumo 
+El sistema actual que BiblioTech reemplazará consiste en:
+- Tarjetas físicas de catálogo ordenadas alfabéticamente
+- Planillas Excel para control de préstamos
+- Registro manual en libros de visitas
+- Archivo físico de fichas de usuarios
+
+BiblioTech digitalizará completamente estos procesos, manteniendo la misma 
+lógica de negocio pero eliminando el manejo de papel.
 
 **Interfaces del Sistema (Visión General):**
 
-sistecafe interactuará con:
-1. **Usuarios del Sistema**:comensales, cajero, chef, coordinador operativo y contador 
+BiblioTech interactuará con:
+1. **Usuarios del Sistema**: Bibliotecarios, administradores, y usuarios finales 
+  (vía interfaz web)
 2. **Sistemas Externos**: 
-  - Sistema de subsidios
-  - Sistema de invntarios y reportes
+  - API del Sistema de Identificación Municipal
+  - Servidor SMTP para envío de correos
+  - Servidor de respaldo institucional
 3. **Hardware**: 
-  - Lector de tarjetas (Identificaciòn de carnets)
-  - Escaneo de código de barras (Registrar consumo de alimentos)
-  - Terminales tàcticas (consultar menù y selecciòn de alimentos)
+  - Lectores de código de barras (para escaneo de libros y carnets)
   - Impresoras térmicas (para comprobantes de préstamo)
   - Servidor de base de datos
-  
+
+[Incluya aquí un diagrama de contexto del sistema]
+
 ESTRUCTURA DEL DIAGRAMA DE CONTEXTO:
 Puede usar notación simple con cajas y flechas. Ejemplo en texto:
 
@@ -550,59 +573,79 @@ OBJETIVO DE ESTA SUBSECCIÓN:
 El sistema esta encargado de administrar las cuentas del restaurante, gestionar el inventario, con el fin de ayudar a minimizar perdidas y gestionar de manera eficaz el presupuesto. 
 
 IMPORTANCIA:
-Esta subsección permite a los lectores no técnicos comprender rápidamente qué
-hará el sistema sin perderse en detalles técnicos.
+El sistema propuesto es crucial para optimizar la gestión del Restaurante, asegurar el uso eficiente de subsidios, reducir el desperdicio alimentario y fortalecer la transparencia y sostenibilidad del programa de seguridad alimentaria.
 
 NIVEL DE DETALLE:
-- ALTO NIVEL: "El sistema gestionará préstamos de libros"
-- NO: "El sistema validará que el ISBN tenga formato correcto usando expresión regular"
+- ALTO NIVEL:el sistema permitirá gestionar de forma integrada el control de acceso al restaurante, la identificación y categorización de usuarios, la asignación de subsidios, la planificación de menús, el control de inventarios y el registro del consumo.
 
 ORGANIZACIÓN SUGERIDA:
-Agrupe las funciones por módulos o áreas funcionales del sistema.
+Módulo de acceso y usuarios: control de ingreso, registro e identificación de categorías y subsidios.
+
+Módulo de inventarios y menús: gestión de insumos, planificación de menús y control de desperdicios.
+
+Módulo de consumo y trazabilidad: registro de transacciones y análisis de patrones de consumo.
+
+Módulo de comunicación y reportes: interacción con comensales y generación de informes para la toma de decisiones.
 
 FORMATO RECOMENDADO:
-Use viñetas con descripciones de 1-2 líneas por función principal.
+Control de acceso: permite la identificación automática de los usuarios y el registro de su ingreso al restaurante.
+
+Gestión de usuarios y subsidios: administra las categorías de beneficiarios y asigna los subsidios correspondientes.
+
+Gestión de inventarios: controla el ingreso, uso y disponibilidad de insumos alimentarios.
+
+Planificación de menús: organiza menús según la demanda, disponibilidad y criterios nutricionales.
+
+Trazabilidad del consumo: registra y analiza el consumo diario para reducir desperdicios.
+
+Comunicación y reportes: facilita la interacción con los comensales y genera informes de gestión y desempeño.
 
 EJEMPLO ACADÉMICO:
 
-El Sistema BiblioTech proporcionará las siguientes funciones principales:
+El Sistema UniCafe proporcionará las siguientes funciones principales:
 
-**Gestión de Catálogo:**
-- Registro y mantenimiento de materiales bibliográficos (libros, revistas, DVDs, etc.)
-- Catalogación según estándares bibliotecarios
-- Búsqueda avanzada de materiales por múltiples criterios
-- Gestión de múltiples ejemplares de un mismo título
+**Gestión de Usuarios y Acceso:**
 
-**Gestión de Usuarios:**
-- Registro de nuevos usuarios de la biblioteca
-- Mantenimiento de información de usuarios (actualización de datos, foto, etc.)
-- Gestión de diferentes tipos de membresía (estudiante, adulto, infantil)
-- Control de estado de usuarios (activo, suspendido, moroso)
+- Registro e identificación de usuarios según su categoría (estudiante, docente, administrativo, visitante).
+- Control de acceso automatizado mediante credenciales institucionales o códigos QR.
+- Asignación, verificación y control de subsidios según el tipo de usuario.
+- Monitoreo del historial de acceso y consumo individual.
 
-**Gestión de Préstamos:**
-- Procesamiento de préstamos y devoluciones de material
-- Renovación de préstamos
-- Sistema de reservas de materiales no disponibles
-- Cálculo automático de multas por retraso
-- Generación de comprobantes de préstamo
+Gestión de Inventarios:
+- Registro y actualización del inventario de insumos alimentarios.
+- Control de entradas, salidas y vencimientos de productos.
+- Alertas automáticas por bajo stock o productos próximos a expirar.
+- Generación de reportes de uso y desperdicio.
 
-**Gestión de Notificaciones:**
-- Notificaciones automáticas de vencimiento de préstamos
-- Alertas de disponibilidad de material reservado
-- Recordatorios de multas pendientes
-- Comunicados generales a usuarios
+Planificación de Menús:
+- Creación y programación de menús diarios o semanales según disponibilidad de insumos.
+ Asociación de valores nutricionales y costos estimados por menú.
+- Ajuste dinámico de menús en función de la demanda y el consumo histórico.
+- Publicación automatizada de menús a los comensales.
 
-**Reportes y Estadísticas:**
-- Reportes de materiales más prestados
-- Estadísticas de uso de la biblioteca
-- Reportes de inventario
-- Estado de cuenta de usuarios (préstamos activos, multas, etc.)
+Trazabilidad y Control de Consumo:
+- Registro detallado del consumo diario por usuario y por categoría.
+- Seguimiento de tendencias de consumo y análisis de demanda.
+- Identificación de posibles fraudes o inconsistencias en el uso de subsidios.
+- Integración de datos para evaluación del impacto alimentario y operativo.
 
-**Administración del Sistema:**
-- Gestión de usuarios del sistema (bibliotecarios, administradores)
-- Configuración de parámetros del sistema (días de préstamo, multas, etc.)
-- Respaldo y restauración de datos
-- Auditoría de operaciones del sistema
+Comunicación y Notificaciones:
+- Envío de notificaciones sobre disponibilidad de menús y horarios de servicio.
+- Alertas personalizadas sobre uso de subsidios o incidencias en el acceso.
+- Recepción de comentarios y encuestas de satisfacción de los comensales.
+- Difusión de comunicados institucionales del programa de alimentación.
+
+Reportes y Estadísticas:
+- Reportes sobre consumo, subsidios aplicados, desperdicio e inventario.
+- Estadísticas de asistencia y comportamiento de los usuarios.
+- Indicadores de eficiencia operativa y sostenibilidad alimentaria.
+- Exportación de datos para auditorías y toma de decisiones institucionales.
+
+Administración del Sistema:
+- Gestión de roles y permisos de administradores, operarios y supervisores.
+- Configuración de parámetros del sistema (horarios, subsidios, umbrales de stock, etc.).
+- Copia de seguridad, restauración y auditoría de operaciones.
+- Integración con sistemas institucionales de datos y control.
 
 OPCIONAL: Puede incluir un diagrama de alto nivel mostrando los módulos principales
 y cómo se relacionan.
@@ -621,13 +664,15 @@ en la Sección 3.1.
 
 <!-- 
 OBJETIVO DE ESTA SUBSECCIÓN:
-Determinados empleados del restaurante interactuaran con el sistema, asì mismo, tambièn los comensales, el sistema de subsidios y ele sistema de inventario. 
+Identificar y describir los diferentes tipos de usuarios que interactuarán con
+el sistema, incluyendo sus características relevantes que puedan afectar el diseño.
 
 IMPORTANCIA:
 Comprender a los usuarios es fundamental para:
-- Establecer un sistema que sea de facì entendimiento para todos
-- Entender cada rol y su funciòn en el sistema
-- Implementar especificaciones correctas
+- Diseñar interfaces apropiadas para cada perfil
+- Establecer niveles adecuados de seguridad y permisos
+- Determinar requisitos de capacitación
+- Identificar necesidades de usabilidad y accesibilidad
 
 QUÉ INCLUIR PARA CADA TIPO DE USUARIO:
 
@@ -646,35 +691,139 @@ Use una tabla o subsecciones para cada tipo de usuario.
 TABLA RECOMENDADA:
 -->
 
-| Característica | Usuario Tipo 1: [Comensal] | Usuario Tipo 2: [Cajero] | Usuario Tipo 3: [Chef] |
+| Característica | Usuario Tipo 1: [Nombre del Rol] | Usuario Tipo 2: [Nombre del Rol] | Usuario Tipo 3: [Nombre del Rol] |
 |----------------|-----------------------------------|-----------------------------------|-----------------------------------|
-| **Descripción** | [Usuario de la universidad el cual es un cliente del restaurante] | [Personal del restaurante, el cual esta encargado de de identificar la categoria del cliente, proceso de pagos, registro de ventas] | [Planificar menù, identifica cantidades e ingredientes] |
-| **Responsabilidades** | [Registrarse, visualizar menù y pagar cuenta] | [Registrar venta, rocesar medios de pago e identificar el valor total] | [Identificr cantidades, analizar los ingredientes y adaptar el menù] |
-| **Nivel Técnico** | Alto | Alto | Medio |
-| **Experiencia en el Dominio** | Intermedio | Intermedio | Intermedio |
-| **Frecuencia de Uso** | Diaria | Diaria | Semanal |
-| **Funciones Principales** |- Consulta menú del día digitalmente- Consulta valor del almuerzo según su rol- Ingresa al restaurante con carnet | - Verfica identidad del comensal (escaneo de carnet) - Identifica categoría segùn el rol- Cobra según tarifa correspondiente- Procesa múltiples métodos de pago | - Planifica menú semanal - Calcula cantidades de producción según demanda histórica -Adapta menú según los ingredientes || **Necesidades Especiales** | [Si aplica] | [Si aplica] | [Si aplica] |
+| **Descripción** | [Breve descripción del rol] | [Breve descripción del rol] | [Breve descripción del rol] |
+| **Responsabilidades** | [Qué hace en el sistema] | [Qué hace en el sistema] | [Qué hace en el sistema] |
+| **Nivel Técnico** | Alto/Medio/Bajo | Alto/Medio/Bajo | Alto/Medio/Bajo |
+| **Experiencia en el Dominio** | Experto/Intermedio/Novato | Experto/Intermedio/Novato | Experto/Intermedio/Novato |
+| **Frecuencia de Uso** | Diaria/Semanal/Ocasional | Diaria/Semanal/Ocasional | Diaria/Semanal/Ocasional |
+| **Funciones Principales** | [Listar 3-5 funciones] | [Listar 3-5 funciones] | [Listar 3-5 funciones] |
+| **Necesidades Especiales** | [Si aplica] | [Si aplica] | [Si aplica] |
+
+<!-- 
+EJEMPLO ACADÉMICO DETALLADO:
+
+**TIPO DE USUARIO 1: Bibliotecario**
+
+- **Descripción**: Personal de la biblioteca encargado de las operaciones diarias 
+  de préstamos, devoluciones, y atención al público.
+
+- **Responsabilidades en el Sistema**:
+  - Registrar préstamos y devoluciones de materiales
+  - Registrar nuevos usuarios
+  - Procesar pagos de multas
+  - Atender consultas sobre disponibilidad de materiales
+  - Generar reportes básicos de operaciones diarias
+
+- **Nivel de Experiencia Técnica**: Medio. Tienen conocimientos básicos de informática 
+  pero no son expertos técnicos. Pueden manejar aplicaciones de oficina estándar.
+
+- **Experiencia en el Dominio**: Alta. Conocen perfectamente los procesos bibliotecarios 
+  y la organización de materiales. Promedio de 5+ años trabajando en bibliotecas.
+
+- **Frecuencia de Uso**: Diaria, durante toda su jornada laboral (8 horas al día).
+
+- **Funciones Principales que Utilizará**:
+  - Módulo de préstamos y devoluciones
+  - Módulo de gestión de usuarios
+  - Búsqueda de materiales en catálogo
+  - Gestión de reservas
+  - Procesamiento de multas
+
+- **Necesidades Especiales**: 
+  - Interfaz intuitiva que permita realizar operaciones rápidamente
+  - Capacidad de trabajo con interrupciones frecuentes (atención al público)
+  - Acceso rápido a ayuda contextual
+
+**TIPO DE USUARIO 2: Administrador del Sistema**
+
+- **Descripción**: Personal técnico o jefe de biblioteca responsable de la configuración 
+  y administración del sistema BiblioTech.
+
+- **Responsabilidades en el Sistema**:
+  - Configurar parámetros operativos del sistema
+  - Gestionar cuentas de bibliotecarios
+  - Mantener el catálogo (altas, bajas, modificaciones masivas)
+  - Generar reportes estadísticos y ejecutivos
+  - Realizar respaldos del sistema
+  - Auditar operaciones del sistema
+
+- **Nivel de Experiencia Técnica**: Alto. Tiene conocimientos avanzados de sistemas 
+  informáticos y administración de aplicaciones.
+
+- **Experiencia en el Dominio**: Alta. Comprende todos los procesos bibliotecarios 
+  desde una perspectiva gerencial.
+
+- **Frecuencia de Uso**: Semanal para tareas de configuración y mantenimiento, 
+  diaria para consulta de reportes y auditoría.
+
+- **Funciones Principales que Utilizará**:
+  - Panel de administración completo
+  - Configuración de parámetros del sistema
+  - Gestión de usuarios del sistema
+  - Generación de reportes avanzados
+  - Herramientas de respaldo y restauración
+  - Visualización de logs de auditoría
+
+- **Necesidades Especiales**: 
+  - Acceso a funciones avanzadas no disponibles para usuarios regulares
+  - Herramientas de diagnóstico y monitoreo del sistema
+  - Capacidad de realizar operaciones masivas sobre datos
+
+**TIPO DE USUARIO 3: Usuario/Cliente de la Biblioteca**
+
+- **Descripción**: Ciudadanos registrados en la biblioteca que consultan el catálogo 
+  y su información personal desde Internet.
+
+- **Responsabilidades en el Sistema**:
+  - Buscar materiales disponibles en la biblioteca
+  - Consultar sus préstamos activos
+  - Renovar préstamos (si es posible)
+  - Hacer reservas de materiales
+  - Consultar su historial de préstamos
+
+- **Nivel de Experiencia Técnica**: Bajo a Medio. Varían desde personas con 
+  conocimientos básicos hasta usuarios experimentados de Internet.
+
+- **Experiencia en el Dominio**: Baja a Media. Algunos son usuarios frecuentes 
+  de bibliotecas, otros son nuevos usuarios.
+
+- **Frecuencia de Uso**: Variable. Desde uso semanal hasta esporádico (mensual 
+  o menos frecuente).
+
+- **Funciones Principales que Utilizará**:
+  - Búsqueda de materiales en catálogo
+  - Consulta de cuenta personal
+  - Sistema de reservas
+  - Renovación de préstamos
+
+- **Necesidades Especiales**: 
+  - Interfaz muy intuitiva, sin necesidad de capacitación
+  - Accesibilidad (cumplimiento WCAG 2.1 nivel AA)
+  - Disponible 24/7 desde cualquier dispositivo (responsive)
+  - Multiidioma (si aplica)
+  - Protección de datos personales
+-->
+
+[Complete esta subsección describiendo todos los tipos de usuarios de su sistema]
+
+<br>
 
 ### 2.4 Restricciones
 
 <!-- 
 OBJETIVO DE ESTA SUBSECCIÓN:
-Documentar todas las limitaciones o restricciones que afectarán el diseño e 
-implementación del sistema. Estas restricciones pueden ser técnicas, de negocio,
-regulatorias, o de cualquier otra naturaleza.
+Documentar las limitaciones técnicas, operativas y normativas que puedan afectar el diseño e implementación del sistema del Restaurante Universitario UniCafé.
 
 IMPORTANCIA:
-Las restricciones son CRÍTICAS porque:
-- Limitan las opciones de diseño e implementación
-- Pueden afectar costos y cronogramas
-- Deben ser conocidas desde el inicio del proyecto
-- Son generalmente NO NEGOCIABLES
+Las restricciones son críticas para el sistema del Restaurante, ya que determinan los límites de diseño e implementación, impactan los costos y tiempos del proyecto, y deben ser identificadas desde el inicio al ser, en su mayoría, no negociables.
 
 TIPOS COMUNES DE RESTRICCIONES:
 
-1. Restricciones Regulatorias/Legales
-2. Restricciones de Hardware
-3. Restricciones de Software
+1. Restricciones Regulatorias/Legales: cumplimiento de normas sanitarias, de manipulación de alimentos y protección de datos personales.
+2. Restricciones de Hardware: dependencia de dispositivos de control de acceso, terminales de registro y equipos de cocina conectados.
+3. Restricciones de Software: 
 4. Restricciones de Interfaces con Aplicaciones
 5. Restricciones Paralelas (procesos concurrentes)
 6. Restricciones de Auditoría
@@ -805,11 +954,17 @@ EJEMPLO ACADÉMICO:
 
 **Suposiciones:**
 
-1. **Conexiòn tecnològica**: Se asume que la universidad cuenta con conexiòn a internet, para la implementaciòn del sistema
+1. **Conectividad**: Se asume que la biblioteca cuenta con conexión a Internet 
+  estable y continua durante el horario de operación. Si la conexión falla, 
+  algunas funcionalidades no estarán disponibles.
 
-2. **Accesibilidad**: Se asume que os diferentes usuarios cuenta con dispositivos tecnològicos paara el registro e identificaciòn en el restaurante
+2. **Hardware**: Se asume que las computadoras de las estaciones de trabajo de 
+  bibliotecarios cumplen con los requisitos mínimos: procesador dual-core 2GHz, 
+  4GB RAM, navegador web actualizado.
 
-3. **Colaboraciòn**: Se asume que el personal de restaurante mantendran actualizada la informaciòn en el sistema para que se desarrolle de manera adecuada. 
+3. **Conocimientos del Personal**: Se asume que el personal de biblioteca tiene 
+  conocimientos básicos de informática (uso de navegador web, mouse, teclado) 
+  y que recibirá capacitación específica sobre BiblioTech antes del lanzamiento.
 
 4. **Proceso de Negocio**: Se asume que los procesos bibliotecarios actuales 
   (políticas de préstamo, cálculo de multas, categorización de materiales) 
