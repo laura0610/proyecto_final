@@ -954,83 +954,27 @@ EJEMPLO ACADÉMICO:
 
 **Suposiciones:**
 
-1. **Conectividad**: Se asume que la biblioteca cuenta con conexión a Internet 
-  estable y continua durante el horario de operación. Si la conexión falla, 
-  algunas funcionalidades no estarán disponibles.
+1. **Conexiòn a internet**: Se asume que la universidad cuenta con conectividad a internet para que los usuarios puedan acceder e el sistema.
 
-2. **Hardware**: Se asume que las computadoras de las estaciones de trabajo de 
-  bibliotecarios cumplen con los requisitos mínimos: procesador dual-core 2GHz, 
-  4GB RAM, navegador web actualizado.
+2. **Dispositivos**: Se asume que los usuarios poseeen disptivos moviles para la identificaciòn y visualizaciòn del menù digital.
 
-3. **Conocimientos del Personal**: Se asume que el personal de biblioteca tiene 
-  conocimientos básicos de informática (uso de navegador web, mouse, teclado) 
-  y que recibirá capacitación específica sobre BiblioTech antes del lanzamiento.
+3. **Colaboraciòn**: Se asume que cada personal que hace parte del restaurante atualiza cada detalle de los procesos fundamentales que estructuran el sistema.
 
-4. **Proceso de Negocio**: Se asume que los procesos bibliotecarios actuales 
-  (políticas de préstamo, cálculo de multas, categorización de materiales) 
-  continuarán siendo válidos en el sistema digitalizado.
+4. **Proceso de menù digital**: Se asume que el inventario de alimentos este sendo actualizado por parte del persona encargado de cocina.
 
-5. **Volumen de Datos Inicial**: Se asume que el catálogo inicial contiene 
-  aproximadamente 25,000 materiales bibliográficos y 15,000 usuarios registrados, 
-  con un crecimiento anual estimado del 10%.
-
-6. **Usuarios Finales**: Se asume que los usuarios de la biblioteca que accedan 
-  al catálogo en línea tienen conocimientos básicos de navegación web y acceso 
-  a un dispositivo con navegador (computadora, tablet, smartphone).
-
-7. **Datos de Migración**: Se asume que los datos en Excel del sistema actual 
-  están razonablemente limpios y estructurados, y que cualquier inconsistencia 
-  será resuelta antes de la migración.
-
-8. **Apoyo Institucional**: Se asume que la dirección de la biblioteca y la 
-  municipalidad proporcionarán el apoyo necesario para la adopción del sistema, 
-  incluyendo tiempo para capacitación del personal.
-
-9. **Mantenimiento**: Se asume que la municipalidad proporcionará soporte técnico 
-  continuo para el servidor y la infraestructura de red.
+5. **Organizaiòn**: Se asume que en la entrega de alimentos, todo se encuentre en el inventario registrado en el sistema.
 
 **Dependencias:**
 
-1. **Sistema Municipal de Identificación (SMI)**: El módulo de registro de usuarios 
-  DEPENDE de la disponibilidad y correcto funcionamiento de la API del SMI para 
-  validar identidad de ciudadanos. Si la API no está disponible, el registro de 
-  nuevos usuarios se verá afectado.
+1. **Implementaiòn tecnològica**: Integraciò de sistemas de identitifaciòn como lo es el carnet, analizando el rol del usuario.
 
-2. **Servicio de Correo Electrónico**: El módulo de notificaciones DEPENDE del 
-  servidor SMTP institucional (mail.municipalidad.gob). Si el servicio de correo 
-  falla, las notificaciones automáticas no se enviarán.
+2. **Capacitaciòn**: Capacitar a los usuarios para uso del sistema de manera correcta
 
-3. **Proveedor de Hosting**: El sistema DEPENDE de la infraestructura de servidores 
-  de la municipalidad. Cualquier mantenimiento, actualización o problema en esta 
-  infraestructura afectará la disponibilidad de BiblioTech.
+3. **Infraestructura**: Dispositivos moviles con conexiòn a internet para e ingreso a la plataforma
 
-4. **Código de Barras**: El sistema DEPENDE del estándar ISBN (International Standard 
-  Book Number) para identificación de libros. Materiales sin ISBN requerirán 
-  códigos alternativos generados internamente.
+4. **Normas**: El sistema debe umpplir con las normas e indicaciones brindadas por parte del resturante y de la instituciòn.
 
-5. **Navegadores Web**: El sistema DEPENDE de que los navegadores web mantengan 
-  compatibilidad con los estándares HTML5, CSS3 y JavaScript ES6. Cambios 
-  significativos en navegadores podrían requerir actualizaciones del sistema.
-
-6. **Base de Datos PostgreSQL**: El sistema DEPENDE de PostgreSQL y sus 
-  actualizaciones de seguridad. Migraciones a nuevas versiones mayores de 
-  PostgreSQL requerirán pruebas exhaustivas.
-
-7. **Lectores de Código de Barras**: El sistema DEPENDE de los lectores de código 
-  de barras Zebra DS2208. Si se reemplazan por otro modelo, puede requerirse 
-  adaptación del sistema.
-
-8. **Proveedor de Carnes de Biblioteca**: La funcionalidad de escaneado de carnets 
-  DEPENDE de que el proveedor de carnets imprima códigos de barras legibles según 
-  el estándar Code 39 o similar.
-
-9. **Equipo de Desarrollo**: El cronograma del proyecto DEPENDE de la disponibilidad 
-  continua del equipo de desarrollo asignado. Cambios en el equipo podrían afectar 
-  plazos de entrega.
-
-10. **Aprobaciones de la Municipalidad**: Ciertas decisiones de diseño y configuración 
-  DEPENDEN de aprobaciones del departamento de sistemas de la municipalidad, lo 
-  que podría introducir retrasos si las aprobaciones se demoran.
+5. **Contabilidad**: El sistema depende del presupuesto que se tiene previsto, teniendo en cuenta el mantenimiento y actualizaciones.
 
 **Impacto de Cambios:**
 
@@ -1257,31 +1201,41 @@ DEFINICIÓN:
 Los requisitos funcionales describen QUÉ debe HACER el sistema. Son las funciones,
 servicios, o comportamientos que el sistema debe proporcionar.
 
-DIFERENCIA CON CASOS DE USO:
-- REQUISITO FUNCIONAL: "El sistema debe validar las credenciales del usuario"
-- CASO DE USO: Describe el flujo completo de interacción (incluyendo flujos 
-  alternativos, excepciones, pre y post condiciones)
-
-Los casos de uso PUEDEN incluirse en los Apéndices (4.1), pero aquí se documentan
-los requisitos funcionales de forma atómica.
-
-FORMATO ESTÁNDAR PARA CADA REQUISITO:
-
-Use una tabla como la siguiente para cada requisito funcional:
--->
-
 **PLANTILLA DE REQUISITO FUNCIONAL:**
 
 | **ID** | RF-XXX |
 |--------|--------|
-| **Nombre** | [Nombre corto descriptivo del requisito] |
-| **Descripción** | [Descripción detallada y precisa de la funcionalidad. Use lenguaje claro, sin ambigüedades. Especifique inputs, procesamiento, y outputs esperados.] |
-| **Prioridad** | Esencial / Deseable / Opcional |
-| **Estabilidad** | Alta / Media / Baja |
-| **Fuente** | [Stakeholder que solicitó este requisito] |
+| **Nombre** | [Gestion de filas] |
+| **Descripción** | [El sistema permite una buena organizaciòn en el proceso de realizar fila, implementando tunos digitales por medio de la identificaciòn ] |
+| **Prioridad** | Esencial |
+| **Estabilidad** | Alta  |
+| **Fuente** | [Cliente] |
 | **Criterios de Aceptación** | 1. [Criterio medible 1]<br>2. [Criterio medible 2]<br>3. [Criterio medible 3] |
-| **Dependencias** | [RF-XXX, RF-YYY] o "Ninguna" |
-| **Comentarios** | [Cualquier información adicional relevante] |
+| **Dependencias** | Ninguna |
+| **Comentarios** | [El sistema por medio de una pantalla se debe mostrar el turno actual de la fila] |
+
+
+| **ID** | RF-XXX |
+|--------|--------|
+| **Nombre** | [Manejo de subsidios] |
+| **Descripción** | [El sistema debe permiter el registro de los usuarios, ademàs de verificar el subsidio segùn el rol del cliente] |
+| **Prioridad** | Esencial |
+| **Estabilidad** | Alta  |
+| **Fuente** | [Cliente ] |
+| **Criterios de Aceptación** | 1. [Criterio medible 1]<br>2. [Criterio medible 2]<br>3. [Criterio medible 3] |
+| **Dependencias** | Ninguna |
+| **Comentarios** | [El sistema por debe estar reportando el proceso de tema de los subsidios] |
+
+| **ID** | RF-XXX |
+|--------|--------|
+| **Nombre** | [Reducciòn de desperdicio de alimentos] |
+| **Descripción** | [El sistema debe permiter registrra el inventario de alimentos que se encuentran disponibles, identificand el consumo diario para conocer el desperdicio que existe] |
+| **Prioridad** | Esencial |
+| **Estabilidad** | Alta  |
+| **Fuente** | [Personal del restaurante] |
+| **Criterios de Aceptación** | 1. [Criterio medible 1]<br>2. [Criterio medible 2]<br>3. [Criterio medible 3] |
+| **Dependencias** | Ninguna |
+| **Comentarios** | [El sistema debe generar reportes en el consumo de alimentos del restaurante] |
 
 <!-- 
 EXPLICACIÓN DE CADA CAMPO:
