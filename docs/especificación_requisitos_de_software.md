@@ -474,21 +474,17 @@ medibles y verificables van en la Sección 3.
 
 <!-- 
 OBJETIVO DE ESTA SUBSECCIÓN:
-Situar el sistema en su contexto más amplio: ¿Es un sistema completamente nuevo?
-¿Reemplaza un sistema existente? ¿Es parte de un sistema mayor? ¿Cómo se relaciona
-con otros sistemas?
+Es un sistema nuevo para el restaurante,  el cual cumpla con los requisitos que generan, implementado un sistema nuevo el cual permita una buena organizaciòn en los procesos que reiza esta empresa, ayudando a resolver de manera eficaz los problemas que afronta. 
 
 QUÉ DEBE INCLUIR:
 
 1. CONTEXTO DEL SISTEMA:
-  - Si es un nuevo producto independiente, reemplazo de sistema legacy, o 
-    componente de un sistema mayor
-  - Relación con otros sistemas existentes en la organización
+  Es una aplicaciòn la cual su objetivo es mejorar la atenciòn de los clientes, manejar el consumo y desperdicio de los alimentos y el tema de los subsidios. Esto, mediante un sistema tecnològico eficaz y adecuado, que esta compuesto por turnos en la fila de manera digital, organizaciòn de subsidio y manejo de inventario. 
 
 2. INTERFACES DEL SISTEMA (Vista general):
-  - Interfaces con sistemas externos (NO detalles, solo mención)
-  - Interfaces con hardware específico
-  - Interfaces con otros componentes de software
+ - Interfaz con los usuarios (Visualizaciòn del menù, turnos y registro)
+ - Interfaz con los empleados (Gestion de menù, inventario y subsidios)
+ - Interfaz con el sistema de subsidios (comprobar el subsidio dependiendo ddel rol del cliente)
 
 3. DIAGRAMA DE CONTEXTO (Altamente recomendado):
   Un diagrama simple que muestre:
@@ -499,48 +495,32 @@ QUÉ DEBE INCLUIR:
 EJEMPLO ACADÉMICO:
 
 **Contexto del Sistema:**
-
-BiblioTech es un sistema de información nuevo que reemplazará completamente el 
-actual sistema manual de gestión bibliotecaria basado en tarjetas físicas y hojas 
-de cálculo Excel. El sistema operará como una aplicación independiente pero 
-compartirá cierta información con sistemas externos de la biblioteca.
-
-BiblioTech NO es un subsistema de un sistema mayor, sino una aplicación completa 
-y autónoma diseñada específicamente para las necesidades de la Biblioteca Municipal 
-Central. Sin embargo, el sistema deberá integrarse con:
-
-- Sistema de identificación de usuarios de la municipalidad (para validar datos 
-  de ciudadanos)
-- Sistema de correo electrónico institucional (para envío de notificaciones)
-- Sistema de respaldo centralizado de la municipalidad (para backup automático)
-
+sistecafe es un sistema el cual organiza de manera digital los procesos que realiza el restaurante manualmente, esto permite una buena estructura del desarrollo de cada paso de la empresa, analizando de la misma manera, los requisitos que se generan para asì poder realizar que el sistema cumpla con la perspetiva a la que se quiere llegar.  
 **Relación con Sistemas Existentes:**
 
-El sistema actual que BiblioTech reemplazará consiste en:
-- Tarjetas físicas de catálogo ordenadas alfabéticamente
-- Planillas Excel para control de préstamos
-- Registro manual en libros de visitas
-- Archivo físico de fichas de usuarios
+El sistema actual que sistecafe reemplazará consiste en:
+- Sistema de filas, por turnos digitales
+- Manejo de subsidios segùn el rol del cliente
+- Sistema de inventario
+- Registro de consumo, contabilizando la estadistica del consumo 
 
 BiblioTech digitalizará completamente estos procesos, manteniendo la misma 
 lógica de negocio pero eliminando el manejo de papel.
 
 **Interfaces del Sistema (Visión General):**
 
-BiblioTech interactuará con:
-1. **Usuarios del Sistema**: Bibliotecarios, administradores, y usuarios finales 
-  (vía interfaz web)
+sistecafe interactuará con:
+1. **Usuarios del Sistema**:comensales, cajero, chef, coordinaor operativo y contador 
 2. **Sistemas Externos**: 
-  - API del Sistema de Identificación Municipal
-  - Servidor SMTP para envío de correos
-  - Servidor de respaldo institucional
+  - Sistema de subsidios
+  - Sistema de invntarios y reportes
 3. **Hardware**: 
-  - Lectores de código de barras (para escaneo de libros y carnets)
+  - Lector de tarjetas (Identificaciòn de carnets)
+  - Escaneo de código de barras (Registrar consumo de alimentos)
+  - Terminales tàcticas (consultar menù y selecciòn de alimentos)
   - Impresoras térmicas (para comprobantes de préstamo)
   - Servidor de base de datos
-
-[Incluya aquí un diagrama de contexto del sistema]
-
+  
 ESTRUCTURA DEL DIAGRAMA DE CONTEXTO:
 Puede usar notación simple con cajas y flechas. Ejemplo en texto:
 
@@ -644,15 +624,13 @@ en la Sección 3.1.
 
 <!-- 
 OBJETIVO DE ESTA SUBSECCIÓN:
-Identificar y describir los diferentes tipos de usuarios que interactuarán con
-el sistema, incluyendo sus características relevantes que puedan afectar el diseño.
+Determinados empleados del restaurante interactuaran con el sistema, asì mismo, tambièn los comensales, el sistema de subsidios y ele sistema de inventario. 
 
 IMPORTANCIA:
 Comprender a los usuarios es fundamental para:
-- Diseñar interfaces apropiadas para cada perfil
-- Establecer niveles adecuados de seguridad y permisos
-- Determinar requisitos de capacitación
-- Identificar necesidades de usabilidad y accesibilidad
+- Establecer un sistema que sea de facì entendimiento para todos
+- Entender cada rol y su funciòn en el sistema
+- Implementar especificaciones correctas
 
 QUÉ INCLUIR PARA CADA TIPO DE USUARIO:
 
@@ -671,124 +649,22 @@ Use una tabla o subsecciones para cada tipo de usuario.
 TABLA RECOMENDADA:
 -->
 
-| Característica | Usuario Tipo 1: [Nombre del Rol] | Usuario Tipo 2: [Nombre del Rol] | Usuario Tipo 3: [Nombre del Rol] |
+| Característica | Usuario Tipo 1: [Comensal] | Usuario Tipo 2: [Cajero] | Usuario Tipo 3: [Chef] |
 |----------------|-----------------------------------|-----------------------------------|-----------------------------------|
-| **Descripción** | [Breve descripción del rol] | [Breve descripción del rol] | [Breve descripción del rol] |
-| **Responsabilidades** | [Qué hace en el sistema] | [Qué hace en el sistema] | [Qué hace en el sistema] |
-| **Nivel Técnico** | Alto/Medio/Bajo | Alto/Medio/Bajo | Alto/Medio/Bajo |
-| **Experiencia en el Dominio** | Experto/Intermedio/Novato | Experto/Intermedio/Novato | Experto/Intermedio/Novato |
-| **Frecuencia de Uso** | Diaria/Semanal/Ocasional | Diaria/Semanal/Ocasional | Diaria/Semanal/Ocasional |
-| **Funciones Principales** | [Listar 3-5 funciones] | [Listar 3-5 funciones] | [Listar 3-5 funciones] |
+| **Descripción** | [Usuario de la universidad el cual es un cliente del restaurante] | [Personal del restaurante, el cual esta encargado de de identificar la categoria del cliente, proceso de pagos, registro de ventas] | [Planificar menù, identifica cantidades e ingredientes] |
+| **Responsabilidades** | [Registrarse, visualizar menù y pagar cuenta] | [Registrar venta, rocesar medios de pago e identificar el valor total] | [Identificr cantidades, analizar los ingredientes y adaptar el menù] |
+| **Nivel Técnico** | Alto | Alto | Medio |
+| **Experiencia en el Dominio** | Intermedio | Intermedio | Intermedio |
+| **Frecuencia de Uso** | Diaria | Diaria | Semanal |
+| **Funciones Principales** |- Consulta menú del día digitalmente
+- Consulta valor del almuerzo según su rol
+- Ingresa al restaurante con carnet | - Verfica identidad del comensal (escaneo de carnet)
+- Identifica categoría segùn el rol
+- Cobra según tarifa correspondiente
+- Procesa múltiples métodos de pago | - Planifica menú semanal 
+- Calcula cantidades de producción según demanda histórica
+- -Adapta menú según los ingredientes |
 | **Necesidades Especiales** | [Si aplica] | [Si aplica] | [Si aplica] |
-
-<!-- 
-EJEMPLO ACADÉMICO DETALLADO:
-
-**TIPO DE USUARIO 1: Bibliotecario**
-
-- **Descripción**: Personal de la biblioteca encargado de las operaciones diarias 
-  de préstamos, devoluciones, y atención al público.
-
-- **Responsabilidades en el Sistema**:
-  - Registrar préstamos y devoluciones de materiales
-  - Registrar nuevos usuarios
-  - Procesar pagos de multas
-  - Atender consultas sobre disponibilidad de materiales
-  - Generar reportes básicos de operaciones diarias
-
-- **Nivel de Experiencia Técnica**: Medio. Tienen conocimientos básicos de informática 
-  pero no son expertos técnicos. Pueden manejar aplicaciones de oficina estándar.
-
-- **Experiencia en el Dominio**: Alta. Conocen perfectamente los procesos bibliotecarios 
-  y la organización de materiales. Promedio de 5+ años trabajando en bibliotecas.
-
-- **Frecuencia de Uso**: Diaria, durante toda su jornada laboral (8 horas al día).
-
-- **Funciones Principales que Utilizará**:
-  - Módulo de préstamos y devoluciones
-  - Módulo de gestión de usuarios
-  - Búsqueda de materiales en catálogo
-  - Gestión de reservas
-  - Procesamiento de multas
-
-- **Necesidades Especiales**: 
-  - Interfaz intuitiva que permita realizar operaciones rápidamente
-  - Capacidad de trabajo con interrupciones frecuentes (atención al público)
-  - Acceso rápido a ayuda contextual
-
-**TIPO DE USUARIO 2: Administrador del Sistema**
-
-- **Descripción**: Personal técnico o jefe de biblioteca responsable de la configuración 
-  y administración del sistema BiblioTech.
-
-- **Responsabilidades en el Sistema**:
-  - Configurar parámetros operativos del sistema
-  - Gestionar cuentas de bibliotecarios
-  - Mantener el catálogo (altas, bajas, modificaciones masivas)
-  - Generar reportes estadísticos y ejecutivos
-  - Realizar respaldos del sistema
-  - Auditar operaciones del sistema
-
-- **Nivel de Experiencia Técnica**: Alto. Tiene conocimientos avanzados de sistemas 
-  informáticos y administración de aplicaciones.
-
-- **Experiencia en el Dominio**: Alta. Comprende todos los procesos bibliotecarios 
-  desde una perspectiva gerencial.
-
-- **Frecuencia de Uso**: Semanal para tareas de configuración y mantenimiento, 
-  diaria para consulta de reportes y auditoría.
-
-- **Funciones Principales que Utilizará**:
-  - Panel de administración completo
-  - Configuración de parámetros del sistema
-  - Gestión de usuarios del sistema
-  - Generación de reportes avanzados
-  - Herramientas de respaldo y restauración
-  - Visualización de logs de auditoría
-
-- **Necesidades Especiales**: 
-  - Acceso a funciones avanzadas no disponibles para usuarios regulares
-  - Herramientas de diagnóstico y monitoreo del sistema
-  - Capacidad de realizar operaciones masivas sobre datos
-
-**TIPO DE USUARIO 3: Usuario/Cliente de la Biblioteca**
-
-- **Descripción**: Ciudadanos registrados en la biblioteca que consultan el catálogo 
-  y su información personal desde Internet.
-
-- **Responsabilidades en el Sistema**:
-  - Buscar materiales disponibles en la biblioteca
-  - Consultar sus préstamos activos
-  - Renovar préstamos (si es posible)
-  - Hacer reservas de materiales
-  - Consultar su historial de préstamos
-
-- **Nivel de Experiencia Técnica**: Bajo a Medio. Varían desde personas con 
-  conocimientos básicos hasta usuarios experimentados de Internet.
-
-- **Experiencia en el Dominio**: Baja a Media. Algunos son usuarios frecuentes 
-  de bibliotecas, otros son nuevos usuarios.
-
-- **Frecuencia de Uso**: Variable. Desde uso semanal hasta esporádico (mensual 
-  o menos frecuente).
-
-- **Funciones Principales que Utilizará**:
-  - Búsqueda de materiales en catálogo
-  - Consulta de cuenta personal
-  - Sistema de reservas
-  - Renovación de préstamos
-
-- **Necesidades Especiales**: 
-  - Interfaz muy intuitiva, sin necesidad de capacitación
-  - Accesibilidad (cumplimiento WCAG 2.1 nivel AA)
-  - Disponible 24/7 desde cualquier dispositivo (responsive)
-  - Multiidioma (si aplica)
-  - Protección de datos personales
--->
-
-[Complete esta subsección describiendo todos los tipos de usuarios de su sistema]
-
-<br>
 
 ### 2.4 Restricciones
 
