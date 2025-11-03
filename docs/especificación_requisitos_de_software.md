@@ -479,7 +479,7 @@ Es un sistema nuevo para el restaurante,  el cual cumpla con los requisitos que 
 QUÉ DEBE INCLUIR:
 
 1. CONTEXTO DEL SISTEMA:
-  Es una aplicaciòn la cual su objetivo es mejorar la atenciòn de los clientes, manejar el consumo y desperdicio de los alimentos y el tema de los subsidios. Esto, mediante un sistema tecnològico eficaz y adecuado, que esta compuesto por turnos en la fila de manera digital, organizaciòn de subsidio y manejo de inventario. 
+Es una aplicaciòn la cual su objetivo es mejorar la atenciòn de los clientes, manejar el consumo y desperdicio de los alimentos y el tema de los subsidios. Esto, mediante un sistema tecnològico eficaz y adecuado, que esta compuesto por turnos en la fila de manera digital, organizaciòn de subsidio y manejo de inventario. 
 
 2. INTERFACES DEL SISTEMA (Vista general):
  - Interfaz con los usuarios (Visualizaciòn del menù, turnos y registro)
@@ -504,13 +504,10 @@ El sistema actual que sistecafe reemplazará consiste en:
 - Sistema de inventario
 - Registro de consumo, contabilizando la estadistica del consumo 
 
-BiblioTech digitalizará completamente estos procesos, manteniendo la misma 
-lógica de negocio pero eliminando el manejo de papel.
-
 **Interfaces del Sistema (Visión General):**
 
 sistecafe interactuará con:
-1. **Usuarios del Sistema**:comensales, cajero, chef, coordinaor operativo y contador 
+1. **Usuarios del Sistema**:comensales, cajero, chef, coordinador operativo y contador 
 2. **Sistemas Externos**: 
   - Sistema de subsidios
   - Sistema de invntarios y reportes
@@ -656,15 +653,7 @@ TABLA RECOMENDADA:
 | **Nivel Técnico** | Alto | Alto | Medio |
 | **Experiencia en el Dominio** | Intermedio | Intermedio | Intermedio |
 | **Frecuencia de Uso** | Diaria | Diaria | Semanal |
-| **Funciones Principales** |- Consulta menú del día digitalmente
-- Consulta valor del almuerzo según su rol
-- Ingresa al restaurante con carnet | - Verfica identidad del comensal (escaneo de carnet)
-- Identifica categoría segùn el rol
-- Cobra según tarifa correspondiente
-- Procesa múltiples métodos de pago | - Planifica menú semanal 
-- Calcula cantidades de producción según demanda histórica
-- -Adapta menú según los ingredientes |
-| **Necesidades Especiales** | [Si aplica] | [Si aplica] | [Si aplica] |
+| **Funciones Principales** |- Consulta menú del día digitalmente- Consulta valor del almuerzo según su rol- Ingresa al restaurante con carnet | - Verfica identidad del comensal (escaneo de carnet) - Identifica categoría segùn el rol- Cobra según tarifa correspondiente- Procesa múltiples métodos de pago | - Planifica menú semanal - Calcula cantidades de producción según demanda histórica -Adapta menú según los ingredientes || **Necesidades Especiales** | [Si aplica] | [Si aplica] | [Si aplica] |
 
 ### 2.4 Restricciones
 
@@ -816,17 +805,11 @@ EJEMPLO ACADÉMICO:
 
 **Suposiciones:**
 
-1. **Conectividad**: Se asume que la biblioteca cuenta con conexión a Internet 
-  estable y continua durante el horario de operación. Si la conexión falla, 
-  algunas funcionalidades no estarán disponibles.
+1. **Conexiòn tecnològica**: Se asume que la universidad cuenta con conexiòn a internet, para la implementaciòn del sistema
 
-2. **Hardware**: Se asume que las computadoras de las estaciones de trabajo de 
-  bibliotecarios cumplen con los requisitos mínimos: procesador dual-core 2GHz, 
-  4GB RAM, navegador web actualizado.
+2. **Accesibilidad**: Se asume que os diferentes usuarios cuenta con dispositivos tecnològicos paara el registro e identificaciòn en el restaurante
 
-3. **Conocimientos del Personal**: Se asume que el personal de biblioteca tiene 
-  conocimientos básicos de informática (uso de navegador web, mouse, teclado) 
-  y que recibirá capacitación específica sobre BiblioTech antes del lanzamiento.
+3. **Colaboraciòn**: Se asume que el personal de restaurante mantendran actualizada la informaciòn en el sistema para que se desarrolle de manera adecuada. 
 
 4. **Proceso de Negocio**: Se asume que los procesos bibliotecarios actuales 
   (políticas de préstamo, cálculo de multas, categorización de materiales) 
