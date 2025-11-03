@@ -823,14 +823,14 @@ TIPOS COMUNES DE RESTRICCIONES:
 
 1. Restricciones Regulatorias/Legales: cumplimiento de normas sanitarias, de manipulación de alimentos y protección de datos personales.
 2. Restricciones de Hardware: dependencia de dispositivos de control de acceso, terminales de registro y equipos de cocina conectados.
-3. Restricciones de Software: 
-4. Restricciones de Interfaces con Aplicaciones
-5. Restricciones Paralelas (procesos concurrentes)
-6. Restricciones de Auditoría
-7. Restricciones de Lenguaje de Programación
-8. Restricciones de Bases de Datos
-9. Restricciones de Estándares
-10. Restricciones de Presupuesto y Recursos
+3. Restricciones de Software: compatibilidad con los sistemas institucionales existentes y limitaciones en licencias o plataformas.
+4. Restricciones de Interfaces con Aplicaciones: necesidad de integración con sistemas universitarios de matrícula, pagos o identificación.
+5. Restricciones Paralelas (procesos concurrentes): coordinación con procesos simultáneos como el servicio de comedor y la actualización de inventarios.
+6. Restricciones de Auditoría: obligación de conservar trazabilidad completa de accesos, subsidios y consumos para control institucional.
+7. Restricciones de Lenguaje de Programación: alineación con los entornos tecnológicos aprobados por la universidad.
+8. Restricciones de Bases de Datos: uso de motores compatibles con la infraestructura existente y políticas de respaldo establecidas.
+9. Restricciones de Estándares: adopción de estándares institucionales de seguridad, usabilidad y accesibilidad.
+10. Restricciones de Presupuesto y Recursos: limitaciones en financiamiento, personal técnico y tiempo de desarrollo.
 
 FORMATO SUGERIDO:
 Organice por categorías para mejor comprensión.
@@ -839,76 +839,50 @@ EJEMPLO ACADÉMICO:
 
 **Restricciones Regulatorias y Legales:**
 
-- El sistema DEBE cumplir con la Ley de Protección de Datos Personales vigente 
-  en el país, garantizando la confidencialidad de información de usuarios.
-  
-- Toda eliminación de datos personales debe ser irreversible y cumplir con el 
-  "derecho al olvido" establecido en la legislación.
-
-- El sistema debe mantener registros de auditoría de acceso a datos personales 
-  por un período mínimo de 2 años.
+- El sistema DEBE cumplir con la Ley de Protección de Datos Personales vigente en Colombia (Ley 1581 de 2012) y las políticas institucionales de confidencialidad.
+- Toda eliminación de datos personales DEBE realizarse de forma irreversible, respetando el derecho al olvido.
+- Los registros de auditoría de accesos y consumos DEBEN conservarse por un período mínimo de dos años para fines de control institucional.
+- El sistema DEBE cumplir con las normas sanitarias y de trazabilidad alimentaria exigidas por el Ministerio de Salud y la Secretaría de Salud municipal.
 
 **Restricciones Tecnológicas:**
 
-- El sistema DEBE ejecutarse en los servidores existentes de la municipalidad 
-  (Linux Ubuntu Server 22.04 LTS, 8GB RAM, 500GB disco).
-
-- El sistema DEBE ser compatible con los navegadores web utilizados en la biblioteca: 
-  Chrome 90+, Firefox 88+, Edge 90+.
-
-- El sistema DEBE integrarse con el lector de código de barras marca Zebra modelo 
-  DS2208 ya adquirido por la biblioteca.
+- El sistema DEBE ejecutarse en la infraestructura tecnológica de la universidad (servidores Linux Ubuntu Server 22.04 LTS, 8GB RAM, 500GB disco).
+- DEBE ser compatible con los navegadores institucionales: Chrome 100+, Firefox 95+ y Edge 100+.
+- DEBE integrarse con los dispositivos de control de acceso y lectores de tarjetas o códigos QR existentes.
+- La solución DEBE funcionar en entorno web, sin requerir instalación en equipos de los operarios.
 
 **Restricciones de Implementación:**
 
-- El desarrollo DEBE realizarse utilizando tecnologías open source para evitar 
-  costos de licenciamiento.
-
-- El sistema DEBE estar implementado y en producción en un plazo máximo de 6 meses.
-
-- El equipo de desarrollo está limitado a 4 personas (2 desarrolladores, 1 analista, 
-  1 tester).
+- El desarrollo DEBE realizarse con tecnologías open source para evitar costos de licenciamiento.
+- El sistema DEBE estar en producción en un plazo máximo de seis meses desde el inicio del proyecto.
+- El equipo de desarrollo ESTÁ LIMITADO a cuatro integrantes: dos desarrolladores, un analista y un tester.
 
 **Restricciones de Interfaz:**
 
-- El sistema DEBE integrarse con la API REST del Sistema Municipal de Identificación 
-  de Ciudadanos (versión 2.1) para validación de datos de usuarios.
-
-- El sistema DEBE utilizar el servidor SMTP institucional (mail.municipalidad.gob) 
-  para envío de correos electrónicos.
+- El sistema DEBE integrarse con la base de datos institucional de usuarios y con el sistema de control académico (SIGA-UCP).
+- DEBE utilizar el servidor de correo institucional (smtp.ucp.edu.co) para notificaciones y alertas.
+- Las interfaces de comunicación DEBEN cumplir con los estándares REST y JSON definidos por el área de TI de la universidad.
 
 **Restricciones Operacionales:**
 
-- El sistema DEBE funcionar con la conexión a Internet existente (10 Mbps simétrica), 
-  la cual NO se puede mejorar.
-
-- La base de datos DEBE ser PostgreSQL versión 13 o superior, ya que es el estándar 
-  de la municipalidad.
-
-- El sistema NO PUEDE requerir instalación de software adicional en las computadoras 
-  de los bibliotecarios (debe ser 100% web).
+- El sistema DEBE funcionar con la conexión a Internet existente (20 Mbps simétrica), sin posibilidad de mejora en el corto plazo.
+- La base de datos DEBE SER PostgreSQL versión 13 o superior, conforme al estándar institucional.
+- El sistema NO PUEDE requerir instalación local en los equipos del personal administrativo ni de los comensales.
 
 **Restricciones de Migración de Datos:**
 
-- El sistema DEBE permitir importar datos del sistema Excel actual, incluyendo 
-  un mínimo de 15,000 registros de usuarios y 25,000 materiales bibliográficos.
-
-- La migración de datos NO puede causar interrupción del servicio de la biblioteca 
-  por más de 4 horas.
+- El sistema DEBE permitir importar datos históricos de usuarios, subsidios y registros de consumo provenientes de hojas de cálculo y archivos CSV.
+- La migración de datos NO PUEDE interrumpir el servicio del restaurante por más de cuatro horas.
 
 **Restricciones de Capacitación:**
 
-- La capacitación del personal DEBE completarse en máximo 16 horas totales 
-  (2 días de 8 horas).
-
-- Los materiales de capacitación DEBEN estar en español.
+- La capacitación del personal operativo DEBE completarse en un máximo de 16 horas (dos jornadas de ocho horas).
+- Los materiales de capacitación DEBEN estar en español y adaptados a los perfiles técnicos del personal.
 
 **Restricciones Presupuestarias:**
 
-- El presupuesto total del proyecto NO puede exceder $25,000 USD.
-
-- NO se puede contratar más personal; el trabajo debe realizarse con el equipo 
-  disponible.
+- El presupuesto total del proyecto NO PUEDE superar los $25,000 USD o su equivalente en pesos colombianos.
+- NO SE PUEDE ampliar el equipo de trabajo; el desarrollo debe realizarse con el personal asignado institucionalmente.
 
 NOTA IMPORTANTE:
 Sea específico. NO escriba "el sistema debe ser rápido" (eso es un requisito de 
@@ -954,27 +928,83 @@ EJEMPLO ACADÉMICO:
 
 **Suposiciones:**
 
-1. **Conexiòn a internet**: Se asume que la universidad cuenta con conectividad a internet para que los usuarios puedan acceder e el sistema.
+1. **Conectividad**: Se asume que la biblioteca cuenta con conexión a Internet 
+  estable y continua durante el horario de operación. Si la conexión falla, 
+  algunas funcionalidades no estarán disponibles.
 
-2. **Dispositivos**: Se asume que los usuarios poseeen disptivos moviles para la identificaciòn y visualizaciòn del menù digital.
+2. **Hardware**: Se asume que las computadoras de las estaciones de trabajo de 
+  bibliotecarios cumplen con los requisitos mínimos: procesador dual-core 2GHz, 
+  4GB RAM, navegador web actualizado.
 
-3. **Colaboraciòn**: Se asume que cada personal que hace parte del restaurante atualiza cada detalle de los procesos fundamentales que estructuran el sistema.
+3. **Conocimientos del Personal**: Se asume que el personal de biblioteca tiene 
+  conocimientos básicos de informática (uso de navegador web, mouse, teclado) 
+  y que recibirá capacitación específica sobre BiblioTech antes del lanzamiento.
 
-4. **Proceso de menù digital**: Se asume que el inventario de alimentos este sendo actualizado por parte del persona encargado de cocina.
+4. **Proceso de Negocio**: Se asume que los procesos bibliotecarios actuales 
+  (políticas de préstamo, cálculo de multas, categorización de materiales) 
+  continuarán siendo válidos en el sistema digitalizado.
 
-5. **Organizaiòn**: Se asume que en la entrega de alimentos, todo se encuentre en el inventario registrado en el sistema.
+5. **Volumen de Datos Inicial**: Se asume que el catálogo inicial contiene 
+  aproximadamente 25,000 materiales bibliográficos y 15,000 usuarios registrados, 
+  con un crecimiento anual estimado del 10%.
+
+6. **Usuarios Finales**: Se asume que los usuarios de la biblioteca que accedan 
+  al catálogo en línea tienen conocimientos básicos de navegación web y acceso 
+  a un dispositivo con navegador (computadora, tablet, smartphone).
+
+7. **Datos de Migración**: Se asume que los datos en Excel del sistema actual 
+  están razonablemente limpios y estructurados, y que cualquier inconsistencia 
+  será resuelta antes de la migración.
+
+8. **Apoyo Institucional**: Se asume que la dirección de la biblioteca y la 
+  municipalidad proporcionarán el apoyo necesario para la adopción del sistema, 
+  incluyendo tiempo para capacitación del personal.
+
+9. **Mantenimiento**: Se asume que la municipalidad proporcionará soporte técnico 
+  continuo para el servidor y la infraestructura de red.
 
 **Dependencias:**
 
-1. **Implementaiòn tecnològica**: Integraciò de sistemas de identitifaciòn como lo es el carnet, analizando el rol del usuario.
+1. **Sistema Municipal de Identificación (SMI)**: El módulo de registro de usuarios 
+  DEPENDE de la disponibilidad y correcto funcionamiento de la API del SMI para 
+  validar identidad de ciudadanos. Si la API no está disponible, el registro de 
+  nuevos usuarios se verá afectado.
 
-2. **Capacitaciòn**: Capacitar a los usuarios para uso del sistema de manera correcta
+2. **Servicio de Correo Electrónico**: El módulo de notificaciones DEPENDE del 
+  servidor SMTP institucional (mail.municipalidad.gob). Si el servicio de correo 
+  falla, las notificaciones automáticas no se enviarán.
 
-3. **Infraestructura**: Dispositivos moviles con conexiòn a internet para e ingreso a la plataforma
+3. **Proveedor de Hosting**: El sistema DEPENDE de la infraestructura de servidores 
+  de la municipalidad. Cualquier mantenimiento, actualización o problema en esta 
+  infraestructura afectará la disponibilidad de BiblioTech.
 
-4. **Normas**: El sistema debe umpplir con las normas e indicaciones brindadas por parte del resturante y de la instituciòn.
+4. **Código de Barras**: El sistema DEPENDE del estándar ISBN (International Standard 
+  Book Number) para identificación de libros. Materiales sin ISBN requerirán 
+  códigos alternativos generados internamente.
 
-5. **Contabilidad**: El sistema depende del presupuesto que se tiene previsto, teniendo en cuenta el mantenimiento y actualizaciones.
+5. **Navegadores Web**: El sistema DEPENDE de que los navegadores web mantengan 
+  compatibilidad con los estándares HTML5, CSS3 y JavaScript ES6. Cambios 
+  significativos en navegadores podrían requerir actualizaciones del sistema.
+
+6. **Base de Datos PostgreSQL**: El sistema DEPENDE de PostgreSQL y sus 
+  actualizaciones de seguridad. Migraciones a nuevas versiones mayores de 
+  PostgreSQL requerirán pruebas exhaustivas.
+
+7. **Lectores de Código de Barras**: El sistema DEPENDE de los lectores de código 
+  de barras Zebra DS2208. Si se reemplazan por otro modelo, puede requerirse 
+  adaptación del sistema.
+
+8. **Proveedor de Carnes de Biblioteca**: La funcionalidad de escaneado de carnets 
+  DEPENDE de que el proveedor de carnets imprima códigos de barras legibles según 
+  el estándar Code 39 o similar.
+
+9. **Equipo de Desarrollo**: El cronograma del proyecto DEPENDE de la disponibilidad 
+  continua del equipo de desarrollo asignado. Cambios en el equipo podrían afectar 
+  plazos de entrega.
+
+10. **Aprobaciones de la Municipalidad**: Ciertas decisiones de diseño y configuración 
+  DEPENDEN de aprobaciones del departamento de sistemas de la municipalidad, lo 
+  que podría introducir retrasos si las aprobaciones se demoran.
 
 **Impacto de Cambios:**
 
@@ -1002,21 +1032,17 @@ exhaustivo al documentar suposiciones y dependencias.
 
 <!-- 
 OBJETIVO DE ESTA SUBSECCIÓN:
-Documentar funcionalidades y mejoras que NO estarán en la versión actual del 
-sistema, pero que se han identificado como valiosas para futuras versiones.
+Documentar las funcionalidades y mejoras que no serán incluidas en la versión inicial del sistema de gestión del Restaurante Universitario UniCafé, pero que se consideran valiosas para futuras versiones orientadas a ampliar su alcance, eficiencia y sostenibilidad.
 
 IMPORTANCIA:
-- Gestiona expectativas de stakeholders (deja claro qué NO estará en esta versión)
-- Proporciona una hoja de ruta de evolución del producto
-- Ayuda en la planificación arquitectónica (diseñar pensando en extensibilidad)
-- Documenta ideas valiosas que surgieron pero están fuera del alcance actual
+Permite definir qué funciones no estarán en la versión inicial, orientar la evolución futura del sistema y conservar ideas útiles para próximas versiones.
 
 CATEGORÍAS SUGERIDAS:
-1. Funcionalidades nuevas
-2. Integraciones adicionales
-3. Mejoras de rendimiento
-4. Mejoras de usabilidad
-5. Soporte de nuevas plataformas
+1. Funcionalidades nuevas: incorporación de módulos avanzados para análisis nutricional, control de proveedores y evaluación de impacto alimentario.
+2. Integraciones adicionales: conexión con sistemas financieros, plataformas móviles y aplicaciones institucionales de bienestar universitario.
+3. Mejoras de rendimiento: optimización del procesamiento de datos, tiempos de respuesta y capacidad para manejar mayor volumen de usuarios.
+4. Mejoras de usabilidad: diseño de interfaces más intuitivas y accesibles para personal operativo y comensales.
+5. Soporte de nuevas plataformas: compatibilidad con dispositivos móviles, terminales de autoservicio y sistemas de pago electrónico.
 
 FORMATO:
 Liste de manera concisa. NO desarrolle requisitos completos aquí.
@@ -1031,69 +1057,45 @@ EJEMPLO ACADÉMICO:
 
 **Versión 2.0 (Estimada para 12 meses después del lanzamiento):**
 
-1. **Aplicación Móvil Nativa**: Desarrollo de aplicaciones nativas para iOS y 
-  Android que permitan a los usuarios acceder al catálogo, renovar préstamos, 
-  y recibir notificaciones push.
+1. **Aplicación Móvil Nativa**: desarrollo de una app para Android e iOS que permita a los usuarios consultar menús, registrar consumos y recibir notificaciones personalizadas.
 
-2. **Sistema de Recomendaciones**: Implementar un sistema de recomendaciones 
-  inteligente que sugiera materiales basándose en el historial de préstamos 
-  y preferencias del usuario (similar a Amazon o Netflix).
+2. **Sistema de Recomendaciones**:permitir a los comensales reservar su porción o menú con antelación para reducir desperdicios.
 
-3. **Biblioteca Digital**: Incorporar módulo para gestión y préstamo de libros 
-  electrónicos (e-books) y audiolibros, con integración de DRM (Digital Rights 
-  Management).
+3. **Biblioteca Digital**: análisis automático del valor nutricional de los menús ofrecidos y recomendaciones personalizadas.
 
-4. **Sistema de Comentarios y Reseñas**: Permitir a los usuarios calificar 
-  materiales y escribir reseñas, creando una comunidad alrededor de la biblioteca.
+4. **Sistema de Comentarios y Reseñas**: asignación de puntos o beneficios por hábitos alimentarios saludables o consumo responsable.
 
-5. **Integración con Redes Sociales**: Permitir a usuarios compartir sus lecturas 
-  y listas de deseos en redes sociales (Facebook, Twitter, Instagram).
+5. **Integración con Redes Sociales**: visualización del historial de consumo, subsidios utilizados y estadísticas personales.
 
 **Versión 2.5 (Estimada para 18 meses):**
 
-6. **Préstamo Interbibliotecario**: Integración con otras bibliotecas municipales 
-  para permitir préstamos de materiales entre bibliotecas de la red.
+6. **Préstamo Interbibliotecario**: módulo para gestión de compras, cotizaciones y trazabilidad de productos desde su origen.
 
-7. **Sistema de Eventos**: Módulo para gestión y difusión de eventos de la 
-  biblioteca (clubs de lectura, presentaciones de libros, talleres).
+7. **Sistema de Eventos**: tablero ejecutivo con indicadores predictivos de demanda, desperdicio y eficiencia del subsidio.
 
-8. **Analítica Avanzada**: Dashboard ejecutivo con análisis predictivo de demanda, 
-  recomendaciones de adquisiciones basadas en IA, y análisis de tendencias.
+8. **Analítica Avanzada**: recopilación y análisis de opiniones de los comensales para ajustar menús y servicios.
 
-9. **Portal del Autor**: Permitir a autores locales publicar información sobre 
-  sus obras, calendario de presentaciones, y conectar con lectores.
+9. **Portal del Autor**: registro y reporte del impacto ambiental del consumo (huella alimentaria, emisiones, residuos).
 
-10. **Accesibilidad Mejorada**: Soporte completo para lectores de pantalla, modo 
-  alto contraste, tamaños de fuente ajustables, y soporte para materiales en 
-  Braille.
+10. **Accesibilidad Mejorada**: notificaciones automáticas sobre lotes o productos con riesgo sanitario o vencimiento próximo.
 
 **Integraciones Futuras:**
 
-11. **Sistema de Pago en Línea**: Integración con pasarelas de pago (PayPal, 
-  tarjetas de crédito) para pago de multas y cuotas de membresía en línea.
+11. **Sistema de Pago en Línea**: integración con pasarelas de pago institucionales y billeteras digitales para compras fuera del subsidio.
 
-12. **API Pública**: Exposición de API REST pública (con autenticación) para que 
-  desarrolladores externos puedan crear aplicaciones que consuman datos de la 
-  biblioteca.
+12. **API Pública**: exposición de una API REST para interoperar con otros sistemas universitarios (bienestar, finanzas, registro académico).
 
-13. **Integración con Servicios Editoriales**: Conexión con bases de datos de 
-  editoriales para obtener automáticamente metadatos, portadas, y reseñas de 
-  nuevos libros.
+13. **Integración con Servicios Editoriales**: conexión con Moodle o sistemas de bienestar estudiantil para gestión unificada de beneficios.
 
 **Mejoras Tecnológicas Consideradas:**
 
-14. **Modo Offline**: Permitir operaciones básicas de préstamo/devolución en modo 
-  offline cuando no hay conexión a Internet, con sincronización automática 
-  posterior.
+14. **Modo Offline**: permitir operaciones básicas de control de acceso y registro de consumo sin conexión, con sincronización posterior.
 
-15. **Reconocimiento por Voz**: Búsqueda de materiales mediante comandos de voz 
-  (integración con Alexa, Google Assistant).
+15. **Reconocimiento por Voz**: autenticación biométrica de usuarios para agilizar el ingreso y reducir fraudes.
 
-16. **Chatbot de Atención**: Asistente virtual con IA que responda preguntas 
-  frecuentes de usuarios 24/7.
+16. **Chatbot de Atención**: asistente virtual que brinde información sobre menús, horarios y subsidios.
 
-17. **Realidad Aumentada**: Aplicación AR que ayude a usuarios a localizar 
-  físicamente materiales en los estantes de la biblioteca.
+17. **Realidad Aumentada**: recomendaciones automáticas de menús basadas en consumo, nutrición y preferencias.
 
 **Nota Importante:**
 Estos requisitos futuros son tentativos y están sujetos a disponibilidad de 
@@ -1101,22 +1103,21 @@ presupuesto, cambios en prioridades del negocio, y evolución tecnológica. No
 constituyen compromisos contractuales.
 
 CONSIDERACIÓN ARQUITECTÓNICA:
-Aunque estas funcionalidades no se implementarán en la versión 1.0, la arquitectura 
-del sistema debe diseñarse de manera que permita su incorporación futura sin 
-requerir rediseños mayores. Esto implica:
-- Diseño modular
-- API bien definidas entre componentes
-- Base de datos extensible
-- Separación clara de responsabilidades
+Aunque estas funcionalidades no se implementarán en la versión 1.0, la arquitectura del sistema del Restaurante debe diseñarse de forma modular y escalable, permitiendo su incorporación futura sin requerir rediseños significativos. Esto implica:
+
+- Diseño modular: cada módulo (usuarios, inventario, menús, consumo, reportes) debe ser independiente y extensible.
+- APIs bien definidas: los componentes del sistema deben comunicarse mediante interfaces estandarizadas y documentadas.
+- Base de datos extensible: el modelo de datos debe admitir nuevas entidades y relaciones sin afectar la estructura principal.
+- Separación clara de responsabilidades: garantizar que la lógica de negocio, la presentación y el acceso a datos estén desacoplados para facilitar mantenimiento y evolución.
 
 PROCESO DE PRIORIZACIÓN:
-Los requisitos futuros serán revisados y priorizados en cada ciclo de planificación, 
-basándose en:
-- Feedback de usuarios reales después del lanzamiento
-- Cambios en el contexto de negocio
-- Disponibilidad de recursos
-- ROI (Retorno de Inversión) estimado
-- Dependencias técnicas
+Los requisitos y funcionalidades futuras del sistema serán evaluados y priorizados en cada ciclo de planificación, considerando los siguientes criterios:
+
+- Retroalimentación de los usuarios y personal operativo tras la implementación inicial.
+- Cambios en el contexto institucional o en las políticas de bienestar universitario.
+- Disponibilidad de recursos técnicos y financieros para el desarrollo.
+- Retorno de inversión (ROI) esperado en términos de eficiencia, reducción de desperdicio o mejora del servicio.
+- Dependencias técnicas con otros módulos o sistemas institucionales.
 -->
 
 [Complete esta subsección con los requisitos futuros identificados para su proyecto]
@@ -1201,41 +1202,31 @@ DEFINICIÓN:
 Los requisitos funcionales describen QUÉ debe HACER el sistema. Son las funciones,
 servicios, o comportamientos que el sistema debe proporcionar.
 
+DIFERENCIA CON CASOS DE USO:
+- REQUISITO FUNCIONAL: "El sistema debe validar las credenciales del usuario"
+- CASO DE USO: Describe el flujo completo de interacción (incluyendo flujos 
+  alternativos, excepciones, pre y post condiciones)
+
+Los casos de uso PUEDEN incluirse en los Apéndices (4.1), pero aquí se documentan
+los requisitos funcionales de forma atómica.
+
+FORMATO ESTÁNDAR PARA CADA REQUISITO:
+
+Use una tabla como la siguiente para cada requisito funcional:
+-->
+
 **PLANTILLA DE REQUISITO FUNCIONAL:**
 
 | **ID** | RF-XXX |
 |--------|--------|
-| **Nombre** | [Gestion de filas] |
-| **Descripción** | [El sistema permite una buena organizaciòn en el proceso de realizar fila, implementando tunos digitales por medio de la identificaciòn ] |
-| **Prioridad** | Esencial |
-| **Estabilidad** | Alta  |
-| **Fuente** | [Cliente] |
+| **Nombre** | [Nombre corto descriptivo del requisito] |
+| **Descripción** | [Descripción detallada y precisa de la funcionalidad. Use lenguaje claro, sin ambigüedades. Especifique inputs, procesamiento, y outputs esperados.] |
+| **Prioridad** | Esencial / Deseable / Opcional |
+| **Estabilidad** | Alta / Media / Baja |
+| **Fuente** | [Stakeholder que solicitó este requisito] |
 | **Criterios de Aceptación** | 1. [Criterio medible 1]<br>2. [Criterio medible 2]<br>3. [Criterio medible 3] |
-| **Dependencias** | Ninguna |
-| **Comentarios** | [El sistema por medio de una pantalla se debe mostrar el turno actual de la fila] |
-
-
-| **ID** | RF-XXX |
-|--------|--------|
-| **Nombre** | [Manejo de subsidios] |
-| **Descripción** | [El sistema debe permiter el registro de los usuarios, ademàs de verificar el subsidio segùn el rol del cliente] |
-| **Prioridad** | Esencial |
-| **Estabilidad** | Alta  |
-| **Fuente** | [Cliente ] |
-| **Criterios de Aceptación** | 1. [Criterio medible 1]<br>2. [Criterio medible 2]<br>3. [Criterio medible 3] |
-| **Dependencias** | Ninguna |
-| **Comentarios** | [El sistema por debe estar reportando el proceso de tema de los subsidios] |
-
-| **ID** | RF-XXX |
-|--------|--------|
-| **Nombre** | [Reducciòn de desperdicio de alimentos] |
-| **Descripción** | [El sistema debe permiter registrra el inventario de alimentos que se encuentran disponibles, identificand el consumo diario para conocer el desperdicio que existe] |
-| **Prioridad** | Esencial |
-| **Estabilidad** | Alta  |
-| **Fuente** | [Personal del restaurante] |
-| **Criterios de Aceptación** | 1. [Criterio medible 1]<br>2. [Criterio medible 2]<br>3. [Criterio medible 3] |
-| **Dependencias** | Ninguna |
-| **Comentarios** | [El sistema debe generar reportes en el consumo de alimentos del restaurante] |
+| **Dependencias** | [RF-XXX, RF-YYY] o "Ninguna" |
+| **Comentarios** | [Cualquier información adicional relevante] |
 
 <!-- 
 EXPLICACIÓN DE CADA CAMPO:
