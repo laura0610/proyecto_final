@@ -476,7 +476,9 @@ Es una aplicación la cual su objetivo es mejorar la atención de los clientes, 
 
 - Interfaz con los usuarios (Visualización del menú, turnos y registro)
 - Interfaz con los empleados (Gestión del menú, inventario y subsidios)
-- Interfaz con el sistema de subsidios (Comprobar el subsidio dependiendo del rol del cliente) 
+- Interfaz con el sistema de subsidios (Comprobar el subsidio dependiendo del rol del cliente)
+- <img width="714" height="419" alt="image" src="https://github.com/user-attachments/assets/c0fe149e-9cb6-4757-a392-cf93fa6d5890" />
+
 
 ### 2.2 Funciones del producto
 
