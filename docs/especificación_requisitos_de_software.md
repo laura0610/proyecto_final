@@ -805,13 +805,13 @@ EJEMPLO ACADÉMICO DETALLADO:
   - Protección de datos personales
 -->
 
-[Complete esta subsección describiendo todos los tipos de usuarios de su sistema]
+
 
 <br>
 
 ### 2.4 Restricciones
 
-<!-- 
+ 
 OBJETIVO DE ESTA SUBSECCIÓN:
 Documentar las limitaciones técnicas, operativas y normativas que puedan afectar el diseño e implementación del sistema del Restaurante Universitario UniCafé.
 
@@ -887,15 +887,15 @@ NOTA IMPORTANTE:
 Sea específico. NO escriba "el sistema debe ser rápido" (eso es un requisito de 
 rendimiento). Escriba restricciones concretas como "el sistema debe ejecutarse 
 en servidores con máximo 8GB de RAM".
--->
 
-[Complete esta subsección documentando todas las restricciones aplicables a su proyecto]
+
+
 
 <br>
 
 ### 2.5 Suposiciones y dependencias
 
-<!-- 
+
 OBJETIVO DE ESTA SUBSECCIÓN:
 Documentar todas las suposiciones (assumptions) hechas durante la especificación
 de requisitos y las dependencias externas que podrían afectar el desarrollo o
@@ -1021,15 +1021,15 @@ NOTA PARA ESTUDIANTES:
 En proyectos reales, este análisis es crítico para la gestión de riesgos. Una 
 suposición incorrecta puede hacer que todo un proyecto fracase. Sea honesto y 
 exhaustivo al documentar suposiciones y dependencias.
--->
 
-[Complete esta subsección documentando todas las suposiciones y dependencias de su proyecto]
+
+
 
 <br>
 
 ### 2.6 Requisitos futuros
 
-<!-- 
+
 OBJETIVO DE ESTA SUBSECCIÓN:
 Documentar las funcionalidades y mejoras que no serán incluidas en la versión inicial del sistema de gestión del Restaurante Universitario UniCafé, pero que se consideran valiosas para futuras versiones orientadas a ampliar su alcance, eficiencia y sostenibilidad.
 
@@ -1117,9 +1117,8 @@ Los requisitos y funcionalidades futuras del sistema serán evaluados y prioriza
 - Disponibilidad de recursos técnicos y financieros para el desarrollo.
 - Retorno de inversión (ROI) esperado en términos de eficiencia, reducción de desperdicio o mejora del servicio.
 - Dependencias técnicas con otros módulos o sistemas institucionales.
--->
 
-[Complete esta subsección con los requisitos futuros identificados para su proyecto]
+
 
 <br>
 
