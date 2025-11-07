@@ -472,25 +472,86 @@ medibles y verificables van en la Sección 3.
 
 ### 2.1 Perspectiva del producto
 
-Es un nuevo sistema para el restaurante, el cual cumpla con los requisitos que generen, implementando un sistema nuevo, el cual permita una buena organización en los procesos que realiza esta empresa, ayudando a resolver de manera eficaz los problemas que afronta en los procesos.
+<!-- 
+OBJETIVO DE ESTA SUBSECCIÓN:
+Situar el sistema en su contexto más amplio: ¿Es un sistema completamente nuevo?
+¿Reemplaza un sistema existente? ¿Es parte de un sistema mayor? ¿Cómo se relaciona
+con otros sistemas?
 
-1. Es una aplicación la cvual su objetivo es mejorar la atención de los clientes, manejar el consumo y el desperdicio de alimentos y el tema de los subsidios. Esto, mediante un sistema tecnológico eficaz y adecuado, que esta compuesto por turnos en la fila de manera digital, organización de subsidios y manejo de inventario.
-2. 2. Interfaz con los usuarios (Visualización del menú, turnos y registro)
-   3. Interfaz con los empleados (Gestión de menú, inventario y subsidios)
-   4. Interfaz con el sistema de subsidios (Comprobar el subsidio dependiendo del rol del cliente) 
+QUÉ DEBE INCLUIR:
 
+1. CONTEXTO DEL SISTEMA:
+  - Si es un nuevo producto independiente, reemplazo de sistema legacy, o 
+    componente de un sistema mayor
+  - Relación con otros sistemas existentes en la organización
+
+2. INTERFACES DEL SISTEMA (Vista general):
+  - Interfaces con sistemas externos (NO detalles, solo mención)
+  - Interfaces con hardware específico
+  - Interfaces con otros componentes de software
+
+3. DIAGRAMA DE CONTEXTO (Altamente recomendado):
+  Un diagrama simple que muestre:
+  - El sistema como caja central
+  - Actores externos (usuarios, otros sistemas)
+  - Flujos de información principales
+
+EJEMPLO ACADÉMICO:
+
+**Contexto del Sistema:**
+
+BiblioTech es un sistema de información nuevo que reemplazará completamente el 
+actual sistema manual de gestión bibliotecaria basado en tarjetas físicas y hojas 
+de cálculo Excel. El sistema operará como una aplicación independiente pero 
+compartirá cierta información con sistemas externos de la biblioteca.
+
+BiblioTech NO es un subsistema de un sistema mayor, sino una aplicación completa 
+y autónoma diseñada específicamente para las necesidades de la Biblioteca Municipal 
+Central. Sin embargo, el sistema deberá integrarse con:
+
+- Sistema de identificación de usuarios de la municipalidad (para validar datos 
+  de ciudadanos)
+- Sistema de correo electrónico institucional (para envío de notificaciones)
+- Sistema de respaldo centralizado de la municipalidad (para backup automático)
+
+**Relación con Sistemas Existentes:**
+
+El sistema actual que BiblioTech reemplazará consiste en:
+- Tarjetas físicas de catálogo ordenadas alfabéticamente
+- Planillas Excel para control de préstamos
+- Registro manual en libros de visitas
+- Archivo físico de fichas de usuarios
+
+BiblioTech digitalizará completamente estos procesos, manteniendo la misma 
+lógica de negocio pero eliminando el manejo de papel.
+
+**Interfaces del Sistema (Visión General):**
+
+BiblioTech interactuará con:
+1. **Usuarios del Sistema**: Bibliotecarios, administradores, y usuarios finales 
+  (vía interfaz web)
+2. **Sistemas Externos**: 
+  - API del Sistema de Identificación Municipal
+  - Servidor SMTP para envío de correos
+  - Servidor de respaldo institucional
+3. **Hardware**: 
+  - Lectores de código de barras (para escaneo de libros y carnets)
+  - Impresoras térmicas (para comprobantes de préstamo)
+  - Servidor de base de datos
+
+[Incluya aquí un diagrama de contexto del sistema]
 
 ESTRUCTURA DEL DIAGRAMA DE CONTEXTO:
 Puede usar notación simple con cajas y flechas. Ejemplo en texto:
 
 ┌─────────────────┐
 │    Usuarios     │────┐
-| del restaurante │    │
+│   de Internet   │    │
 └─────────────────┘    │
                        ▼
-┌──────────────────────┐   ┌────────────────────────┐   ┌──────────────────┐
-│ Empleados de UNICAFÉ │─▶│ Sistema Digital UNICAFÉ │─▶│ Sistema Registro│
-└──────────────────────┘   └────────────────────────┘   └──────────────────┘
+┌────────────────┐   ┌──────────────────────┐   ┌──────────────────┐
+│ Bibliotecarios │─▶│   Sistema BiblioTech │─▶│  Sistema Email   │
+└────────────────┘   └──────────────────────┘   └──────────────────┘
                               │
                               ▼
                      ┌──────────────────┐
@@ -2606,7 +2667,7 @@ ESTRUCTURA DE UN CASO DE USO:
 |-------|-------------|
 | *ID* | CU-001 |
 | *Nombre* | mirar menu|
-| *Actores* | chef (primario), Usuario del restaurante (secundario) |
+| *Actores* | Usuario del restaurante (primario) |
 | *Descripción* | permite al usuario visualizar el menú semanal, para posteriormente realizar tareas como hacer pedido|
 | *Precondiciones* | 1. Al usuario se le válido el carnet<br>2. El usuario NO está suspendido ni tiene multas |
 | *Postcondiciones* | 1. La página debe redirigir al usuario a una nueva pagina<br>2. la nueva página debe contener el menú semanal  |
@@ -2820,8 +2881,9 @@ Flujo Alternativo 1b: Login con Facebook
 
 **Diagrama de Casos de Uso:**
 
-<img width="713" height="363" alt="image" src="https://github.com/user-attachments/assets/bb298519-469e-4d36-98c8-abc98dcffc83" />
+[Incluya aquí un diagrama UML de casos de uso mostrando actores y casos de uso principales con sus relaciones (include, extend). Puede crearlo con herramientas como draw.io, Lucidchart, PlantUML, o incluso a mano]
 
+[![](https://img.plantuml.biz/plantuml/svg/XLRDRXit4BxlKqpbGoNLSlNdfZ5i8vOi9G7iE92iNA8W62qfYGv5RhXSftLH8ASyG1-Xjvxx27cJF4c7vEvg_LC75cmjvnlEp3VVpFfPQj7OR2EZ7nXV2iNXxENp5vU3iza8TaQzSNTyMbh2ORVpz9TnBqe_29MWmGqa67_05P_QtoK7msEBQYLv1P2bFCQKmnyHm830AwCpnOPQQhEDvcpQC6x2UNvqOep-L3dvCuf-XB4sDsY02GeMYw__Ah0wQLdTMcXhjKl886pu5Jbfiq8bRZ30hhcn8aOP4Pvy8CVxYwpGAegii5J4SDPgjpi7CE4eXGlrsdpzXuZQQ60Spj5o8r3ELVqDDwc_-Tn5GuRGWejR8IyIApRqnB3XKZywEeAJs6h3KwXBP1h4pSTCSCDqmnaZT4Qe3SH22cs9DoDq3J250UoCnwFshzq2CaipPwICvceBzzYPmmw7Ws4HSYfIopVe8vGTWbfn7DmlURokaUU--_7Dea_m7sBgIy_eJsA4YaM24kenLzReLfebH8WseG8e-rrhDWEJpUPStUTohYfa-ho7CmB3pc1mEXeFgl6dsO9kr2beIdI5LB-WXpeb8ZF66yJwgKWJdOhRVRwRpnjAWL4A8uhFGloSnMtuzvs7FFprIYo4UsJ_a_dxRjLrmbT4hxbTSVtIe4enb-t9yELfe-BVg_e_vuexxw7U94OlK5dkuvQtLHpx3v05Eeb9qwvF_3VB5NCqJRaR3f8TWaJgA8bXZNTf6gbhGO5VQIkMHAFFTQuIxN8nXbS3xpkbZPyEomHkgv-dj1o88rYwaML8a9naQBrT2yQuUiVq9zMg49X_UnZGAm6zXm7zi28S3nCkqJ50enPh1PYFdIjs02qZLclREiurTm12aNWmci6Uj-oL1bowWI7AY807hZuyp5LuV0prhJmnzQhaANKiZ0ci7HM02xpIFeaGO6_lkEJae7hRFNltE_RUT-pzE_PRjRXk7Hu6eVXASl5igwYAfMX-URc_kl2UgxUn5mgLx2R6iVUk24Ug8lNeSYs6XYXQNk291xqCLrAdcysnpAveqb7Ih2cqubgd1yqccRvz_XlwU53CBoWDN56RhLVtjoz_-INUQUVGVOAUPv92_ppDqeIhiBOBNBV0FN6uVB3TdIoVUzgM1RRN3bgdtGzCnzc6kfiJoBX5APtEYGTmDKMXCicNsyByXddjrrc_jK_V9sEwjVkuJpVtWIU5G-TnXrxXqEaK7ctu2IQlw5kx_xXll_Jj5hwzYeVaA_VWs-MxD59B_J7ZeJEqN4ai0bVqwgVNSCRT4eJfnTa5hHook-SijXaT2kNRIhp9_9sx5xWz8sx2mizVEa9TwvWwwmv8Z0HPtbS6r4FFT_EUxlfbuGfl0Esribcqb-WZmP9WDM5S-7ZxXjiDOdA8eWoVbgivb1v5p-Yt-wVfFm00)](https://editor.plantuml.com/uml/XLRDRXit4BxlKqpbGoNLSlNdfZ5i8vOi9G7iE92iNA8W62qfYGv5RhXSftLH8ASyG1-Xjvxx27cJF4c7vEvg_LC75cmjvnlEp3VVpFfPQj7OR2EZ7nXV2iNXxENp5vU3iza8TaQzSNTyMbh2ORVpz9TnBqe_29MWmGqa67_05P_QtoK7msEBQYLv1P2bFCQKmnyHm830AwCpnOPQQhEDvcpQC6x2UNvqOep-L3dvCuf-XB4sDsY02GeMYw__Ah0wQLdTMcXhjKl886pu5Jbfiq8bRZ30hhcn8aOP4Pvy8CVxYwpGAegii5J4SDPgjpi7CE4eXGlrsdpzXuZQQ60Spj5o8r3ELVqDDwc_-Tn5GuRGWejR8IyIApRqnB3XKZywEeAJs6h3KwXBP1h4pSTCSCDqmnaZT4Qe3SH22cs9DoDq3J250UoCnwFshzq2CaipPwICvceBzzYPmmw7Ws4HSYfIopVe8vGTWbfn7DmlURokaUU--_7Dea_m7sBgIy_eJsA4YaM24kenLzReLfebH8WseG8e-rrhDWEJpUPStUTohYfa-ho7CmB3pc1mEXeFgl6dsO9kr2beIdI5LB-WXpeb8ZF66yJwgKWJdOhRVRwRpnjAWL4A8uhFGloSnMtuzvs7FFprIYo4UsJ_a_dxRjLrmbT4hxbTSVtIe4enb-t9yELfe-BVg_e_vuexxw7U94OlK5dkuvQtLHpx3v05Eeb9qwvF_3VB5NCqJRaR3f8TWaJgA8bXZNTf6gbhGO5VQIkMHAFFTQuIxN8nXbS3xpkbZPyEomHkgv-dj1o88rYwaML8a9naQBrT2yQuUiVq9zMg49X_UnZGAm6zXm7zi28S3nCkqJ50enPh1PYFdIjs02qZLclREiurTm12aNWmci6Uj-oL1bowWI7AY807hZuyp5LuV0prhJmnzQhaANKiZ0ci7HM02xpIFeaGO6_lkEJae7hRFNltE_RUT-pzE_PRjRXk7Hu6eVXASl5igwYAfMX-URc_kl2UgxUn5mgLx2R6iVUk24Ug8lNeSYs6XYXQNk291xqCLrAdcysnpAveqb7Ih2cqubgd1yqccRvz_XlwU53CBoWDN56RhLVtjoz_-INUQUVGVOAUPv92_ppDqeIhiBOBNBV0FN6uVB3TdIoVUzgM1RRN3bgdtGzCnzc6kfiJoBX5APtEYGTmDKMXCicNsyByXddjrrc_jK_V9sEwjVkuJpVtWIU5G-TnXrxXqEaK7ctu2IQlw5kx_xXll_Jj5hwzYeVaA_VWs-MxD59B_J7ZeJEqN4ai0bVqwgVNSCRT4eJfnTa5hHook-SijXaT2kNRIhp9_9sx5xWz8sx2mizVEa9TwvWwwmv8Z0HPtbS6r4FFT_EUxlfbuGfl0Esribcqb-WZmP9WDM5S-7ZxXjiDOdA8eWoVbgivb1v5p-Yt-wVfFm00)
 
 [Complete con los casos de uso principales de su sistema. No necesita documentar TODOS los casos de uso con el mismo nivel de detalle. Enfóquese en los más críticos o complejos.]
 
