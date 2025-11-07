@@ -514,19 +514,6 @@ Trazabilidad del consumo: registra y analiza el consumo diario para reducir desp
 
 Comunicación y reportes: facilita la interacción con los comensales y genera informes de gestión y desempeño.
 
-EJEMPLO ACADÉMICO:
-
-
-
-OPCIONAL: Puede incluir un diagrama de alto nivel mostrando los módulos principales
-y cómo se relacionan.
-
-NOTA IMPORTANTE:
-Esta NO es la especificación detallada de requisitos funcionales. Cada función
-aquí mencionada se expandirá con requisitos específicos, medibles y verificables
-en la Sección 3.1.
--->
-
 El Sistema UniCafe proporcionará las siguientes funciones principales:
 
 **Gestión de Usuarios y Acceso:**
@@ -574,150 +561,33 @@ Administración del Sistema:
 <br>
 
 ### 2.3 Características de los usuarios
+Comensales: Son aquellos que realizan pedidos en el restaurante
+- Manejan dispositivos tecnologicos para realizar pedidos
+- Quieren que exista más ordén en las filas
+- Desean saber el valor del subsidio
+- Quieren conocer el menú que hay
+- Requieren notificaciones como de ofertas y descuentos del restaurante
 
-<!-- 
-OBJETIVO DE ESTA SUBSECCIÓN:
-Identificar y describir los diferentes tipos de usuarios que interactuarán con
-el sistema, incluyendo sus características relevantes que puedan afectar el diseño.
+Administrativos y empleados: Son las personas la cuales están encargadas del brindar el servicio
+- Conocen los procesos que realizan en el restuarnte
+- Necesitan acceso en el sistema, incluyendo los informes
+- Buscan el buen manjeo de los alimentos
+- Desean obtener soluciones para manejar el consumo y desperdicio de alimentos
+- Deben tener permitido la modificación e los procesos, como los turnos de fila, inventario, entre otros.
 
-IMPORTANCIA:
-Comprender a los usuarios es fundamental para:
-- Diseñar interfaces apropiadas para cada perfil
-- Establecer niveles adecuados de seguridad y permisos
-- Determinar requisitos de capacitación
-- Identificar necesidades de usabilidad y accesibilidad
+Técnico en sistemas: Persona o personas encargada de mantener y supervisar el buen funcionamiento del sistema
+- Tiene conocimiento acerca del sistema, como lo es la base de datos
+- Deben tener permitido el acceso a las actualizaciones
+- Garantizan la seguridad de los datos 
 
-QUÉ INCLUIR PARA CADA TIPO DE USUARIO:
-
-1. Tipo de usuario (nombre del rol)
-2. Descripción general del rol
-3. Responsabilidades en el sistema
-4. Nivel de experiencia técnica
-5. Nivel de experiencia con el dominio del negocio
-6. Frecuencia de uso del sistema
-7. Funciones principales que utilizará
-8. Necesidades especiales (accesibilidad, idioma, etc.)
-
-FORMATO SUGERIDO:
-Use una tabla o subsecciones para cada tipo de usuario.
-
-TABLA RECOMENDADA:
--->
-
-| Característica | Usuario Tipo 1: [Nombre del Rol] | Usuario Tipo 2: [Nombre del Rol] | Usuario Tipo 3: [Nombre del Rol] |
-|----------------|-----------------------------------|-----------------------------------|-----------------------------------|
-| **Descripción** | [Breve descripción del rol] | [Breve descripción del rol] | [Breve descripción del rol] |
-| **Responsabilidades** | [Qué hace en el sistema] | [Qué hace en el sistema] | [Qué hace en el sistema] |
-| **Nivel Técnico** | Alto/Medio/Bajo | Alto/Medio/Bajo | Alto/Medio/Bajo |
-| **Experiencia en el Dominio** | Experto/Intermedio/Novato | Experto/Intermedio/Novato | Experto/Intermedio/Novato |
-| **Frecuencia de Uso** | Diaria/Semanal/Ocasional | Diaria/Semanal/Ocasional | Diaria/Semanal/Ocasional |
-| **Funciones Principales** | [Listar 3-5 funciones] | [Listar 3-5 funciones] | [Listar 3-5 funciones] |
-| **Necesidades Especiales** | [Si aplica] | [Si aplica] | [Si aplica] |
-
-<!-- 
-EJEMPLO ACADÉMICO DETALLADO:
-
-**TIPO DE USUARIO 1: Bibliotecario**
-
-- **Descripción**: Personal de la biblioteca encargado de las operaciones diarias 
-  de préstamos, devoluciones, y atención al público.
-
-- **Responsabilidades en el Sistema**:
-  - Registrar préstamos y devoluciones de materiales
-  - Registrar nuevos usuarios
-  - Procesar pagos de multas
-  - Atender consultas sobre disponibilidad de materiales
-  - Generar reportes básicos de operaciones diarias
-
-- **Nivel de Experiencia Técnica**: Medio. Tienen conocimientos básicos de informática 
-  pero no son expertos técnicos. Pueden manejar aplicaciones de oficina estándar.
-
-- **Experiencia en el Dominio**: Alta. Conocen perfectamente los procesos bibliotecarios 
-  y la organización de materiales. Promedio de 5+ años trabajando en bibliotecas.
-
-- **Frecuencia de Uso**: Diaria, durante toda su jornada laboral (8 horas al día).
-
-- **Funciones Principales que Utilizará**:
-  - Módulo de préstamos y devoluciones
-  - Módulo de gestión de usuarios
-  - Búsqueda de materiales en catálogo
-  - Gestión de reservas
-  - Procesamiento de multas
-
-- **Necesidades Especiales**: 
-  - Interfaz intuitiva que permita realizar operaciones rápidamente
-  - Capacidad de trabajo con interrupciones frecuentes (atención al público)
-  - Acceso rápido a ayuda contextual
-
-**TIPO DE USUARIO 2: Administrador del Sistema**
-
-- **Descripción**: Personal técnico o jefe de biblioteca responsable de la configuración 
-  y administración del sistema BiblioTech.
-
-- **Responsabilidades en el Sistema**:
-  - Configurar parámetros operativos del sistema
-  - Gestionar cuentas de bibliotecarios
-  - Mantener el catálogo (altas, bajas, modificaciones masivas)
-  - Generar reportes estadísticos y ejecutivos
-  - Realizar respaldos del sistema
-  - Auditar operaciones del sistema
-
-- **Nivel de Experiencia Técnica**: Alto. Tiene conocimientos avanzados de sistemas 
-  informáticos y administración de aplicaciones.
-
-- **Experiencia en el Dominio**: Alta. Comprende todos los procesos bibliotecarios 
-  desde una perspectiva gerencial.
-
-- **Frecuencia de Uso**: Semanal para tareas de configuración y mantenimiento, 
-  diaria para consulta de reportes y auditoría.
-
-- **Funciones Principales que Utilizará**:
-  - Panel de administración completo
-  - Configuración de parámetros del sistema
-  - Gestión de usuarios del sistema
-  - Generación de reportes avanzados
-  - Herramientas de respaldo y restauración
-  - Visualización de logs de auditoría
-
-- **Necesidades Especiales**: 
-  - Acceso a funciones avanzadas no disponibles para usuarios regulares
-  - Herramientas de diagnóstico y monitoreo del sistema
-  - Capacidad de realizar operaciones masivas sobre datos
-
-**TIPO DE USUARIO 3: Usuario/Cliente de la Biblioteca**
-
-- **Descripción**: Ciudadanos registrados en la biblioteca que consultan el catálogo 
-  y su información personal desde Internet.
-
-- **Responsabilidades en el Sistema**:
-  - Buscar materiales disponibles en la biblioteca
-  - Consultar sus préstamos activos
-  - Renovar préstamos (si es posible)
-  - Hacer reservas de materiales
-  - Consultar su historial de préstamos
-
-- **Nivel de Experiencia Técnica**: Bajo a Medio. Varían desde personas con 
-  conocimientos básicos hasta usuarios experimentados de Internet.
-
-- **Experiencia en el Dominio**: Baja a Media. Algunos son usuarios frecuentes 
-  de bibliotecas, otros son nuevos usuarios.
-
-- **Frecuencia de Uso**: Variable. Desde uso semanal hasta esporádico (mensual 
-  o menos frecuente).
-
-- **Funciones Principales que Utilizará**:
-  - Búsqueda de materiales en catálogo
-  - Consulta de cuenta personal
-  - Sistema de reservas
-  - Renovación de préstamos
-
-- **Necesidades Especiales**: 
-  - Interfaz muy intuitiva, sin necesidad de capacitación
-  - Accesibilidad (cumplimiento WCAG 2.1 nivel AA)
-  - Disponible 24/7 desde cualquier dispositivo (responsive)
-  - Multiidioma (si aplica)
-  - Protección de datos personales
--->
+| Característica            | Usuario Tipo 1: [Comensales]                                                                                                                                                                                                                          | Usuario Tipo 2: [Administrativos y empleados]                                                                                                                                                                                                                                                                                            | Usuario Tipo 3: [Técnico en sistemas                                                                                                                                |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Descripción               | Son aquellos que realizan pedidos en el restaurante                                                                                                                                                                                                   | Son las personas las cuales están encargadas del brindar el servicio                                                                                                                                                                                                                                                                     | Persona o personas encargadas de mantener y supervisar el buen funcionamiento del sistema.                                                                          |
+| Responsabilidades         | - Manejan dispositivos tecnológicos para realizar pedidos - Quieren que exista más orden en las filas - Desean saber el valor del descuento - Quieren conocer el menú que hay - Requieren notificaciones como de ofertas y descuentos del restaurante | - Conocen los procesos que realizan en el restaurante - Necesitan acceso al sistema, incluyendo los informes - Buscan el buen manejo de los alimentos - Desean obtener soluciones para manejar el consumo y el desperdicio de alimentos - Deben tener permitido modificar los procesos, como los turnos de fila, inventario, entre otros | - Tiene conocimiento acerca del sistema, como lo es la base de datos - Deben tener permitido el acceso a las actualizaciones - Garantizan la seguridad de los datos |
+| Nivel Técnico             | Medio                                                                                                                                                                                                                                                 | Medio                                                                                                                                                                                                                                                                                                                                    | Alto                                                                                                                                                                |
+| Experiencia en el Dominio | Novato                                                                                                                                                                                                                                                | Experto                                                                                                                                                                                                                                                                                                                                  | Experto                                                                                                                                                             |
+| Frecuencia de uso         | Diaria                                                                                                                                                                                                                                                | Diaria                                                                                                                                                                                                                                                                                                                                   | Diaria                                                                                                                                                              |
+| Funciones Principales     | - Consulta el menú del día en línea - Consulta el valor del almuerzo según su categoría. - Ingresa al comedor con carnet/identificación - Recibe servicio en línea buffet                                                                             | - Valida la identidad del comensal (escaneo de carnet) - Identifica la categoría (estudiante becado, regular, docente, externo) - Cobra según la tarifa correspondiente3. - Controla porciones servidas (estandarización) - Calcula las cantidades de producción según la demanda histórica                                              | - Realizar el mantenimiento del sistema - Actualiza según las indicaciones - Verifica que todo esta funcionando de manera adecuada                                  |
 
 
 
