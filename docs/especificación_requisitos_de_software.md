@@ -568,7 +568,7 @@ como Draw.io, notación mermaid, Lucidchart, o similar.
 
 ### 2.2 Funciones del producto
 
-<!-- 
+ <!--
 OBJETIVO DE ESTA SUBSECCIÓN:
 El sistema esta encargado de administrar las cuentas del restaurante, gestionar el inventario, con el fin de ayudar a minimizar perdidas y gestionar de manera eficaz el presupuesto. 
 
@@ -601,6 +601,17 @@ Trazabilidad del consumo: registra y analiza el consumo diario para reducir desp
 Comunicación y reportes: facilita la interacción con los comensales y genera informes de gestión y desempeño.
 
 EJEMPLO ACADÉMICO:
+
+
+
+OPCIONAL: Puede incluir un diagrama de alto nivel mostrando los módulos principales
+y cómo se relacionan.
+
+NOTA IMPORTANTE:
+Esta NO es la especificación detallada de requisitos funcionales. Cada función
+aquí mencionada se expandirá con requisitos específicos, medibles y verificables
+en la Sección 3.1.
+-->
 
 El Sistema UniCafe proporcionará las siguientes funciones principales:
 
@@ -646,18 +657,6 @@ Administración del Sistema:
 - Configuración de parámetros del sistema (horarios, subsidios, umbrales de stock, etc.).
 - Copia de seguridad, restauración y auditoría de operaciones.
 - Integración con sistemas institucionales de datos y control.
-
-OPCIONAL: Puede incluir un diagrama de alto nivel mostrando los módulos principales
-y cómo se relacionan.
-
-NOTA IMPORTANTE:
-Esta NO es la especificación detallada de requisitos funcionales. Cada función
-aquí mencionada se expandirá con requisitos específicos, medibles y verificables
-en la Sección 3.1.
--->
-
-[Complete esta subsección describiendo las funciones principales de su sistema, agrupadas lógicamente]
-
 <br>
 
 ### 2.3 Características de los usuarios
