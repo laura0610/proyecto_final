@@ -472,99 +472,11 @@ medibles y verificables van en la Sección 3.
 
 ### 2.1 Perspectiva del producto
 
-<!-- 
-OBJETIVO DE ESTA SUBSECCIÓN:
-Situar el sistema en su contexto más amplio: ¿Es un sistema completamente nuevo?
-¿Reemplaza un sistema existente? ¿Es parte de un sistema mayor? ¿Cómo se relaciona
-con otros sistemas?
+Es una aplicación la cual su objetivo es mejorar la atención de los clientes, manejar el consumo y desperdicio de los alimentos y el tema de los subsidios. Estto, mediante un sistema tecnológico eficaz y adecuado, que esta compuesto por turnos en la fila de manera digital, organización del subsidio y manejo de inventario.
 
-QUÉ DEBE INCLUIR:
-
-1. CONTEXTO DEL SISTEMA:
-  - Si es un nuevo producto independiente, reemplazo de sistema legacy, o 
-    componente de un sistema mayor
-  - Relación con otros sistemas existentes en la organización
-
-2. INTERFACES DEL SISTEMA (Vista general):
-  - Interfaces con sistemas externos (NO detalles, solo mención)
-  - Interfaces con hardware específico
-  - Interfaces con otros componentes de software
-
-3. DIAGRAMA DE CONTEXTO (Altamente recomendado):
-  Un diagrama simple que muestre:
-  - El sistema como caja central
-  - Actores externos (usuarios, otros sistemas)
-  - Flujos de información principales
-
-EJEMPLO ACADÉMICO:
-
-**Contexto del Sistema:**
-
-BiblioTech es un sistema de información nuevo que reemplazará completamente el 
-actual sistema manual de gestión bibliotecaria basado en tarjetas físicas y hojas 
-de cálculo Excel. El sistema operará como una aplicación independiente pero 
-compartirá cierta información con sistemas externos de la biblioteca.
-
-BiblioTech NO es un subsistema de un sistema mayor, sino una aplicación completa 
-y autónoma diseñada específicamente para las necesidades de la Biblioteca Municipal 
-Central. Sin embargo, el sistema deberá integrarse con:
-
-- Sistema de identificación de usuarios de la municipalidad (para validar datos 
-  de ciudadanos)
-- Sistema de correo electrónico institucional (para envío de notificaciones)
-- Sistema de respaldo centralizado de la municipalidad (para backup automático)
-
-**Relación con Sistemas Existentes:**
-
-El sistema actual que BiblioTech reemplazará consiste en:
-- Tarjetas físicas de catálogo ordenadas alfabéticamente
-- Planillas Excel para control de préstamos
-- Registro manual en libros de visitas
-- Archivo físico de fichas de usuarios
-
-BiblioTech digitalizará completamente estos procesos, manteniendo la misma 
-lógica de negocio pero eliminando el manejo de papel.
-
-**Interfaces del Sistema (Visión General):**
-
-BiblioTech interactuará con:
-1. **Usuarios del Sistema**: Bibliotecarios, administradores, y usuarios finales 
-  (vía interfaz web)
-2. **Sistemas Externos**: 
-  - API del Sistema de Identificación Municipal
-  - Servidor SMTP para envío de correos
-  - Servidor de respaldo institucional
-3. **Hardware**: 
-  - Lectores de código de barras (para escaneo de libros y carnets)
-  - Impresoras térmicas (para comprobantes de préstamo)
-  - Servidor de base de datos
-
-[Incluya aquí un diagrama de contexto del sistema]
-
-ESTRUCTURA DEL DIAGRAMA DE CONTEXTO:
-Puede usar notación simple con cajas y flechas. Ejemplo en texto:
-
-┌─────────────────┐
-│    Usuarios     │────┐
-│   de Internet   │    │
-└─────────────────┘    │
-                       ▼
-┌────────────────┐   ┌──────────────────────┐   ┌──────────────────┐
-│ Bibliotecarios │─▶│   Sistema BiblioTech │─▶│  Sistema Email   │
-└────────────────┘   └──────────────────────┘   └──────────────────┘
-                              │
-                              ▼
-                     ┌──────────────────┐
-                     │  Base de Datos   │
-                     └──────────────────┘
-
-NOTA: En su documento final, reemplace esto con un diagrama formal usando herramientas
-como Draw.io, notación mermaid, Lucidchart, o similar.
--->
-
-[Complete esta subsección describiendo la perspectiva de su producto e incluya un diagrama de contexto]
-
-<br>
+- Interfaz con los usuarios (Visualización del menú, turnos y registro)
+- Interfaz con los empleados (Gestión del menú, inventario y subsidios)
+- Interfaz con el sistema de subsidios (Comprobar el subsidio dependiendo del rol del cliente) 
 
 ### 2.2 Funciones del producto
 
