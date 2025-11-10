@@ -979,91 +979,102 @@ interfaces, etc.) que es la más común en proyectos académicos.
 ═══════════════════════════════════════════════════════════════════════════════
 REQUISITOS FUNCIONALES
 ═══════════════════════════════════════════════════════════════════════════════
+**Usuarios**
+| ID                      | RFU-01                                                                                                                                         |
+|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nombre                  | Visualizacion del menu                                                                                                                         |
+| Descripcion             | El sistema debe permitir al usuario ver el menu diario, donde se evidencia el nombre, los ingredientes y el precio.                            |
+| Prioridad               | Esencial                                                                                                                                       |
+| Estabilidad             | Alta                                                                                                                                           |
+| Fuente                  | Cliente/Comensal                                                                                                                               |
+| Criterios de Aceptacion | 1. El cliente puede ver el menu, sin inciar sesion 2. Los datos coinciden con la informacion de la base de datos 3. El menu se va actualizando |
+| Dependencias            | RFE-02 (Gestion del menu)                                                                                                                      |
+| Comentarios             | Se puede acceder en dispositivos moviles                                                                                                       |
 
-DEFINICIÓN:
-Los requisitos funcionales describen QUÉ debe HACER el sistema. Son las funciones,
-servicios, o comportamientos que el sistema debe proporcionar.
+| ID                      | RFU-05                                                                                                                           |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| Nombre                  | Generacion de turno digital                                                                                                      |
+| Descripcion             | El sistema debe generar un turno digital para cada usuario que va a comprar, asignando un numero secuencial.                     |
+| Prioridad               | Esencial                                                                                                                         |
+| Estabilidad             | Alta                                                                                                                             |
+| Fuente                  | Empleado atenciòn al cliente                                                                                                     |
+| Criterios de Aceptacion | 1. Se asigna un turno para usuario 2. El turno aparece en la lista 3. El tiempo estimado se actualiza segùn el flujo de atenciòn |
+| Dependencias            | Ninguna                                                                                                                          |
+| Comentarios             | Puede integrarse con notificaciones push                                                                                         |
 
-DIFERENCIA CON CASOS DE USO:
-- REQUISITO FUNCIONAL: "El sistema debe validar las credenciales del usuario"
-- CASO DE USO: Describe el flujo completo de interacción (incluyendo flujos 
-  alternativos, excepciones, pre y post condiciones)
+| ID                      | RFU-08                                                                                                                            |
+|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| Nombre                  | Consultar subsidio                                                                                                                |
+| Descripcion             | El sistema debe mostrar al cliente el subsidio con el que cuenta antes de realizar la compra                                      |
+| Prioridad               | Esencial                                                                                                                          |
+| Estabilidad             | Media                                                                                                                             |
+| Fuente                  | Cliente/Administraciòn                                                                                                            |
+| Criterios de Aceptacion | 1. La informaciòn del subsidio se obtiene correctamente 2. Se actualiza automaticamente 3. El usuario recibe la informacion clara |
+| Dependencias            | RFS-02 (El usaurio debe verificar)                                                                                                |
+| Comentarios             | Importante para evitar errores                                                                                                    |
 
-Los casos de uso PUEDEN incluirse en los Apéndices (4.1), pero aquí se documentan
-los requisitos funcionales de forma atómica.
 
-FORMATO ESTÁNDAR PARA CADA REQUISITO:
+**Empleados**
+| ID                      | RFE-02                                                                                                                                                                 |
+|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nombre                  | Gestion del menu                                                                                                                                                       |
+| Descripcion             | El sistema debe permitir al empleado editar los platos del menù                                                                                                        |
+| Prioridad               | Esencial                                                                                                                                                               |
+| Estabilidad             | Alta                                                                                                                                                                   |
+| Fuente                  | Administrador/Chef                                                                                                                                                     |
+| Criterios de Aceptacion | 1. Se pueden crear y editar platos correctamente 2. Los cambios se reflejan en la interfaz del usuario 3. Se evita que la eliminaciòn de platos que se estan comprando |
+| Dependencias            | RFU-01 (Ver el menu)                                                                                                                                                   |
+| Comentarios             | Puede incluir imagenes del plato                                                                                                                                       |
 
-Use una tabla como la siguiente para cada requisito funcional:
--->
+| ID                      | RFE-07                                                                                                                                                               |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nombre                  | Gestion del inventario                                                                                                                                               |
+| Descripcion             | El sistema debe permitir a los empleados registrar entradas y salidas de los ingredientes y platos, actualizando el inventario.                                      |
+| Prioridad               | Esencial                                                                                                                                                             |
+| Estabilidad             | Alta                                                                                                                                                                 |
+| Fuente                  | Chef/Adminsitraciòn                                                                                                                                                  |
+| Criterios de Aceptacion | 1. Las salidas del inevntario se registran con cada venta que se realiza 2. El stock no debe ser negativo 3. El sistema genera alarmar cunado ese bajo el inventario |
+| Dependencias            | RFU-04 (Registro de ventas)                                                                                                                                          |
+| Comentarios             | Mediante reportes automaticos                                                                                                                                        |
 
-**PLANTILLA DE REQUISITO FUNCIONAL:**
 
-| **ID** | RF-XXX |
-|--------|--------|
-| **Nombre** | [Nombre corto descriptivo del requisito] |
-| **Descripción** | [Descripción detallada y precisa de la funcionalidad. Use lenguaje claro, sin ambigüedades. Especifique inputs, procesamiento, y outputs esperados.] |
-| **Prioridad** | Esencial / Deseable / Opcional |
-| **Estabilidad** | Alta / Media / Baja |
-| **Fuente** | [Stakeholder que solicitó este requisito] |
-| **Criterios de Aceptación** | 1. [Criterio medible 1]<br>2. [Criterio medible 2]<br>3. [Criterio medible 3] |
-| **Dependencias** | [RF-XXX, RF-YYY] o "Ninguna" |
-| **Comentarios** | [Cualquier información adicional relevante] |
+**Subsidios**
+| ID                      | RFE-02                                                                                                                                                           |
+|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nombre                  | Verificacion del cliente                                                                                                                                         |
+| Descripcion             | El sistema debe verificar el rol del cliente mediante la base de datos, para saber el valor del subsidio                                                         |
+| Prioridad               | Esencial                                                                                                                                                         |
+| Estabilidad             | Media                                                                                                                                                            |
+| Fuente                  | Empleado                                                                                                                                                         |
+| Criterios de Aceptacion | 1. El rol se valida mediante el inicio de sesion 2. Se aplican las reglas de subsidio  3. Los usuarios que no forman parte de la institucion no reciben subsidio |
+| Dependencias            | RFU-08 (Consultar subsidios)                                                                                                                                     |
+| Comentarios             | Mantener buena conexion con la base de datos                                                                                                                     |
 
-<!-- 
-EXPLICACIÓN DE CADA CAMPO:
 
-- **ID**: Identificador único (RF-001, RF-002, etc.). Use números secuenciales.
-  CRÍTICO para trazabilidad.
+| ID                      | RFE-06                                                                                                                                 |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| Nombre                  | Reporte de subsidios                                                                                                                   |
+| Descripcion             | El sistema debe generar reportes periodicos del uso de subsidios                                                                       |
+| Prioridad               | Deseable                                                                                                                               |
+| Estabilidad             | Alta                                                                                                                                   |
+| Fuente                  | Contador                                                                                                                               |
+| Criterios de Aceptacion | 1. Se puede exportar el reporte en PDF 2. El valor coincide con los registros del sistema 3. Los datos se agrupan por usuario y fecha  |
+| Dependencias            | RFU-04 (Registro de subsidios)                                                                                                         |
+| Comentarios             | Control de presupuestos de la empresa                                                                                                  |
 
-- **Nombre**: Título breve que identifique el requisito (max 8-10 palabras)
+**Requisitos trasversales**
+| ID                      | RFE-06                                                                                                                                                             |
+|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nombre                  | Sincronizaciòn de datos                                                                                                                                            |
+| Descripcion             | El sistema debe sincronizar en tiempo real la informacion del cliente, el subsidio y el empleado                                                                   |
+| Prioridad               | Esencial                                                                                                                                                           |
+| Estabilidad             | Alta                                                                                                                                                               |
+| Fuente                  | Tecnico                                                                                                                                                            |
+| Criterios de Aceptacion | 1. Las actualizacion se deden evidenciar en el menor tiempo posible 2. No existen datos que este desincronizados 3. Las actualizaciones se registran en el sistema |
+| Dependencias            | Todas las interfaces                                                                                                                                               |
+| Comentarios             | Requiere conectividad estable                                                                                                                                      |
 
-- **Descripción**: La especificación completa del requisito. DEBE ser:
-  - Clara: Lenguaje preciso, sin términos vagos
-  - Completa: Incluir toda la información necesaria
-  - Verificable: Debe poder probarse
-  - Consistente: No contradecir otros requisitos
-  
-  Template para descripciones:
-  "El sistema DEBE [acción] [entidad/datos] [bajo qué condiciones] 
-  [con qué restricciones/validaciones]"
 
-- **Prioridad**:
-  - Esencial: El sistema no puede funcionar sin esto. DEBE estar en v1.0
-  - Deseable: Importante pero el sistema puede funcionar sin ello temporalmente
-  - Opcional: Nice to have, puede postergarse a versiones futuras
-
-- **Estabilidad**: Qué tan probable es que este requisito cambie:
-  - Alta: Requisito bien entendido, poco probable que cambie
-  - Media: Puede requerir refinamiento
-  - Baja: Requisito exploratorio, probablemente cambiará
-
-- **Fuente**: Quién solicitó este requisito (cliente, usuario, regulación, etc.)
-
-- **Criterios de Aceptación**: Condiciones específicas, medibles y verificables 
-  que deben cumplirse para que el requisito se considere implementado correctamente.
-  Estos serán la base de los casos de prueba.
-
-- **Dependencias**: Otros requisitos que deben implementarse antes o junto con 
-  este requisito.
-
-- **Comentarios**: Cualquier aclaración adicional, nota técnica, o contexto
-
-ORGANIZACIÓN DE REQUISITOS FUNCIONALES:
-
-Agrupe los requisitos por módulos funcionales del sistema. Por ejemplo:
-
-3.1.1 Módulo de Autenticación y Autorización
-3.1.2 Módulo de Gestión de Usuarios
-3.1.3 Módulo de Gestión de Catálogo
-3.1.4 Módulo de Préstamos y Devoluciones
-3.1.5 Módulo de Reportes
-... etc
-
-Dentro de cada módulo, liste todos los requisitos funcionales relacionados.
-
-EJEMPLOS ACADÉMICOS COMPLETOS:
--->
 
 #### 3.1.1 Módulo de Autenticación y Seguridad
 
