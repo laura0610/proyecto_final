@@ -482,7 +482,7 @@ Es una aplicación la cual su objetivo es mejorar la atención de los clientes, 
 
 ### 2.2 Funciones del producto
 
- <!--
+
 OBJETIVO DE ESTA SUBSECCIÓN:
 El sistema esta encargado de administrar las cuentas del restaurante, gestionar el inventario, con el fin de ayudar a minimizar perdidas y gestionar de manera eficaz el presupuesto. 
 
@@ -558,7 +558,7 @@ Administración del Sistema:
 - Configuración de parámetros del sistema (horarios, subsidios, umbrales de stock, etc.).
 - Copia de seguridad, restauración y auditoría de operaciones.
 - Integración con sistemas institucionales de datos y control.
-<br>
+  
 
 ### 2.3 Características de los usuarios
 Comensales: Son aquellos que realizan pedidos en el restaurante
