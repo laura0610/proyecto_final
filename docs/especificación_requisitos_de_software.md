@@ -975,7 +975,7 @@ interfaces, etc.) que es la más común en proyectos académicos.
 
 ### 3.1 Requisitos funcionales
 
-<!-- 
+
 ═══════════════════════════════════════════════════════════════════════════════
 REQUISITOS FUNCIONALES
 ═══════════════════════════════════════════════════════════════════════════════
