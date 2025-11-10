@@ -1014,6 +1014,29 @@ REQUISITOS FUNCIONALES
 | Comentarios             | Importante para evitar errores                                                                                                    |
 
 
+| ID                      | RFU-10                                                                                                                                                  |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nombre                  | Reservade comidad                                                                                                                                       |
+| Descripcion             | El sistema permite al cliente reservar platos con anticipacion dentro de un determinado horario                                                         |
+| Prioridad               | Deseable                                                                                                                                                |
+| Estabilidad             | Media                                                                                                                                                   |
+| Fuente                  | Cliente/Empleado                                                                                                                                        |
+| Criterios de Aceptacion | 1. Lareserva se registra correctamente 2. El sistema bloquea cuando hay cupos agotados 3. S emite una confirmacion medinate algun medio de comunicacion |
+| Dependencias            | RFU-01 (Visualizacion del menu), REF-07 (Inventario)                                                                                                    |
+| Comentarios             | Reducir filas                                                                                                                                           |
+
+| ID                      | RFU-15                                                                                                                               |
+|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| Nombre                  | Notificaciones personalizadas                                                                                                        |
+| Descripcion             | El sistema debe enviar notificaciones automaticas al usuario a cerca de su turno y subsidio                                          |
+| Prioridad               | Deseable                                                                                                                             |
+| Estabilidad             | Alta                                                                                                                                 |
+| Fuente                  | Usuario/Administrador                                                                                                                |
+| Criterios de Aceptacion | 1.  El usuario recibe notificaciones oportunas 2. Los mensajes contienen informacion correcta 3. Puede desactivar las notificaciones |
+| Dependencias            | RFU-05(Turnos), RFS-10(Subsidio agotado)                                                                                             |
+| Comentarios             | Puede usarse para promociones                                                                                                        |
+
+
 **Empleados**
 | ID                      | RFE-02                                                                                                                                                                 |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -1036,6 +1059,29 @@ REQUISITOS FUNCIONALES
 | Criterios de Aceptacion | 1. Las salidas del inevntario se registran con cada venta que se realiza 2. El stock no debe ser negativo 3. El sistema genera alarmar cunado ese bajo el inventario |
 | Dependencias            | RFU-04 (Registro de ventas)                                                                                                                                          |
 | Comentarios             | Mediante reportes automaticos                                                                                                                                        |
+
+
+| ID                      | RFE-10                                                                                                                                             |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nombre                  | Control de desperdicios                                                                                                                            |
+| Descripcion             | El sistema debe permitir registrar alimentos desperdiciados, que incluya el motivo, cantidad y precio                                              |
+| Prioridad               | Deseable                                                                                                                                           |
+| Estabilidad             | Alta                                                                                                                                               |
+| Fuente                  | Chef/Empleado                                                                                                                                      |
+| Criterios de Aceptacion | 1. Se pueden registrar desperdicios con motivo 2. Los datos se reflejan en los reportes de consumo 3. Permite filtrar por fecha o tipo de alimento |
+| Dependencias            | RFE-07(Inventario)                                                                                                                                 |
+| Comentarios             | Util para auditorias y manejo de costos                                                                                                            |
+
+| ID                      | RFE-16                                                                                                                                         |
+|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nombre                  | Cierre de caja                                                                                                                                 |
+| Descripcion             | El sistema permitira genere un resumen del total de ventas, subsidios y medios de pago obtenidos                                               |
+| Prioridad               | Esencial                                                                                                                                       |
+| Estabilidad             | Alta                                                                                                                                           |
+| Fuente                  | Administrador                                                                                                                                  |
+| Criterios de Aceptacion | 1. Los totales coinciden con las transacciones registradas 2. Se puede exportar en PDF 3. Se guarda una copia de seguridad en la base de datos |
+| Dependencias            | RFE-04 (Registro de consumo), RFS-04 (Subsidios)                                                                                               |
+| Comentarios             | Mejora la trasparencia y control contable                                                                                                      |
 
 
 **Subsidios**
@@ -1074,6 +1120,16 @@ REQUISITOS FUNCIONALES
 | Dependencias            | Todas las interfaces                                                                                                                                               |
 | Comentarios             | Requiere conectividad estable                                                                                                                                      |
 
+| ID                      | RFS-07                                                                                                      |
+|-------------------------|-------------------------------------------------------------------------------------------------------------|
+| Nombre                  | Validacion del limite del subsidio                                                                          |
+| Descripcion             | El sistema controlara que el usuario no exceda el numero de subsidios permitidos                            |
+| Prioridad               | Esencial                                                                                                    |
+| Estabilidad             | Alta                                                                                                        |
+| Fuente                  | Contador                                                                                                    |
+| Criterios de Aceptacion | 1. No se puede superar el limite del subsidio 2. El sistema muestra un aviso 3. Los datos reflejan reportes |
+| Dependencias            | RFS-02(Verificacion rol)                                                                                    |
+| Comentarios             | Optimiza recursos                                                                                           |
 
 
 #### 3.1.1 Módulo de Autenticación y Seguridad
