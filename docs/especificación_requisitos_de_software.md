@@ -482,7 +482,7 @@ Es una aplicación la cual su objetivo es mejorar la atención de los clientes, 
 
 ### 2.2 Funciones del producto
 
-
+ <!--
 OBJETIVO DE ESTA SUBSECCIÓN:
 El sistema esta encargado de administrar las cuentas del restaurante, gestionar el inventario, con el fin de ayudar a minimizar perdidas y gestionar de manera eficaz el presupuesto. 
 
@@ -558,7 +558,7 @@ Administración del Sistema:
 - Configuración de parámetros del sistema (horarios, subsidios, umbrales de stock, etc.).
 - Copia de seguridad, restauración y auditoría de operaciones.
 - Integración con sistemas institucionales de datos y control.
-  
+<br>
 
 ### 2.3 Características de los usuarios
 Comensales: Son aquellos que realizan pedidos en el restaurante
@@ -2477,20 +2477,11 @@ proporcionando contexto y flujos de trabajo.
 
 **Lista de Casos de Uso del Sistema:**
 
-- **CU-001**: Realizar Préstamo de Material (documentado arriba)
-- 
-- **CU-002**: Realizar Devolución de Material
-- **CU-003**: Registrar Nuevo Usuario
-- **CU-004**: Buscar Material en Catálogo
-- **CU-005**: Crear Reserva de Material
-- **CU-006**: Renovar Préstamo
-- **CU-007**: Procesar Pago de Multa
-- **CU-008**: Generar Reporte de Materiales Más Prestados
-- **CU-009**: Configurar Parámetros del Sistema
-- **CU-010**: Realizar Respaldo de Datos
-- ... [continuar según necesidad]
-<br>
-
+- **CU-001**: Mirar menu
+- **CU-002**: Pagar cuenta
+- **CU-003**: Registrar carnet
+- **CU-004**: Hacer pedido
+- **CU-005**: Añadir menu semanal
 
 **CU-001: Resturante unicafe**
 
@@ -2507,7 +2498,8 @@ proporcionando contexto y flujos de trabajo.
 | *Flujos de Excepción* | *5a. Usuario suspendido o con multas vencidas*:<br>  5a1. El sistema muestra advertencia "Usuario suspendido" o "Usuario tiene multas vencidas por $[monto]"<br>  5a2. El sistema NO permite continuar con la venta<br>  5a3. Fin del caso de uso<br>  |
 | *Requisitos Relacionados* | CU-01 (visualizar menu)<br>CU-02 (Escanear QR)<br>CU-03 (consulta menú semanal) |
 <br>
-                                                                                                                        **CU-002: Pagar cuenta**
+
+**CU-003: Pagar cuenta**
 
 | Campo | Descripción |
 |-------|-------------|
@@ -2524,6 +2516,7 @@ a soporte"<br>  4a3. Si el usuario selecciona llamar, ir a (llamar a soporte)<br
 | **Flujos de Excepción** | **5a. Usuario suspendido o con multas vencidas**:<br>  5a1. El sistema muestra advertencia "Usuario suspendido" o "Usuario tiene multas vencidas por $[monto]"<br>  5a2. El sistema NO permite continuar con la venta<br>  5a3. Fin del caso de uso<br>  |
 | **Requisitos Relacionados** | CO-01 (pagar cuenta)<br>CO-02 (validar carnet)<br>CO-03 (aplicar descuento)<br>CO-04 (generar factura)|
 <br>
+
 **CU-003: Registrar carnet**
 
 | Campo | Descripción |
@@ -2555,7 +2548,7 @@ a soporte"<br>  4a3. Si el usuario selecciona llamar, ir a (llamar a soporte)<br
 | **Flujos de Excepción** | **5a.producto agotado**:<br>  5a1. El sistema muestra el mensaje "producto agotado" <br>  5a2. el sistema redirigira al usuario a la pesataña menu <br>  5a3. Fin del caso de uso<br>  |
 | **Requisitos Relacionados** | CU-01 (Hacer pedido)<br>CU-02 (Resive el servicio solicitado )<br>CU-03 (Evalua el servicio y el menu)<br>CU-04 (ingresar, identificado por el carnet)<br>CU-05 (Realiza el pago)<br>CU-06 (verificar menu y precio) |
 <br>
-w
+
 **CU-005: Añadir menu semanal**
 
 | Campo | Descripción |
