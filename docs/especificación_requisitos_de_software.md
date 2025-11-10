@@ -2491,26 +2491,6 @@ proporcionando contexto y flujos de trabajo.
 - ... [continuar según necesidad]
 <br>
 
-<!--
-ESTRUCTURA DE UN CASO DE USO:
-
-**Plantilla de Caso de Uso:**
-
-| Campo | Descripción |
-|-------|-------------|
-| **ID** | CU-001 |
-| **Nombre** | [Nombre descriptivo del caso de uso] |
-| **Actores** | [Quién interactúa: Usuario, Bibliotecario, Sistema externo, etc.] |
-| **Descripción** | [Breve descripción del objetivo del caso de uso] |
-| **Precondiciones** | [Estado que debe existir antes de ejecutar el caso de uso] |
-| **Postcondiciones** | [Estado después de ejecutar exitosamente el caso de uso] |
-| **Flujo Principal** | 1. [Paso 1]<br>2. [Paso 2]<br>3. [Paso 3]<br>... |
-| **Flujos Alternativos** | **2a**. Si [condición]:<br>  2a1. [Paso alternativo]<br>  2a2. [Volver al paso X] |
-| **Flujos de Excepción** | **3a**. Si [error]:<br>  3a1. [Manejo del error]<br>  3a2. [Fin del caso de uso o recuperación] |
-| **Requisitos Relacionados** | [RF-XXX, RF-YYY] |
-
-**Punto 6**
--->
 
 **CU-001: Resturante unicafe**
 
@@ -2527,208 +2507,70 @@ ESTRUCTURA DE UN CASO DE USO:
 | *Flujos de Excepción* | *5a. Usuario suspendido o con multas vencidas*:<br>  5a1. El sistema muestra advertencia "Usuario suspendido" o "Usuario tiene multas vencidas por $[monto]"<br>  5a2. El sistema NO permite continuar con la venta<br>  5a3. Fin del caso de uso<br>  |
 | *Requisitos Relacionados* | CU-01 (visualizar menu)<br>CU-02 (Escanear QR)<br>CU-03 (consulta menú semanal) |
 <br>
+                                                                                                                        **CU-002: Pagar cuenta**
 
-<!--
-sobre LOS SUBCASOS DE USO:
-
-Un **subcaso de uso** es un caso de uso que:
-1. **NO puede ejecutarse de forma independiente**
-2. **Siempre es invocado por otro caso de uso** (relación <<include>>)
-3. **Representa funcionalidad compartida** por múltiples casos de uso
-4. **Es un fragmento funcional** del sistema, no un proceso completo
-
-Documenta un subcaso de uso cuando:
-1. Es INCLUIDO (<<include>>) por 2+ casos de uso, Y
-2. Tiene complejidad suficiente que merece especificación separada
-
-**Ejemplos:**
-- Validar Credenciales de Usuario (usado en Login, Cambiar Contraseña, Desbloquear Cuenta)
-- Calcular Costo Total con Impuestos (usado en Ver Carrito, Generar Factura, Procesar Pago)
-- Verificar Disponibilidad de Inventario (usado en Agregar a Carrito, Crear Pedido, Reservar)
-
-
-NO documentes un subcaso cuando:
-- Es usado por un solo CU (documéntalo como parte del CU principal)
-- Es trivial (1-2 pasos simples)
-
-**Ejemplos de NO subcasos:**
-- Cerrar Sesión (trivial: 1 paso)
-- Guardar Log (técnico, no lógica de negocio)
-- Actualizar Timestamp (trivial)
-- Formatear Fecha para Mostrar (técnico)
-
-¿CÓMO DOCUMENTAR UN SUBCASO DE USO?
-
-opcion 1: **Plantilla de Subcaso de Uso:**
-
-| **Campo**                   | **Descripción**                                                                                                                      |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| **ID**                      | CU-XXX.Y (donde XXX es el CU padre y Y es el número de subcaso)                                                                      |
-| **Nombre**                  | [Nombre descriptivo del subcaso]                                                                                                     |
-| **Tipo**                    | Subcaso de uso (<> del caso padre)                                                                                                   |
-| **Usado por**               | CU-AAA, CU-BBB, CU-CCC (casos de uso que lo invocan)                                                                                 |
-| **Descripción**             | [Descripción del propósito del subcaso y su relación con el CU padre]                                                                |
-| **Precondiciones**          | [Estado que debe existir antes de ejecutar este subcaso]                                                                             |
-| **Postcondiciones**         | [Estado resultante después de ejecutar este subcaso]                                                                                 |
-| **Entradas**                | [Datos o parámetros que recibe del caso de uso padre]                                                                                |
-| **Salidas**                 | [Datos o resultados que devuelve al caso de uso padre]                                                                               |
-| **Flujo Principal**         | 1. [Paso 1]<br>2. [Paso 2]<br>3. [Paso 3]<br>...                                                                                     |
-| **Flujos Alternativos**     | **2a**. Si [condición]:<br>  2a1. [Paso alternativo]<br>  2a2. [Retornar al paso X del flujo principal]                              |
-| **Excepciones**             | **3a**. Si [error o evento inesperado]:<br>  3a1. [Acción de manejo o notificación]<br>  3a2. [Fin del subcaso o retorno controlado] |
-| **Reglas de Negocio**       | [RB-XXX, RB-YYY, u otras reglas que aplican]                                                                                         |
-| **Requisitos Relacionados** | [RF-XXX, RF-YYY]                                                                                                                     |
+| Campo | Descripción |
+|-------|-------------|
+| **ID** | CU-002 |
+| **Nombre** | pagar cuenta|
+| **Actores** | cajero (primario), Usuario del restaurante (secundario) |
+| **Descripción** | permite al carejo realizar el pago de los productos consumidos por el usuario|
+| **Precondiciones** | 1. se validan los productos pedidos por el usuario <br>2. se le escanea el carnet al usuario
+<br>3. se crea la factura <br>4. se le cobra lo correspondiente al usuario |
+| **Postcondiciones** | 1. el sistema debe tener registrado los productos pedidos por el usuario <br>2. el sistema debe hacer la suma de los precios de los productos vendidos<br>3. el sistema debe crear una factura <br>4. el sistema debe guardar una copia de la factura en la base de datos y imprimir una fisica
+| **Flujo Principal** | 1. se validan los productos pedidos por el usuario <br>2. se le escanea el carnet, para validar su rol y ańadirle su descuento correspondiente (si se puede) <br>3. se crea la factura <br>4. se imprime una copia de la factura <br>5.se le cobra lo correspondiente al usuario |
+| **Flujos Alternativos** | **4a. compra no registrada**:<br>  4a1. El sistema muestra mensaje "compra no registrada"<br>  4a2. El sistema ofrece opción "
+a soporte"<br>  4a3. Si el usuario selecciona llamar, ir a (llamar a soporte)<br>  4a4. Si el usuario cancela, volver al paso 2<br><br>**7a. error en la pagina**:<br>  7a1.  El sistema nuestra un mensaje "error"<br>  7a2. Si esto sucede, el sistema ofrece opción "reportar problema"<br>  7a3. un usuario de soporte será alertado <bro> 7a4. se soluciona el problema |
+| **Flujos de Excepción** | **5a. Usuario suspendido o con multas vencidas**:<br>  5a1. El sistema muestra advertencia "Usuario suspendido" o "Usuario tiene multas vencidas por $[monto]"<br>  5a2. El sistema NO permite continuar con la venta<br>  5a3. Fin del caso de uso<br>  |
+| **Requisitos Relacionados** | CO-01 (pagar cuenta)<br>CO-02 (validar carnet)<br>CO-03 (aplicar descuento)<br>CO-04 (generar factura)|
 <br>
--->
+**CU-003: Registrar carnet**
 
-| **Campo**                                | **Descripción**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **ID**                                   | **CU-VAL-001**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| **Nombre**                               | Validar Credenciales de Usuario                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Tipo**                                 | Subcaso de uso (<<include>>)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| **Usado por**                            | • CU-001: Login al Sistema<br>• CU-025: Cambiar Contraseña<br>• CU-030: Desbloquear Cuenta<br>• CU-045: Autorizar Operación Crítica                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| **Descripción**                          | Valida que las credenciales proporcionadas (usuario + contraseña) son correctas y que la cuenta está en condiciones de ser utilizada. Verifica contra la base de datos de usuarios, valida el hash de la contraseña y comprueba el estado de la cuenta. Este subcaso encapsula toda la lógica de autenticación para garantizar consistencia en todo el sistema.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Precondiciones**                       | 1. El sistema está conectado a la base de datos de usuarios.<br>2. Los datos de entrada (usuario y contraseña) no son nulos ni vacíos.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| **Postcondiciones (Éxito)**              | 1. Las credenciales son válidas.<br>2. Se registra intento exitoso en log de auditoría.<br>3. Se actualiza fecha/hora de último acceso del usuario.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| **Postcondiciones (Fallo)**              | 1. Las credenciales NO son válidas (usuario no existe o contraseña incorrecta).<br>2. Se registra intento fallido en log de auditoría.<br>3. Se incrementa contador de intentos fallidos.<br>4. Si contador alcanza 5 → Se bloquea cuenta temporalmente (30 min).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| **Entradas**                             | **nombre_usuario** *(String)*: Nombre de usuario o email (**Obligatorio**).<br>**contraseña** *(String)*: Contraseña en texto plano (**Obligatorio**).<br>**ip_origen** *(String)*: Dirección IP del cliente (Opcional, para auditoría).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| **Salidas**                              | **resultado** *(Boolean)*: TRUE si credenciales válidas, FALSE si inválidas.<br>**motivo_fallo** *(String)*: Si resultado=FALSE → “usuario_no_existe” / “contraseña_incorrecta” / “cuenta_bloqueada”.<br>**usuario_id** *(Integer)*: Si resultado=TRUE → ID del usuario autenticado.<br>**datos_usuario** *(Object)*: Si resultado=TRUE → Objeto con nombre, rol y permisos.                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| **Flujo Principal**                      | 1. Recibir parámetros de entrada (nombre_usuario, contraseña, ip_origen).<br>2. Buscar usuario en base de datos por nombre_usuario.<br>3. Si usuario no encontrado → Ir a Excepción 3a.<br>4. Verificar hash de contraseña:<br> • Obtener hash almacenado y salt.<br> • Calcular hash de contraseña proporcionada.<br> • Comparar hashes.<br>5. Si hashes no coinciden → Ir a Excepción 5a.<br>6. Verificar estado de cuenta:<br> • estado = “activo”<br> • intentos_fallidos < 5<br> • bloqueo_hasta IS NULL o < AHORA().<br>7. Si cuenta bloqueada o inactiva → Ir a Excepción 7a.<br>8. **Credenciales válidas:** Resetear intentos_fallidos = 0; actualizar fecha e IP último acceso.<br>9. Registrar en log de auditoría (“login_exitoso”).<br>10. Retornar resultado=TRUE, usuario_id, datos_usuario.<br>11. **Fin del Subcaso – Éxito.** |
-| **Flujos Alternativos**                  | **Ninguno** (todos los caminos no exitosos se manejan como excepciones).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| **Flujos de Excepción**                  | **3a – Usuario no encontrado:**<br>1. Registrar en log “intento_login_usuario_inexistente”.<br>2. No revelar si el usuario existe o no (seguridad).<br>3. Retornar resultado=FALSE, motivo_fallo="credenciales_invalidas".<br>4. **Fin – Fallo.**<br><br>**5a – Contraseña incorrecta:**<br>1. Incrementar intentos_fallidos.<br>2. Si >=5, bloquear cuenta 30 min y notificar por email.<br>3. Registrar en log “intento_login_contraseña_incorrecta”.<br>4. Retornar resultado=FALSE, motivo_fallo="credenciales_invalidas".<br>5. **Fin – Fallo.**<br><br>**7a – Cuenta bloqueada o inactiva:**<br>1. Determinar motivo: “cuenta_inactiva”, “bloqueada_temporalmente” o “bloqueada_por_seguridad”.<br>2. Registrar en log.<br>3. Retornar resultado=FALSE, motivo_fallo=[motivo].<br>4. **Fin – Fallo.**                                     |
-| **Reglas de Negocio**                    | **RN-SEC-001:** Las contraseñas NUNCA se almacenan en texto plano (usar bcrypt cost=12).<br>**RN-SEC-002:** Después de 5 intentos fallidos, la cuenta se bloquea por 30 minutos.<br>**RN-SEC-003:** Los mensajes de error no deben revelar si el usuario existe o no.<br>**RN-SEC-004:** Todos los intentos (éxito/fallo) se registran en log de auditoría.<br>**RN-SEC-005:** El bloqueo temporal se resetea automáticamente después de 30 min.                                                                                                                                                                                                                                                                                                                                                                                                |
-| **Requisitos No Funcionales Aplicables** | **RNFS-001:** Almacenamiento seguro de contraseñas (bcrypt).<br>**RNFS-002:** Protección contra fuerza bruta (bloqueo tras 5 intentos).<br>**RNFR-001:** Tiempo de respuesta < 500 ms.<br>**RNFS-006:** Auditoría de seguridad (registro completo de intentos).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Casos de Prueba del Subcaso**          | **TC-VAL-001:** Credenciales válidas → resultado=TRUE, usuario_id retornado.<br>**TC-VAL-002:** Usuario no existe → resultado=FALSE, motivo="credenciales_invalidas".<br>**TC-VAL-003:** Contraseña incorrecta → resultado=FALSE, intentos_fallidos++.<br>**TC-VAL-004:** 5to intento fallido → cuenta bloqueada 30 min.<br>**TC-VAL-005:** Cuenta inactiva → resultado=FALSE, motivo="cuenta_inactiva".<br>**TC-VAL-006:** Login durante bloqueo → resultado=FALSE, motivo="cuenta_bloqueada".                                                                                                                                                                                                                                                                                                                                                 |
+| Campo | Descripción |
+|-------|-------------|
+| **ID** | CU-003 |
+| **Nombre** | Registrar carnet|
+| **Actores** | administrador (primario) |
+| **Descripción** | Permite al usuario ańadir toda la información correspondiente a un carnet |
+| **Precondiciones** | 1. identificar usuario<br>2. verificar datos <br>3. crear nuevo usuario |
+| **Postcondiciones** | 1. el sistema debe permitir crear un nuevo usuario <br>2. añadir los datos en el nuevo usuario <br>3. el sistema debe verificar que no falte informacion<br>4. el nuevo usuario debe quedar dentro de la base de datos  |
+| **Flujo Principal** | 1. el sistema empieza a crear el carnet<br>2. el administrador introducira la informacion nesesaria (nombre, apellidos, rol, estado, etc) <br>3. se verificara el rol del usuario<br>4. en caso tal de tener un rol que posea algun descuento, se le aplicara al carnet <br>5. el administrador finalizara la creacion del usuario  |
+| **Flujos Alternativos** | **4a. datos faltantes**:<br>  4a1. El sistema muestra mensaje "datos faltantes"<br>  4a2. El sistema pondra en rojo los espacios con informacion faltante <br>  4a3. en caso tal de no poder o no querer seguir creando el usuario, se podra cancelar el proceso<br><br>**7a. datos duplicados**:<br>  7a1.  El sistema nuestra un mensaje "datos duplicados"<br>  7a2. Si esto sucede el sistema informara con el color rojo el campo donde sucede este echo<br>  7a3. si esta informacion es erronea, se cancelara el proceso de "creacion de usuario" |
+| **Flujos de Excepción** | **5a. informacion erronea**:<br>  5a1. si el sistmea detecta datos duplicados informara de una cituacion  de "informacion erronea"<br>  5a2. el sistema ofrecera llamar al usuario <br>  5a3. si el usurio no quiere llamar al usuario se finalizara  <br>  5a4. el proceso Fin del caso de uso<br>  |
+| **Requisitos Relacionados** | CU-01 (registrar usuario)<br>CU-02 (validar carnet) |
+<br>
 
-<!-- 
-Opción 2: Plantilla para Subcasos Simples
+**CU-004: Hacer pedido**
 
-Para subcasos simples pero que aún merecen documentación separada:
+| Campo | Descripción |
+|-------|-------------|
+| **ID** | CU-004 |
+| **Nombre** | Hacer pedido|
+| **Actores** | usuario del restaurante (primario) |
+| **Descripción** | permite al usuario realizar un pedido con los productos que se encuentren en el catálogo del menu|
+| **Precondiciones** | 1. el usuario entra a la pagina<br>2. mira el menu <br>3. realiza el pedido |
+| **Postcondiciones** | 1. la pagina debe mostrar el menu <br>2. los productos pedidos deben quedar registrados <br>3. el sistema debe registrar el pedido  |
+| **Flujo Principal** | 1. el usuario visualizara el menu<br>2. el usuario ira pidiendo los productos que quiere y añadiendolos al carrito <br>3. el sistema mostrara el total del pedido en la pestaña "carrito" <br>4. se le creara un comprobante de la compra  |
+| **Flujos Alternativos** | **4a. compra no registrada**:<br>  4a1. El sistema muestra mensaje "compra no registrada"<br>  4a2. El sistema ofrece opción "llamar a soporte"<br>  4a3. Si el usuario selecciona llamar, ir a (llamar a soporte)<br>  4a4. Si el usuario cancela, volver al paso 2<br><br>**7a. error en la pagina**:<br>  7a1.  El sistema nuestra un mensaje "error"<br>  7a2. Si esto sucede, el sistema ofrece opción "reportar problema"<br>  7a3. un usuario de soporte será alertado <bro> 7a4. se soluciona el problema |
+| **Flujos de Excepción** | **5a.producto agotado**:<br>  5a1. El sistema muestra el mensaje "producto agotado" <br>  5a2. el sistema redirigira al usuario a la pesataña menu <br>  5a3. Fin del caso de uso<br>  |
+| **Requisitos Relacionados** | CU-01 (Hacer pedido)<br>CU-02 (Resive el servicio solicitado )<br>CU-03 (Evalua el servicio y el menu)<br>CU-04 (ingresar, identificado por el carnet)<br>CU-05 (Realiza el pago)<br>CU-06 (verificar menu y precio) |
+<br>
+w
+**CU-005: Añadir menu semanal**
 
-| **Campo**           | **Descripción**                                                  |
-| ------------------- | ---------------------------------------------------------------- |
-| **ID**              | CU-XXX.Y                                                         |
-| **Nombre**          | [Nombre del Subcaso]                                             |
-| **Usado por**       | CU-AAA, CU-BBB                                                   |
-| **Propósito**       | [Breve descripción: qué hace y por qué existe el subcaso]        |
-| **Entradas**        | [Datos o parámetros que recibe del caso de uso padre]            |
-| **Salidas**         | [Datos o resultados que retorna al caso de uso padre]            |
-| **Flujo Principal** | 1. [Paso 1]<br>2. [Paso 2]<br>3. [Paso 3]                        |
-| **Excepciones**     | [Descripción de las excepciones o errores manejados, si los hay] |
-
-
-Opción 3: **Documentación Inline (No es Subcaso Separado)**
-
-Cuando NO merece subcaso separado, documentar directamente en el flujo principal:
-
-CU-001: Realizar Préstamo
-
-Flujo Principal
-1. El bibliotecario selecciona "Nuevo Préstamo"
-2. El sistema solicita identificación del usuario
-3. El bibliotecario ingresa carnet
-4. **El sistema valida estado del usuario:**
-   4.1. Verifica que usuario existe en BD
-   4.2. Verifica que usuario.estado = "activo"
-   4.3. Verifica que multas vencidas = 0
-   4.4. Si alguna validación falla → Excepción 4a
-5. El sistema muestra información del usuario
--->
-
-
-<!--
-## ERRORES COMUNES
-
-### **Error 1: Documentar todo como subcaso**
-
-**Incorrecto:**
-
-CU-001: Login
-  └─ CU-001.1: Mostrar Formulario de Login  ← NO merece subcaso
-  └─ CU-001.2: Validar Formato de Email     ← Trivial
-  └─ CU-001.3: Verificar Credenciales       ← SÍ es subcaso
-  └─ CU-001.4: Crear Sesión                 ← Trivial
-  └─ CU-001.5: Redirigir a Dashboard        ← Trivial
-
-
-**Correcto:**
-
-CU-001: Login
-  Pasos inline: 1-10
-  Paso 4: [Subcaso incluido: CU-VAL-001 Verificar Credenciales]
-  Otros pasos: documentados inline
-
-
-### **Error 2: Confundir subcaso con función técnica**
-
-**Incorrecto subcaso:**
-
-CU-LOG-001: Escribir en Log
-  Propósito: Guardar mensaje en archivo de log
-
-  Flujo:
-  1. Abrir archivo log en modo append
-  2. Escribir timestamp + nivel + mensaje
-  3. Cerrar archivo
-
-
-**Problema:** Esto es una **función técnica**, no un subcaso de uso. No tiene lógica de negocio, no le importa al usuario final.
-
-**Correcto:** Documentar como función en documentación técnica, no como caso de uso.
-
-
-### **Error 3: Subcasos demasiado granulares**
-
-**Incorrecto:**
-
-CU-001: Realizar Préstamo
-  └─ CU-001.1: Validar Usuario
-       └─ CU-001.1.1: Verificar Usuario Existe
-       └─ CU-001.1.2: Verificar Usuario Activo
-       └─ CU-001.1.3: Verificar Sin Multas
-
-
-**Problema:** Demasiada granularidad. Los sub-subcasos rara vez son necesarios.
-
-**Correcto:**
-
-CU-001: Realizar Préstamo
-  └─ CU-001.1: Validar Usuario
-       Pasos dentro del subcaso:
-       1. Verificar usuario existe
-       2. Verificar usuario activo
-       3. Verificar sin multas vencidas
-
-
-
-### **Error 4: Mezclar subcasos con flujos alternativos**
-
-**Incorrecto:**
-
-CU-001: Login
-  └─ CU-001.1: Login con Google      ← NO es subcaso, es alternativa
-  └─ CU-001.2: Login con Facebook    ← NO es subcaso, es alternativa
-  └─ CU-001.3: Login tradicional     ← NO es subcaso, es alternativa
-
-
-**Problema:** Estos son **flujos alternativos** del mismo caso de uso, no subcasos.
-
-**Correcto:**
-
-CU-001: Login
-
-Flujo Principal:
-1. Usuario selecciona método de autenticación
-
-Flujo Alternativo 1a: Login con Google
-  1a1. Sistema redirige a OAuth de Google
-  1a2. ...
-
-Flujo Alternativo 1b: Login con Facebook
-  1b1. Sistema redirige a OAuth de Facebook
-  1b2. ...
-
--->
-
+| Campo | Descripción |
+|-------|-------------|
+| **ID** | CU-005 |
+| **Nombre** | Añadir menu semanal|
+| **Actores** | chef (primario)|
+| **Descripción** | permite al cocinero actualizar, ańadir o eliminar productos que se encuentren en el menu|
+| **Precondiciones** | 1. el chef verifica productos en stock<br>2. el chef crea un menu <br>3. el cheft agrega el nuevo menu a la base de datos|
+| **Postcondiciones** | 1. la pagina dejara visualizar el inventario actual<br>2. el sistema permitira añadir el nuevo menu semanal  |
+| **Flujo Principal** | 1.el chef visualizara el inventario actual <br>2. dependiendo de la cantidad de los productos en stok creara un nuevo menu <br>3. el chef agregara rl nuevo menu en la base de datos<br>4. el sistema verificara que no falte informacion <br>5. el sistema validara el nuevo menu semanal |
+| **Flujos Alternativos** | **4a. producto inexistente**:<br>  4a1. El sistema muestra mensaje "producto inexistente"<br>  4a2. El sistema ofrece opción "llamar su soporte"<br>  4a3. Si el usuario selecciona llamar, ir a (llamar a soporte)<br>  4a4. Si el usuario cancela, volver al paso 2<br><br>**7a. producto faltante**:<br>  7a1.  El sistema nuestra un mensaje "producto faltante"<br>  7a2. Si esto sucede el sistema informara con el color rojo el campo donde sucede este echo<br>  7a3. si esta informacion es erronea, se cancelara el proceso de "creacion de usuario" |
+| **Flujos de Excepción** | **5a. Usuario suspendido o con multas vencidas**:<br>  5a1. El sistema muestra advertencia "Usuario suspendido" o "Usuario tiene multas vencidas por $[monto]"<br>  5a2. El sistema NO permite continuar con la venta<br>  5a3. Fin del caso de uso<br>  |
+| **Requisitos Relacionados** | CU-01 (Añadir menu semanal)<br>CU-02 (identidicar cantidades)<br>CU-03 (analiza ingredientes para el menu)<br>CU-04 (segun los ingrdientes, se adapta al menu) |
+<br>s                                                                                                                                                                                                                                                                                                                                                  
 
 **Diagrama de Casos de Uso:**
 
