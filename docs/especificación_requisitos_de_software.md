@@ -719,6 +719,14 @@ Empleados
 - Se asume que los empleados conocen acerca del sistema
 - Se asume que personas especificas tienen permisos para modificar procesos del restaurante
 
+Técnico
+- Se asume qu el técnico posee conocmientos acerca de bases de datos, servidores y seguridad digital
+- Sea  sume quue es responsable de las actualizaciones del sistema
+- Se asume que no interviene en procesos operativos del restaurante
+
+- El sistema funciona en los horarios establecidos en el restaurante
+- Los turnos se asignan automaticamente
+- Los empleados tiene la responsabilidad de registrar las ventas
 
 **Dependencias:**
 
@@ -733,7 +741,7 @@ Modulo Usuarios
 Modulo Menú
 Modulo Notificaciones
 
-Tecnico
+Técnico de sistemas
 Base de datos
 Modulo de seguridad y monitoreo
 
