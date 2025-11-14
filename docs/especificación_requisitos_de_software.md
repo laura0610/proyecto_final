@@ -2549,11 +2549,26 @@ a soporte"<br>  4a3. Si el usuario selecciona llamar, ir a (llamar a soporte)<br
 | **Requisitos Relacionados** | CU-01 (Hacer pedido)<br>CU-02 (Resive el servicio solicitado )<br>CU-03 (Evalua el servicio y el menu)<br>CU-04 (ingresar, identificado por el carnet)<br>CU-05 (Realiza el pago)<br>CU-06 (verificar menu y precio) |
 <br>
 
-**CU-005: Añadir menu semanal**
+**CU-005: Registrar venta**
 
 | Campo | Descripción |
 |-------|-------------|
 | **ID** | CU-005 |
+| **Nombre** | Registrar venta|
+| **Actores** | contador (primario), cajero (secundario)|
+| **Descripción** | permite al cajero, registrar los productos vendido en la base de datos para que el contador administre que no exista algun inconeniente |
+| **Precondiciones** | 1.el cajero registra la venta<br>2. el contador visualiza las ventas diarias <br>3. el contador crea un informa sobre inconvenientes o valida la informacion|
+| **Postcondiciones** | 1. la pagina registra la venta en la base de datos <br>2. el sistema muestra las ventas diarias |
+| **Flujo Principal** | 1.el cajero registra la venta <br>2. se crea una factura, tanto virtual como fisica <br>3.el contador entra en el registro de ventas diarias<br>4. en caso de algun inconveniente, se le informara al administrador |
+| **Flujos Alternativos** | **4a. producto inexistente**:<br>  4a1. El sistema muestra mensaje "producto inexistente"<br>  4a2. El sistema ofrece opción "llamar su soporte"<br>  4a3. Si el usuario selecciona llamar, ir a (llamar a soporte)<br>  4a4. Si el usuario cancela, volver al paso 2<br><br> |
+| **Flujos de Excepción** | **5a. Usuario suspendido o con multas vencidas**:<br>  5a1. El sistema muestra advertencia "Usuario suspendido" o "Usuario tiene multas vencidas por $[monto]"<br>  5a2. El sistema NO permite continuar con la venta<br>  5a3. Fin del caso de uso<br>  |
+| **Requisitos Relacionados** | CU-01 (Registrar venta)<br>CU-02 (Gestionar metodo de pago)<br>CU-03 (Porcesar valor total)<br>CU-04 (Incorporar ventas en el sistema) |
+<br>                                                                                                                                                                                                                                                                                                                                                
+**CU-006: Añadir menu semanal**
+
+| Campo | Descripción |
+|-------|-------------|
+| **ID** | CU-006 |
 | **Nombre** | Añadir menu semanal|
 | **Actores** | chef (primario)|
 | **Descripción** | permite al cocinero actualizar, ańadir o eliminar productos que se encuentren en el menu|
@@ -2563,8 +2578,23 @@ a soporte"<br>  4a3. Si el usuario selecciona llamar, ir a (llamar a soporte)<br
 | **Flujos Alternativos** | **4a. producto inexistente**:<br>  4a1. El sistema muestra mensaje "producto inexistente"<br>  4a2. El sistema ofrece opción "llamar su soporte"<br>  4a3. Si el usuario selecciona llamar, ir a (llamar a soporte)<br>  4a4. Si el usuario cancela, volver al paso 2<br><br>**7a. producto faltante**:<br>  7a1.  El sistema nuestra un mensaje "producto faltante"<br>  7a2. Si esto sucede el sistema informara con el color rojo el campo donde sucede este echo<br>  7a3. si esta informacion es erronea, se cancelara el proceso de "creacion de usuario" |
 | **Flujos de Excepción** | **5a. Usuario suspendido o con multas vencidas**:<br>  5a1. El sistema muestra advertencia "Usuario suspendido" o "Usuario tiene multas vencidas por $[monto]"<br>  5a2. El sistema NO permite continuar con la venta<br>  5a3. Fin del caso de uso<br>  |
 | **Requisitos Relacionados** | CU-01 (Añadir menu semanal)<br>CU-02 (identidicar cantidades)<br>CU-03 (analiza ingredientes para el menu)<br>CU-04 (segun los ingrdientes, se adapta al menu) |
-<br>s                                                                                                                                                                                                                                                                                                                                                  
+<br> 
 
+**CU-007: inventario diario**
+
+| Campo | Descripción |
+|-------|-------------|
+| **ID** | CU-007 |
+| **Nombre** | inventario diario|
+| **Actores** | Coordinador Operativo (primario)|
+| **Descripción** | Permite al Coordinador Operativo, registrar el conteo del inventario diariamente|
+| **Precondiciones** | 1. EL Coordinador Operativo hace el conteo del inventario<br>2. El Coordinador Operativo actualiza el inventario|
+| **Postcondiciones** | 1. la pagina deja modificar el inventrio actual<br>2. el sistema valida la informacion nueva  |
+| **Flujo Principal** | 1. EL Coordinador Operativo hace el conteo del inventario<br>2. el Cordinador Operativo valida su identidad<br>3. El Coordinador Operativo  se registra datos como la cantidad<br>4. la pagina registra la nueva informacion |
+| **Flujos Alternativos** | **4a. producto inexistente**:<br>  4a1. El sistema muestra mensaje "producto inexistente"<br>  4a2. El sistema ofrece opción "llamar su soporte"<br>  4a3. Si el usuario selecciona llamar, ir a (llamar a soporte)<br>  4a4. Si el usuario cancela, volver al paso 2<br><br>**7a. producto faltante**:<br>  7a1.  El sistema nuestra un mensaje "producto faltante"<br>  7a2. Si esto sucede el sistema informara con el color rojo el campo donde sucede este echo<br>  7a3. si esta informacion es erronea, se cancelara el proceso de "creacion de usuario"<br><br>**7a. cantidad invalida**:<br>  7a1. El sistema nuestra un mensaje "cantidad invalida"<br>  7a2. algun campo de "cantidad" quedo vacio <br>  7a2. El sistema ofrece opción "llamar su soporte"<br>  7a3. Si el usuario selecciona llamar, ir a (llamar a soporte)<br>  7a4. Si el usuario cancela, volver al paso 2|
+| **Flujos de Excepción** | **5a. Usuario no valido**:<br>  5a1. El sistema muestra advertencia "Usuario no valido" <br>  5a2. El sistema NO permite continuar con el registro<br>  5a3. Fin del caso de uso<br>  |
+| **Requisitos Relacionados** | CU-01 (inventario diario)<br>CU-02 (Identificar productos que se requieren)<br>CU-03 (Notificar a los proveedores)<br>CU-04 (Analizar los distintos tipos de menu)<br>CU-05 (Determinar los productos faltantes)|
+<br> 
 **Diagrama de Casos de Uso:**
 
 [Incluya aquí un diagrama UML de casos de uso mostrando actores y casos de uso principales con sus relaciones (include, extend). Puede crearlo con herramientas como draw.io, Lucidchart, PlantUML, o incluso a mano]
