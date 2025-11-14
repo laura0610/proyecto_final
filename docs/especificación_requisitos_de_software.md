@@ -711,105 +711,31 @@ EJEMPLO ACADÉMICO:
 
 **Suposiciones:**
 
-1. **Conectividad**: Se asume que la biblioteca cuenta con conexión a Internet 
-  estable y continua durante el horario de operación. Si la conexión falla, 
-  algunas funcionalidades no estarán disponibles.
+Comensal
+- Se asume que el comensal cuenta con dispositivos electronicos para utilizar la aplicacion
+- Se sume que los clientes pueden comprender los turnos, precios, entre otros.
 
-2. **Hardware**: Se asume que las computadoras de las estaciones de trabajo de 
-  bibliotecarios cumplen con los requisitos mínimos: procesador dual-core 2GHz, 
-  4GB RAM, navegador web actualizado.
+Empleados
+- Se asume que los empleados conocen acerca del sistema
+- Se asume que personas especificas tienen permisos para modificar procesos del restaurante
 
-3. **Conocimientos del Personal**: Se asume que el personal de biblioteca tiene 
-  conocimientos básicos de informática (uso de navegador web, mouse, teclado) 
-  y que recibirá capacitación específica sobre BiblioTech antes del lanzamiento.
-
-4. **Proceso de Negocio**: Se asume que los procesos bibliotecarios actuales 
-  (políticas de préstamo, cálculo de multas, categorización de materiales) 
-  continuarán siendo válidos en el sistema digitalizado.
-
-5. **Volumen de Datos Inicial**: Se asume que el catálogo inicial contiene 
-  aproximadamente 25,000 materiales bibliográficos y 15,000 usuarios registrados, 
-  con un crecimiento anual estimado del 10%.
-
-6. **Usuarios Finales**: Se asume que los usuarios de la biblioteca que accedan 
-  al catálogo en línea tienen conocimientos básicos de navegación web y acceso 
-  a un dispositivo con navegador (computadora, tablet, smartphone).
-
-7. **Datos de Migración**: Se asume que los datos en Excel del sistema actual 
-  están razonablemente limpios y estructurados, y que cualquier inconsistencia 
-  será resuelta antes de la migración.
-
-8. **Apoyo Institucional**: Se asume que la dirección de la biblioteca y la 
-  municipalidad proporcionarán el apoyo necesario para la adopción del sistema, 
-  incluyendo tiempo para capacitación del personal.
-
-9. **Mantenimiento**: Se asume que la municipalidad proporcionará soporte técnico 
-  continuo para el servidor y la infraestructura de red.
 
 **Dependencias:**
 
-1. **Sistema Municipal de Identificación (SMI)**: El módulo de registro de usuarios 
-  DEPENDE de la disponibilidad y correcto funcionamiento de la API del SMI para 
-  validar identidad de ciudadanos. Si la API no está disponible, el registro de 
-  nuevos usuarios se verá afectado.
+Sistema
+Modelo Usuarios: Identificar el comensal y su subsidio
+Modulo Notificaciones: Revisar turno
+Modulo pedidos: Revisar turno e inventario
+Modelo de Menú: Información de los platos, ofertas y descuentos
 
-2. **Servicio de Correo Electrónico**: El módulo de notificaciones DEPENDE del 
-  servidor SMTP institucional (mail.municipalidad.gob). Si el servicio de correo 
-  falla, las notificaciones automáticas no se enviarán.
+Clientes y empleados
+Modulo Usuarios
+Modulo Menú
+Modulo Notificaciones
 
-3. **Proveedor de Hosting**: El sistema DEPENDE de la infraestructura de servidores 
-  de la municipalidad. Cualquier mantenimiento, actualización o problema en esta 
-  infraestructura afectará la disponibilidad de BiblioTech.
-
-4. **Código de Barras**: El sistema DEPENDE del estándar ISBN (International Standard 
-  Book Number) para identificación de libros. Materiales sin ISBN requerirán 
-  códigos alternativos generados internamente.
-
-5. **Navegadores Web**: El sistema DEPENDE de que los navegadores web mantengan 
-  compatibilidad con los estándares HTML5, CSS3 y JavaScript ES6. Cambios 
-  significativos en navegadores podrían requerir actualizaciones del sistema.
-
-6. **Base de Datos PostgreSQL**: El sistema DEPENDE de PostgreSQL y sus 
-  actualizaciones de seguridad. Migraciones a nuevas versiones mayores de 
-  PostgreSQL requerirán pruebas exhaustivas.
-
-7. **Lectores de Código de Barras**: El sistema DEPENDE de los lectores de código 
-  de barras Zebra DS2208. Si se reemplazan por otro modelo, puede requerirse 
-  adaptación del sistema.
-
-8. **Proveedor de Carnes de Biblioteca**: La funcionalidad de escaneado de carnets 
-  DEPENDE de que el proveedor de carnets imprima códigos de barras legibles según 
-  el estándar Code 39 o similar.
-
-9. **Equipo de Desarrollo**: El cronograma del proyecto DEPENDE de la disponibilidad 
-  continua del equipo de desarrollo asignado. Cambios en el equipo podrían afectar 
-  plazos de entrega.
-
-10. **Aprobaciones de la Municipalidad**: Ciertas decisiones de diseño y configuración 
-  DEPENDEN de aprobaciones del departamento de sistemas de la municipalidad, lo 
-  que podría introducir retrasos si las aprobaciones se demoran.
-
-**Impacto de Cambios:**
-
-Si cualquiera de las suposiciones anteriores resulta incorrecta o las dependencias 
-externas fallan, se requerirá:
-- Revisión de requisitos afectados
-- Evaluación de impacto en cronograma y presupuesto
-- Posible renegociación de alcance del proyecto
-
-El equipo de proyecto debe monitorear continuamente la validez de estas suposiciones 
-y el estado de las dependencias, reportando cualquier cambio significativo a los 
-stakeholders.
-
-NOTA PARA ESTUDIANTES:
-En proyectos reales, este análisis es crítico para la gestión de riesgos. Una 
-suposición incorrecta puede hacer que todo un proyecto fracase. Sea honesto y 
-exhaustivo al documentar suposiciones y dependencias.
-
-
-
-
-<br>
+Tecnico
+Base de datos
+Modulo de seguridad y monitoreo
 
 ### 2.6 Requisitos futuros
 
