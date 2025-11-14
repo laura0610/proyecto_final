@@ -726,25 +726,32 @@ Técnico
 
 - El sistema funciona en los horarios establecidos en el restaurante
 - Los turnos se asignan automaticamente
-- Los empleados tiene la responsabilidad de registrar las ventas
+- Los empleados tienen la responsabilidad de registrar las ventas
+- La base de datos esta segura y protegida mediante seguridad informatica
+- El restaurante tiene infraestructura tecnologica para la aplicación 
 
 **Dependencias:**
 
 Sistema
 Modelo Usuarios: Identificar el comensal y su subsidio
-Modulo Notificaciones: Revisar turno
+Modulo Notificaciones: Revisar turno y alertas de suministros
 Modulo pedidos: Revisar turno e inventario
 Modelo de Menú: Información de los platos, ofertas y descuentos
 
-Clientes y empleados
-Modulo Usuarios
-Modulo Menú
-Modulo Notificaciones
+Cliente
+- Modulo de menú
+- Modulo Turnos
+- Modulo pedidos
+- Modulo subsidios
+- Modulo notificaciones (turno)
 
-Técnico de sistemas
-Base de datos
-Modulo de seguridad y monitoreo
-
+Empleados
+- Modulo inventario
+- Modulo Informes
+- Modulo Turnos
+- Modulo Mneú
+- Modulo Subsidios
+  
 ### 2.6 Requisitos futuros
 
 
