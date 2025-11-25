@@ -1,36 +1,18 @@
 # Especificación de Requisitos de Software (SRS)
-### Proyecto: [Nombre del Proyecto]
+### Proyecto: Unicafe
 *Versión [1.0]*
 
 <br>
 
 <img width="445" height="127" alt="image" src="https://github.com/user-attachments/assets/a2cb6e38-e0cb-4149-b56f-a295d28b4a78" />
 
-*[Mes de Año]*
-
-<br>
-
-> **Nota Aclaratoria:** <br>
-> Este documento fue elaborado con fines académicos como parte de una práctica formativa bajo el estándar IEEE 830-1998.
-> Todos los datos, nombres de entidades, diagramas y estructuras de base de datos son simulados y no corresponden a información real.
-> Este documento tiene propósitos educativos y está diseñado para enseñar la correcta especificación de requisitos de software.
-
-<br>
-
-> **Instrucciones para el Estudiante:** <br>
-> - Elimine todos los comentarios HTML `<!-- ... -->` en la versión final
-> - Reemplace todo el texto entre `[corchetes]` con información real de su proyecto
-> - Utilice las tablas y formatos sugeridos como guía
-> - Revise el checklist de calidad antes de entregar
-> - Mantenga la numeración y estructura del estándar IEEE 830
-
-<br>
+*24/11/2025*
 
 **Control de Versiones:**
 
 | Versión | Fecha | Autor | Descripción de Cambios |
 |---------|-------|-------|------------------------|
-| 1.0 | [DD/MM/AAAA] | [Nombre] | Versión inicial del documento |
+| 1.0 | 24/11/2025 | nicolas| Versión final del documento |
 | | | | |
 
 <br>
@@ -75,8 +57,7 @@
   - [4.1 Modelos de casos de uso](#41-modelos-de-casos-de-uso)
   - [4.2 Glosario](#42-glosario)
   - [4.3 Diagramas del sistema](#43-diagramas-del-sistema)
-  - [4.4 Matriz de trazabilidad](#44-matriz-de-trazabilidad)
-  - [4.5 Criterios de evaluación](#45-criterios-de-evaluación)
+
 
 <br>
 
@@ -247,31 +228,6 @@ En conjunto, el documento brinda una guía clara y trazable para el diseño, con
 
 ## 2 DESCRIPCIÓN GENERAL
 
-<!-- 
-═══════════════════════════════════════════════════════════════════════════════
-SECCIÓN 2: DESCRIPCIÓN GENERAL
-═══════════════════════════════════════════════════════════════════════════════
-
-PROPÓSITO DE ESTA SECCIÓN:
-Proporcionar contexto y visión general del sistema sin entrar en detalles técnicos
-específicos. Esta sección ayuda a los lectores a comprender el "panorama general"
-antes de sumergirse en los requisitos específicos.
-
-IMPORTANCIA ACADÉMICA:
-Esta sección establece el contexto de negocio y técnico que justifica los requisitos
-específicos que vendrán en la Sección 3. Es fundamental para que stakeholders no
-técnicos comprendan el propósito y las capacidades del sistema.
-
-AUDIENCIA PRINCIPAL:
-- Gerentes y ejecutivos
-- Analistas de negocio
-- Arquitectos de sistemas
-- Nuevos miembros del equipo
-
-PRINCIPIO CLAVE:
-Todo lo descrito en la Sección 2 debe ser GENERAL. Los detalles específicos,
-medibles y verificables van en la Sección 3.
--->
 
 ### 2.1 Perspectiva del producto
 
@@ -537,68 +493,6 @@ Empleados
 
 ## 3 REQUISITOS ESPECÍFICOS
 
-<!-- 
-═══════════════════════════════════════════════════════════════════════════════
-SECCIÓN 3: REQUISITOS ESPECÍFICOS
-═══════════════════════════════════════════════════════════════════════════════
-
-PROPÓSITO DE ESTA SECCIÓN:
-Esta es la sección MÁS IMPORTANTE del documento SRS. Aquí se especifican de manera
-DETALLADA, PRECISA y VERIFICABLE todos los requisitos del sistema.
-
-IMPORTANCIA CRÍTICA:
-- Es la base para el diseño, implementación y pruebas del sistema
-- Debe ser lo suficientemente detallada para que desarrolladores puedan construir 
-  el sistema sin ambigüedades
-- Debe ser lo suficientemente precisa para que testers puedan verificar cada 
-  requisito
-- Sirve como contrato entre cliente y equipo de desarrollo
-
-PRINCIPIOS FUNDAMENTALES PARA REQUISITOS DE CALIDAD:
-
-Un requisito de calidad es:
-
-1. CORRECTO: Refleja una necesidad real del cliente/usuario
-2. NO AMBIGUO: Tiene una sola interpretación posible
-3. COMPLETO: Contiene toda la información necesaria para su implementación
-4. CONSISTENTE: No contradice otros requisitos
-5. CLASIFICADO: Tiene prioridad asignada (esencial/deseable/opcional)
-6. VERIFICABLE: Se puede diseñar una prueba para verificar su cumplimiento
-7. MODIFICABLE: Estructura que permite cambios sin afectar otros requisitos
-8. TRAZABLE: Tiene ID único y se puede seguir a través del ciclo de vida
-
-PALABRAS CLAVE IEEE 830:
-En requisitos, use estas palabras con precisión:
-- DEBE / DEBERÁ (MUST): Requisito obligatorio, esencial
-- DEBERÍA (SHOULD): Requisito deseable, importante pero no crítico
-- PUEDE (MAY): Requisito opcional
-
-ERRORES COMUNES A EVITAR:
-
-✗ Requisitos ambiguos: "El sistema será rápido"
-✓ Requisito correcto: "El sistema responderá a consultas en máximo 3 segundos"
-
-✗ Requisitos sin verificar: "El sistema será fácil de usar"
-✓ Requisito correcto: "El 90% de usuarios podrán completar un préstamo sin ayuda 
-  después de 30 minutos de capacitación"
-
-✗ Requisitos que especifican soluciones: "El sistema usará base de datos MySQL"
-  (a menos que sea una restricción real)
-✓ Requisito correcto: "El sistema almacenará datos de forma persistente y permitirá 
-  consultas concurrentes de al menos 50 usuarios"
-
-✗ Requisitos que combinan múltiples funcionalidades sin separación clara
-
-ORGANIZACIÓN DE ESTA SECCIÓN:
-La Sección 3 puede organizarse de diferentes formas según IEEE 830:
-- Por funcionalidad del sistema
-- Por tipo de usuario
-- Por modo de operación
-- Por objetos del sistema
-
-Esta plantilla usa organización por TIPO DE REQUISITO (funcionales, no funcionales,
-interfaces, etc.) que es la más común en proyectos académicos.
--->
 
 ### 3.1 Requisitos funcionales
 
@@ -761,10 +655,6 @@ REQUISITOS FUNCIONALES
 
 #### 3.1.1 Módulo de Autenticación y Seguridad
 
-<!-- 
-Este módulo incluye todos los requisitos relacionados con login, logout, gestión
-de sesiones, permisos, y seguridad de acceso al sistema.
--->
 
 | **ID** | RF-001 |
 |--------|--------|
@@ -804,10 +694,7 @@ de sesiones, permisos, y seguridad de acceso al sistema.
 
 #### 3.1.2 Módulo de Gestión de Usuarios (Clientes de la Biblioteca)
 
-<!-- 
-Este módulo gestiona los usuarios FINALES de la biblioteca (no el personal).
-Incluye registro, actualización, consulta, suspensión de usuarios.
--->
+
 
 | **ID** | RF-010 |
 |--------|--------|
@@ -833,123 +720,13 @@ Incluye registro, actualización, consulta, suspensión de usuarios.
 | **Comentarios** | Este requisito es DESEABLE, no ESENCIAL, porque el sistema debe poder funcionar aunque la integración con SMI no esté disponible. La API del SMI es un sistema externo fuera del control del proyecto. Documentar timeout y manejo de errores claramente. |
 <br>
 
-**[Continúe con más requisitos funcionales del Módulo de Gestión de Usuarios: actualización de datos, consulta de usuarios, suspensión de usuarios, renovación de membresía, etc.]**
 
-#### 3.1.3 Módulo de Gestión de Catálogo
-
-<!-- Continúe documentando requisitos para este módulo -->
-
-#### 3.1.4 Módulo de Préstamos y Devoluciones
-
-<!-- Continúe documentando requisitos para este módulo -->
-
-#### 3.1.5 Módulo de Reservas
-
-<!-- Continúe documentando requisitos para este módulo -->
-
-#### 3.1.6 Módulo de Multas y Pagos
-
-<!-- Continúe documentando requisitos para este módulo -->
-
-#### 3.1.7 Módulo de Notificaciones
-
-<!-- Continúe documentando requisitos para este módulo -->
-
-#### 3.1.8 Módulo de Reportes y Estadísticas
-
-<!-- Continúe documentando requisitos para este módulo -->
-
-#### 3.1.9 Módulo de Administración del Sistema
-
-<!-- Continúe documentando requisitos para este módulo -->
-
-#### 3.1.10 Módulo de Auditoría y Logs
-
-<!-- Continúe documentando requisitos para este módulo -->
-
-<!-- 
-CHECKLIST DE CALIDAD PARA REQUISITOS FUNCIONALES:
-
-Antes de dar por terminado un requisito funcional, verifique:
-
-☐ Tiene un ID único y secuencial
-☐ Tiene un nombre descriptivo
-☐ La descripción es clara y sin ambigüedades
-☐ Usa las palabras clave correctamente (DEBE/DEBERÍA/PUEDE)
-☐ Es verificable (se puede probar)
-☐ Tiene prioridad asignada
-☐ Tiene criterios de aceptación medibles
-☐ Las dependencias están identificadas
-☐ No contradice otros requisitos
-☐ No especifica soluciones técnicas innecesariamente (a menos que sea una restricción)
-☐ Es atómico (no combina múltiples funcionalidades que deberían ser requisitos separados)
-
-CANTIDAD DE REQUISITOS:
-
-NO hay un número "correcto" de requisitos. Depende de la complejidad del sistema.
-Como referencia:
-- Sistema pequeño: 30-60 requisitos funcionales
-- Sistema mediano: 60-150 requisitos funcionales
-- Sistema grande: 150+ requisitos funcionales
-
-Un sistema como BiblioTech (biblioteca mediana) típicamente tendría 80-120 
-requisitos funcionales bien especificados.
-
-IMPORTANTE PARA ESTUDIANTES:
-
-En proyectos académicos, es mejor tener MENOS requisitos pero MUY BIEN ESPECIFICADOS
-que muchos requisitos vagos o incompletos. La calidad supera a la cantidad.
-
-Si su proyecto es académico y tiene límites de tiempo, enfóquese en:
-1. Especificar completamente los módulos principales (2-3 módulos)
-2. Para módulos secundarios, puede listar requisitos de forma más resumida
-3. Demuestre que entiende CÓMO escribir requisitos de calidad
--->
 
 ---
 
-### 3.2 Requisitos de interfaz externa
-
-<!-- 
-═══════════════════════════════════════════════════════════════════════════════
-REQUISITOS DE INTERFAZ EXTERNA
-═══════════════════════════════════════════════════════════════════════════════
-
-DEFINICIÓN:
-Los requisitos de interfaz externa describen CÓMO el sistema interactúa con
-su entorno: usuarios (UI), hardware, otros sistemas (software), y redes (comunicación).
-
-IMPORTANCIA:
-Las interfaces son puntos críticos de falla. Una interfaz mal especificada puede
-hacer que todo el sistema sea inutilizable incluso si la lógica interna es perfecta.
-
-CATEGORÍAS:
-3.2.1 Interfaz de Usuario (UI)
-3.2.2 Interfaz de Hardware
-3.2.3 Interfaz de Software
-3.2.4 Interfaz de Comunicación
--->
+### 3.2 Requisitos de interfaz eextern
 
 #### 3.2.1 Interfaz de usuario
-
-<!-- 
-OBJETIVO:
-Especificar características de las interfaces gráficas o de línea de comando
-que los usuarios utilizarán para interactuar con el sistema.
-
-QUÉ INCLUIR:
-- Estándares de GUI (Material Design, Bootstrap, etc.)
-- Resoluciones de pantalla soportadas
-- Navegadores web soportados
-- Accesibilidad
-- Idiomas
-- Layouts generales
-- Flujos de navegación principales
-
-QUÉ NO INCLUIR AQUÍ:
-Mockups detallados de cada pantalla (esos van en Apéndices o documentos de diseño).
-Aquí se especifican CARACTERÍSTICAS GENERALES de la UI.
--->
 
 **RUI-001: Estándar de interfaz web responsiva**
 
@@ -1043,42 +820,12 @@ El sistema DEBE soportar atajos de teclado para operaciones frecuentes:
 
 El sistema DEBE mostrar una ventana de ayuda con todos los atajos disponibles cuando el usuario presione F1.
 
-<!-- 
-NOTA PARA ESTUDIANTES:
-Pueden incluir MOCKUPS (bocetos de pantallas) en los Apéndices (Sección 4.3)
-para complementar estos requisitos de interfaz. Los mockups son muy útiles pero
-NO reemplazan los requisitos escritos.
 
-Herramientas recomendadas para mockups:
-- Figma (gratis para estudiantes)
-- Balsamiq
-- Draw.io
-- Incluso papel y lápiz (escanear y adjuntar)
--->
-
-[Complete con requisitos adicionales de interfaz de usuario según su proyecto]
 
 <br>
 
 #### 3.2.2 Interfaz de hardware
 
-<!-- 
-OBJETIVO:
-Especificar características del hardware con el que el sistema interactuará
-directamente, incluyendo dispositivos de entrada/salida, sensores, etc.
-
-EJEMPLOS COMUNES:
-- Lectores de código de barras
-- Impresoras
-- Dispositivos biométricos
-- Cámaras
-- Sensores
-- Dispositivos de almacenamiento específicos
-
-SI NO HAY INTERFACES DE HARDWARE:
-Puede indicar explícitamente: "No aplica. El sistema no requiere interfaces con
-hardware especializado más allá de computadoras estándar."
--->
 
 **RHW-001: Lector de código de barras**
 
@@ -1124,22 +871,6 @@ El sistema DEBE funcionar en computadoras con las siguientes especificaciones m�
 
 #### 3.2.3 Interfaz de software
 
-<!-- 
-OBJETIVO:
-Especificar cómo el sistema interactuará con otros sistemas de software,
-incluyendo sistemas operativos, bases de datos, APIs externas, servicios web, etc.
-
-INCLUIR:
-- APIs de terceros que el sistema consumirá
-- Servicios web que el sistema utilizará
-- Integración con sistemas corporativos existentes
-- Requisitos de bases de datos
-- Bibliotecas o frameworks específicos (si son restricciones)
-
-NIVEL DE DETALLE:
-Suficiente para que los desarrolladores entiendan QUÉ integraciones son necesarias,
-pero sin especificar excesivamente el CÓMO (eso va en diseño técnico).
--->
 
 **RSW-001: Integración con Sistema Municipal de Identificación (SMI)**
 
@@ -1241,47 +972,10 @@ El sistema DEBE retener:
 
 El sistema DEBE notificar al administrador si un respaldo falla.
 
-**RSW-005: Framework de desarrollo (Restricción técnica)**
-
-[NOTA: Solo incluir esto si es una restricción REAL impuesta por el cliente o por estándares organizacionales. Normalmente, la elección de framework es decisión del equipo técnico y NO debe estar en requisitos, sino en diseño.]
-
-Si el cliente/organización impone un framework específico, documentarlo así:
-
-El sistema DEBE desarrollarse utilizando [Nombre del Framework] debido a estándares tecnológicos de la municipalidad. Todas las aplicaciones de la municipalidad usan este framework para facilitar mantenimiento futuro por el equipo interno de IT.
-
-<!-- 
-NOTA IMPORTANTE:
-NO confunda requisitos de interfaz de software con decisiones de diseño técnico.
-
-✓ CORRECTO (requisito):
-"El sistema debe integrarse con el API de Sistema X para validar usuarios"
-
-✗ INCORRECTO (decisión de diseño disfrazada de requisito):
-"El sistema usará la biblioteca Axios para hacer llamadas HTTP"
-
-La segunda es una decisión técnica que debe tomarse durante el diseño, no un requisito
-del cliente (a menos que el cliente explícitamente lo exija por razones específicas).
--->
-
-[Complete con otras integraciones de software relevantes para su proyecto]
-
 <br>
 
 #### 3.2.4 Interfaz de comunicación
 
-<!-- 
-OBJETIVO:
-Especificar requisitos de comunicación en red, protocolos, seguridad de
-comunicación, y requisitos de conectividad.
-
-INCLUIR:
-- Protocolos de red requeridos
-- Requisitos de seguridad en comunicación
-- Ancho de banda necesario
-- Puertos de red
-- Firewalls y configuraciones de red
-- Cifrado de datos en tránsito
--->
 
 **RCOM-001: Protocolo de comunicación web**
 
@@ -1357,7 +1051,6 @@ En versiones futuras, el sistema PUEDE exponer una API REST pública para permit
 
 Ver Sección 2.6 Requisitos Futuros.
 
-[Complete con otros requisitos de comunicación específicos de su proyecto]
 
 <br>
 
@@ -1365,51 +1058,10 @@ Ver Sección 2.6 Requisitos Futuros.
 
 ### 3.3 Requisitos no funcionales
 
-<!-- 
-═══════════════════════════════════════════════════════════════════════════════
-REQUISITOS NO FUNCIONALES
-═══════════════════════════════════════════════════════════════════════════════
 
-DEFINICIÓN:
-Los requisitos no funcionales describen CÓMO debe comportarse el sistema, no QUÉ
-debe hacer. Son atributos de calidad que el sistema debe poseer.
-
-IMPORTANCIA CRÍTICA:
-Los requisitos no funcionales son TAN IMPORTANTES como los funcionales, pero
-frecuentemente se descuidan. Un sistema que hace todo lo que debe hacer (requisitos
-funcionales) pero es lento, inseguro, o inestable, es un sistema FRACASADO.
-
-CATEGORÍAS PRINCIPALES:
-- Rendimiento (Performance)
-- Fiabilidad (Reliability)
-- Disponibilidad (Availability)
-- Seguridad (Security)
-- Mantenibilidad (Maintainability)
-- Portabilidad (Portability)
-
-PRINCIPIO FUNDAMENTAL:
-Los requisitos no funcionales DEBEN ser CUANTIFICABLES y MEDIBLES.
-
-✗ INCORRECTO: "El sistema será rápido"
-✓ CORRECTO: "El sistema responderá a consultas en máximo 3 segundos en el 95% de los casos"
-
-✗ INCORRECTO: "El sistema será seguro"
-✓ CORRECTO: "El sistema cifrará todas las contraseñas usando bcrypt con factor de trabajo mínimo de 12"
--->
 
 #### 3.3.1 Rendimiento
 
-<!-- 
-OBJETIVO:
-Especificar requisitos de velocidad, tiempo de respuesta, throughput, capacidad,
-y eficiencia de uso de recursos.
-
-MÉTRICAS COMUNES:
-- Tiempo de respuesta (response time)
-- Throughput (transacciones por segundo)
-- Utilización de recursos (CPU, memoria, disco, red)
-- Capacidad (número de usuarios concurrentes, tamaño de base de datos)
--->
 
 **RNFR-001: Tiempo de respuesta de interfaz web**
 
@@ -1469,20 +1121,7 @@ La base de datos DEBE tener índices apropiados en campos de búsqueda frecuente
 
 <br>
 
-#### 3.3.2 Fiabilidad
-
-<!-- 
-OBJETIVO:
-Especificar requisitos sobre la capacidad del sistema de funcionar correctamente
-bajo condiciones establecidas por un período de tiempo determinado.
-
-MÉTRICAS COMUNES:
-- MTBF (Mean Time Between Failures)
-- MTTR (Mean Time To Repair)
-- Tasa de errores aceptable
-- Manejo de errores
-- Recuperación ante fallos
--->
+#### 3.3.2 FFiabilida
 
 **RNFF-001: Tasa de fallos aceptable**
 
@@ -1546,16 +1185,6 @@ Los logs DEBEN rotar diariamente y comprimirse después de 7 días. Los logs DEB
 
 #### 3.3.3 Disponibilidad
 
-<!-- 
-OBJETIVO:
-Especificar el porcentaje de tiempo que el sistema debe estar operativo y accesible.
-
-MÉTRICAS COMUNES:
-- Porcentaje de uptime (ej: 99.5%)
-- Ventanas de mantenimiento permitidas
-- Tiempo máximo de downtime
-- Recuperación ante desastres
--->
 
 **RNFD-001: Disponibilidad objetivo (Uptime)**
 
@@ -1595,8 +1224,6 @@ El proceso de recuperación DEBE estar documentado en un manual de operaciones c
 4. Verificar integridad de datos restaurados
 5. Reiniciar servicio
 
-[OPCIONAL: Si el presupuesto lo permite, especificar servidor de respaldo activo-pasivo para failover automático, pero esto puede estar fuera del alcance de proyectos pequeños]
-
 **RNFD-005: Degradación controlada**
 
 Si servicios externos (Sistema Municipal, servidor SMTP) no están disponibles, el sistema DEBE continuar operando con funcionalidad reducida en lugar de fallar completamente:
@@ -1610,19 +1237,7 @@ El sistema DEBE informar al usuario cuando opera en "modo degradado" sin alarmar
 
 #### 3.3.4 Seguridad
 
-<!-- 
-OBJETIVO:
-Especificar requisitos para proteger el sistema contra accesos no autorizados,
-garantizar confidencialidad, integridad, y disponibilidad de la información (CIA Triad).
 
-CATEGORÍAS:
-- Autenticación
-- Autorización
-- Auditoría
-- Confidencialidad
-- Integridad de datos
-- Protección contra ataques comunes
--->
 
 **RNFS-001: Almacenamiento seguro de contraseñas**
 
@@ -1728,18 +1343,7 @@ Los respaldos de la base de datos DEBEN estar cifrados. Las claves de cifrado NO
 <br>
 
 #### 3.3.5 Mantenibilidad
-
-<!-- 
-OBJETIVO:
-Especificar qué tan fácil debe ser mantener, modificar, y extender el sistema.
-
-ASPECTOS:
-- Documentación del código
-- Estructura modular
-- Facilidad de diagnóstico de problemas
-- Facilidad de actualización
--->
-
+`
 **RNFM-001: Documentación del código**
 
 El código fuente DEBE estar documentado de forma que futuros desarrolladores puedan entenderlo y modificarlo:
@@ -1800,15 +1404,6 @@ Actualizaciones de dependencias DEBEN probarse en ambiente de staging antes de p
 
 #### 3.3.6 Portabilidad
 
-<!-- 
-OBJETIVO:
-Especificar qué tan fácil es transferir el sistema a diferentes entornos o plataformas.
-
-ASPECTOS:
-- Independencia de plataforma
-- Facilidad de migración
-- Compatibilidad
--->
 
 **RNFP-001: Independencia de sistema operativo del servidor**
 
@@ -1826,7 +1421,6 @@ Esto se logra usando:
 
 **RNFP-003: Contenedorización (Deseable)**
 
-[Este es un requisito DESEABLE, no esencial para v1.0]
 
 El sistema DEBERÍA poder empaquetarse en contenedores Docker para facilitar despliegue en diferentes entornos:
 - Dockerfile para construir imagen del sistema
@@ -1856,27 +1450,6 @@ Esto garantiza que los datos NO quedan "atrapados" en el sistema.
 
 ### 3.4 Requisitos de diseño
 
-<!-- 
-═══════════════════════════════════════════════════════════════════════════════
-REQUISITOS DE DISEÑO
-═══════════════════════════════════════════════════════════════════════════════
-
-OBJETIVO:
-Especificar restricciones o decisiones de diseño que deben seguirse por razones
-específicas (regulatorias, estándares organizacionales, compatibilidad, etc.).
-
-NOTA IMPORTANTE:
-Esta sección es OPCIONAL y debe usarse con cuidado. En general, se debe dar
-libertad al equipo de diseño para tomar decisiones técnicas. Solo incluir aquí
-decisiones de diseño que son IMPUESTAS por requisitos externos no negociables.
-
-DIFERENCIA CLAVE:
-- Restricción legítima: "El sistema debe seguir el manual de identidad visual de la municipalidad"
-- Micro-gestión técnica: "El sistema debe usar patrón MVC con controladores en carpeta /app/controllers"
-
-La segunda es una decisión técnica que debe quedar en manos del equipo de desarrollo,
-a menos que haya una razón de negocio FUERTE para especificarla.
--->
 
 **RD-001: Estándares de interfaz de usuario**
 
@@ -1921,18 +1494,6 @@ El sistema DEBE seguir las siguientes convenciones de nomenclatura establecidas 
 
 ### 3.5 Requisitos de calidad
 
-<!-- 
-═══════════════════════════════════════════════════════════════════════════════
-REQUISITOS DE CALIDAD
-═══════════════════════════════════════════════════════════════════════════════
-
-OBJETIVO:
-Especificar estándares de calidad que el sistema y el proceso de desarrollo deben cumplir.
-
-NOTA: Algunos de estos requisitos pueden solaparse con requisitos no funcionales.
-La diferencia es que aquí especificamos procesos y prácticas de calidad, mientras
-que en RNF especificamos atributos del sistema final.
--->
 
 **RC-001: Cobertura de pruebas**
 
@@ -1977,11 +1538,6 @@ El equipo DEBE crear un Plan de Pruebas documentado que especifique:
 
 ### 3.6 Restricciones del sistema
 
-<!-- 
-Esta sección puede usarse para enumerar restricciones adicionales no cubiertas
-en secciones previas, o puede referenciarse a la Sección 2.4 si todas las
-restricciones ya fueron documentadas allí.
--->
 
 Ver Sección 2.4 para restricciones completas del sistema. Las restricciones principales son:
 
@@ -1992,7 +1548,6 @@ Ver Sección 2.4 para restricciones completas del sistema. Las restricciones pri
 - Restricciones de personal: Equipo de 4 personas
 - Restricciones regulatorias: Cumplimiento de Ley de Protección de Datos Personales
 
-[O puede expandir con restricciones adicionales no mencionadas en 2.4]
 
 <br>
 
@@ -2000,16 +1555,7 @@ Ver Sección 2.4 para restricciones completas del sistema. Las restricciones pri
 
 ### 3.7 Atributos del sistema
 
-<!-- 
-Esta sección puede usarse para especificar atributos adicionales del sistema
-no cubiertos en otras secciones, o puede omitirse si todo ya está documentado.
 
-Ejemplos de atributos adicionales:
-- Estándares de documentación
-- Procesos de entrega
-- Capacitación requerida
-- Garantías y soporte post-implementación
--->
 
 **A-001: Documentación de usuario**
 
@@ -2069,38 +1615,11 @@ El sistema se considerará aceptado cuando:
 
 ## 4 APÉNDICES
 
-<!-- 
-═══════════════════════════════════════════════════════════════════════════════
-SECCIÓN 4: APÉNDICES
-═══════════════════════════════════════════════════════════════════════════════
 
-PROPÓSITO:
-Los apéndices contienen información complementaria que respalda y aclara las
-secciones anteriores, pero que por su extensión o naturaleza se documenta mejor
-por separado.
-
-CONTENIDO TÍPICO:
-- Modelos de casos de uso
-- Diagramas del sistema
-- Prototipos de interfaces
-- Esquemas de base de datos
-- Matrices de trazabilidad
-- Glosario extendido
-- Análisis de requisitos
-- Criterios de evaluación
-
-NOTA IMPORTANTE:
-Los apéndices NO son opcionales si contienen información crítica para entender
-los requisitos. Son parte integral del SRS.
--->
 
 ### 4.1 Modelos de casos de uso
 
-<!-- 
-Los casos de uso describen interacciones completas entre actores y el sistema
-para lograr un objetivo específico. Complementan los requisitos funcionales
-proporcionando contexto y flujos de trabajo.
--->
+
 
 **Lista de Casos de Uso del Sistema:**
 
@@ -2134,12 +1653,10 @@ proporcionando contexto y flujos de trabajo.
 | **Nombre** | pagar cuenta|
 | **Actores** | cajero (primario), Usuario del restaurante (secundario) |
 | **Descripción** | permite al carejo realizar el pago de los productos consumidos por el usuario|
-| **Precondiciones** | 1. se validan los productos pedidos por el usuario <br>2. se le escanea el carnet al usuario
-<br>3. se crea la factura <br>4. se le cobra lo correspondiente al usuario |
+| **Precondiciones** | 1. se validan los productos pedidos por el usuario <br>2. se le escanea el carnet al usuario<br>3. se crea la factura <br>4. se le cobra lo correspondiente al usuario |
 | **Postcondiciones** | 1. el sistema debe tener registrado los productos pedidos por el usuario <br>2. el sistema debe hacer la suma de los precios de los productos vendidos<br>3. el sistema debe crear una factura <br>4. el sistema debe guardar una copia de la factura en la base de datos y imprimir una fisica
 | **Flujo Principal** | 1. se validan los productos pedidos por el usuario <br>2. se le escanea el carnet, para validar su rol y ańadirle su descuento correspondiente (si se puede) <br>3. se crea la factura <br>4. se imprime una copia de la factura <br>5.se le cobra lo correspondiente al usuario |
-| **Flujos Alternativos** | **4a. compra no registrada**:<br>  4a1. El sistema muestra mensaje "compra no registrada"<br>  4a2. El sistema ofrece opción "
-a soporte"<br>  4a3. Si el usuario selecciona llamar, ir a (llamar a soporte)<br>  4a4. Si el usuario cancela, volver al paso 2<br><br>**7a. error en la pagina**:<br>  7a1.  El sistema nuestra un mensaje "error"<br>  7a2. Si esto sucede, el sistema ofrece opción "reportar problema"<br>  7a3. un usuario de soporte será alertado <bro> 7a4. se soluciona el problema |
+| **Flujos Alternativos** | **4a. compra no registrada**:<br>  4a1. El sistema muestra mensaje "compra no registrada"<br>  4a2. El sistema ofrece opción " sa soporte"<br>  4a3. Si el usuario selecciona llamar, ir a (llamar a soporte)<br>  4a4. Si el usuario cancela, volver al paso 2<br><br>**7a. error en la pagina**:<br>  7a1.  El sistema nuestra un mensaje "error"<br>  7a2. Si esto sucede, el sistema ofrece opción "reportar problema"<br>  7a3. un usuario de soporte será alertado <bro> 7a4. se soluciona el problema |
 | **Flujos de Excepción** | **5a. Usuario suspendido o con multas vencidas**:<br>  5a1. El sistema muestra advertencia "Usuario suspendido" o "Usuario tiene multas vencidas por $[monto]"<br>  5a2. El sistema NO permite continuar con la venta<br>  5a3. Fin del caso de uso<br>  |
 | **Requisitos Relacionados** | CO-01 (pagar cuenta)<br>CO-02 (validar carnet)<br>CO-03 (aplicar descuento)<br>CO-04 (generar factura)|
 <br>
@@ -2222,152 +1739,50 @@ a soporte"<br>  4a3. Si el usuario selecciona llamar, ir a (llamar a soporte)<br
 | **Flujos de Excepción** | **5a. Usuario no valido**:<br>  5a1. El sistema muestra advertencia "Usuario no valido" <br>  5a2. El sistema NO permite continuar con el registro<br>  5a3. Fin del caso de uso<br>  |
 | **Requisitos Relacionados** | CU-01 (inventario diario)<br>CU-02 (Identificar productos que se requieren)<br>CU-03 (Notificar a los proveedores)<br>CU-04 (Analizar los distintos tipos de menu)<br>CU-05 (Determinar los productos faltantes)|
 <br> 
-**Diagrama de Casos de Uso:**
-
-
-<img width="830" height="371" alt="image" src="https://github.com/user-attachments/assets/b2bb24f7-0e83-4a6c-9f2b-5edffd7bdb77" />
-
-<img width="800" height="391" alt="image" src="https://github.com/user-attachments/assets/766d8192-1541-4734-b22d-188ea506bce1" />
-
-<img width="680" height="461" alt="image" src="https://github.com/user-attachments/assets/3be718c2-2213-4a1c-a6ab-d6f145f0e717" />
-
-<img width="934" height="333" alt="image" src="https://github.com/user-attachments/assets/84323015-e7d0-4a5d-8754-8524bd04979e" />
-
-<img width="1013" height="419" alt="image" src="https://github.com/user-attachments/assets/fec03dc3-6d39-4f21-a1ed-183af78e88c8" />
-
-<img width="1062" height="424" alt="image" src="https://github.com/user-attachments/assets/6278a6cf-7a84-4f88-9d24-64f5ba6c52d6" />
-
-<img width="1039" height="416" alt="image" src="https://github.com/user-attachments/assets/59163192-855a-454b-8daa-9fadf426052e" />
-
 
 
 ### 4.2 Glosario
-
-<!--
-Glosario extendido complementando la Sección 1.4.
-Incluye términos adicionales que surgieron durante la especificación detallada.
--->
-
-[Si ya documentó un glosario completo en 1.4, puede referenciarlo:]
-
-Ver Sección 1.4 para el glosario completo de términos, acrónimos y abreviaturas utilizados en este documento.
-
-[O expandir con términos adicionales específicos del dominio:]
 
 **Términos Adicionales del Dominio Bibliotecario:**
 
 | Término | Definición |
 |---------|------------|
-| **Catálogo bibliográfico** | Registro organizado de todos los materiales disponibles en la biblioteca, con información descriptiva de cada uno. |
-| **Clasificación Dewey** | Sistema Dewey de clasificación decimal utilizado para organizar libros por temas. Rango de 000 a 999. |
-| **ISBN** | International Standard Book Number. Código único de 13 dígitos que identifica libros comerciales. |
+| **Catálogo bibliográfico** | Registro organizado de todos los materiales disponibles en la cafeteria, con información descriptiva de cada uno. |
+| **Clasificación Dewey** | Sistema Dewey de clasificación decimal utilizado para organizar alimentos por temas. Rango de 000 a 999. |
+| **ISBN** | International Standard Book Number. Código único de 13 dígitos que identifica alimentos comerciales. |
 | **MARC** | MAchine-Readable Cataloging. Formato estándar para representar y comunicar información bibliográfica en forma legible por computadora. |
-| **Morosidad** | Estado de un usuario que no ha devuelto materiales en la fecha establecida. |
-| **Obra** | Contenido intelectual (ej: "Don Quijote de la Mancha"). Una obra puede tener múltiples ediciones y ejemplares. |
-| **Política de préstamo** | Reglas que definen cuántos materiales puede prestar cada tipo de usuario, por cuántos días, y si puede renovar. |
+| **Morosidad** | Estado de un usuario con multas en la fecha establecida. |
+| **Obra** | Contenido intelectual (ej: "empanadas"). pueden tener variedad de tipos. |
+| **Política de préstamo** | Reglas que definen cuántos materiales puede pedir por cada tipo de usuario, por cuántos días, y si puede renovar. |
 <br>
 
 ### 4.3 Diagramas del sistema
 
-<!--
-Incluya diagramas que ayuden a visualizar la arquitectura, estructura de datos,
-flujos de información, etc.
 
-TIPOS DE DIAGRAMAS ÚTILES:
-- Diagrama de contexto (relación del sistema con su entorno)
-- Diagrama de arquitectura de alto nivel
-- Diagrama de componentes
-- Diagrama de despliegue
-- Modelo entidad-relación de la base de datos
-- Diagramas de flujo de procesos críticos
-- Wireframes/mockups de interfaces principales
--->
+**Modelo 1**
 
-**4.3.1 Diagrama de Contexto del Sistema**
+<img width="830" height="371" alt="image" src="https://github.com/user-attachments/assets/b2bb24f7-0e83-4a6c-9f2b-5edffd7bdb77" />
 
-[Incluya diagrama mostrando el sistema y sus interacciones con actores externos y sistemas externos]
+**Modelo 2**
 
-[![](https://img.plantuml.biz/plantuml/svg/VLRBRkCs5DthAswpwKm0mzEi2cCQZ2ofYG2_8Cf1fx4NZCGuH2JI9Qcaaw8VCyjPp6e-mJ_MIxqiMtQz2KBUnpdd7bxxapPKcIBF8972iB-D73pmXunBmv8dvwUKFNB180gys9tTJ098Cggru-XdBhPKqHmKImmLcup1FmxWPqoJvusIXKWzcKdryQFcsh2SNb_3X6-Up3WhsEb0cXYfch0RnPWu7OSWcHAoYVpCiao-Lg5IfKoLOJ3ECAyy_Hs94Vx6u9ShvzykTAgKVArXLqa-LSyjm7tU1vjdk46IFgSRpAMGCiof58C1a8eaZ4ljOgkTypFyPZ_WUl4y2WZSBgVkR4xWNVZsLy6PIkdxAi8fcSF5KXTKSJdqCiwmyagCcqdG2w0QYkeUMgcQn7qSNfUX3zsJVeARvbmWP4LJgLQYHbzcKdlLoMXfa934mTG5BvZ5aJkfeU_7Vt5vsLVXyd8btZN7ADaDquRlVWZeGgRloywrKQ1ZcLvt0i4VSH2LCleCcpzH8CMM8KlrlW-fwJmj14_ubcOhWI325ENbZpoXYSLY4Kx36aFEeUEmWrfClN2K2yWqNgo49vLY4e8C8nHMuOciAvZjsHAj42iHCOruKecL48sY6N_3OLJ3G-SMXqLQ7VoGBEOaZCExhWIXU3mdmOIL8_TsFrA-aIN_CHgVQgJz9tjG57noTVNXruf_LaMVmH_cMyMqL7GbujqtbVFQcBmvFurvudwUBsEeSCzduUocXjaOUd3_n5CSoZgLhs9mQ5xdqCf7eQLRyKtZs8vkx1oSSXZ7rKjrdLhaeykAlrFBS7JPqjnJYuA9wo6dW8nWIPPk5Cw7tYJ49n8SSrHsMGskMvkFxFxGHMOe9DJilcRIZYTYec0l5BPgzmrNSovnJhSqORXdDHgGQgV97sJiqTPh6enW9XjNIy4qO117mwCtfCehgqDESJgSPaoVvZ0EnvDm7WUUPL8pE1f0dqV4DkKkEG1TldGfQ8CFZnPA9anR-x_8hAXGzkWSTXl10Nmcm72MRoNAOH-pcp5bq81VG1nmFqtEzQVX3FT8vFhpg5czvRexFPn7lYcGLNrcAGc6_oksbSgmBaTLF-O-dQg-rQXA0aoXwUux9YPMaudSQBiOQP5ojDpk-nbpDTjtkfo5NhXezs_RhsM0Js44TxXFKWgyt7GfJLSYuGN-fS8slR-DumKPufTI3EuYN5VlfqQyby2dHcgGA6lfc6wDCo23w2wqsjeLUHuWliaH1E85oHxD3Q7Pr64y8UlwyVPGbOFfE0BBoF_Np0_mcA1c_lmSg7eRs3dLayI969dlljPpkbVwYqY6XDokszNHWqOCDONkkE4ah8CLNk5fzasVRBMshKCUwgrzloHZk0tzTP_5VWzRcN8gB8_giFgYkm-8DyJcQmS_dvX8yOVVVm00)](https://editor.plantuml.com/uml/VLRBRkCs5DthAswpwKm0mzEi2cCQZ2ofYG2_8Cf1fx4NZCGuH2JI9Qcaaw8VCyjPp6e-mJ_MIxqiMtQz2KBUnpdd7bxxapPKcIBF8972iB-D73pmXunBmv8dvwUKFNB180gys9tTJ098Cggru-XdBhPKqHmKImmLcup1FmxWPqoJvusIXKWzcKdryQFcsh2SNb_3X6-Up3WhsEb0cXYfch0RnPWu7OSWcHAoYVpCiao-Lg5IfKoLOJ3ECAyy_Hs94Vx6u9ShvzykTAgKVArXLqa-LSyjm7tU1vjdk46IFgSRpAMGCiof58C1a8eaZ4ljOgkTypFyPZ_WUl4y2WZSBgVkR4xWNVZsLy6PIkdxAi8fcSF5KXTKSJdqCiwmyagCcqdG2w0QYkeUMgcQn7qSNfUX3zsJVeARvbmWP4LJgLQYHbzcKdlLoMXfa934mTG5BvZ5aJkfeU_7Vt5vsLVXyd8btZN7ADaDquRlVWZeGgRloywrKQ1ZcLvt0i4VSH2LCleCcpzH8CMM8KlrlW-fwJmj14_ubcOhWI325ENbZpoXYSLY4Kx36aFEeUEmWrfClN2K2yWqNgo49vLY4e8C8nHMuOciAvZjsHAj42iHCOruKecL48sY6N_3OLJ3G-SMXqLQ7VoGBEOaZCExhWIXU3mdmOIL8_TsFrA-aIN_CHgVQgJz9tjG57noTVNXruf_LaMVmH_cMyMqL7GbujqtbVFQcBmvFurvudwUBsEeSCzduUocXjaOUd3_n5CSoZgLhs9mQ5xdqCf7eQLRyKtZs8vkx1oSSXZ7rKjrdLhaeykAlrFBS7JPqjnJYuA9wo6dW8nWIPPk5Cw7tYJ49n8SSrHsMGskMvkFxFxGHMOe9DJilcRIZYTYec0l5BPgzmrNSovnJhSqORXdDHgGQgV97sJiqTPh6enW9XjNIy4qO117mwCtfCehgqDESJgSPaoVvZ0EnvDm7WUUPL8pE1f0dqV4DkKkEG1TldGfQ8CFZnPA9anR-x_8hAXGzkWSTXl10Nmcm72MRoNAOH-pcp5bq81VG1nmFqtEzQVX3FT8vFhpg5czvRexFPn7lYcGLNrcAGc6_oksbSgmBaTLF-O-dQg-rQXA0aoXwUux9YPMaudSQBiOQP5ojDpk-nbpDTjtkfo5NhXezs_RhsM0Js44TxXFKWgyt7GfJLSYuGN-fS8slR-DumKPufTI3EuYN5VlfqQyby2dHcgGA6lfc6wDCo23w2wqsjeLUHuWliaH1E85oHxD3Q7Pr64y8UlwyVPGbOFfE0BBoF_Np0_mcA1c_lmSg7eRs3dLayI969dlljPpkbVwYqY6XDokszNHWqOCDONkkE4ah8CLNk5fzasVRBMshKCUwgrzloHZk0tzTP_5VWzRcN8gB8_giFgYkm-8DyJcQmS_dvX8yOVVVm00)
+<img width="800" height="391" alt="image" src="https://github.com/user-attachments/assets/766d8192-1541-4734-b22d-188ea506bce1" />
 
-**4.3.2 Diagrama de Arquitectura de Alto Nivel**
+**Modelo 3**
 
-[Incluya diagrama mostrando capas principales: Presentación, Lógica de Negocio, Acceso a Datos, Integraciones]
-[![](https://img.plantuml.biz/plantuml/svg/XLVDSjis4BxpARQ-r7RYPZAPNZoTJ6LQSTMnVYegwNJg7Y0Iek6000k0IfnEhts0vWbop26dt7hLc_H9kWl-YtBZWqVS_G0illsm2tnl7JEko2GmytiX78zTOTXPp79cWwyIlX6AGpYVBkQpyMm51lrCfP87WNqjLCuCoo3MMQuLLmx-203_BbZyEZMwK4cefJRVVPSRRj7DOg7Ly-TmBT9RTo4BVXYjUAeHMGEl3EVgC39XJjiQzmkNKhyv31JAyTJqrby8zVems1ccx9ORosGR0xilmTeat7WWN4WSwQqlj7AHUCVXwTFWpoup621RCyiF4mC_ttBc7fWNvt72IGwNWc7e6OE4mwYJ8_yjdOQPs789Pn09wpZYBiHQ2htYyUsDEjuVyGn2IYqyWeYRhK16x4aGvBWYIpaSXQF522x7i5YE8yptA9piti-EO932SZ-_Jf1Nis7lu6U-lb5BRb47LcpPRu1BlE7h4ZLQJ03dMs4uBmeAvCJxMIwyt_zJsd4mn3NeJJCKuFGKDwAGbtJtYPsVdbRcC_XXDRt-zZ64KVJiCVp8jYoAZSXTux_GsbbCPVvaoZ18mIHSSYjIrI12b2rpI1O_X_3Mw8m_XXV2y8r--xW20OoJ5CqHsp1JHijLueEb10rekzwzlvg4_kTiV3KF9tFYhXLqHTjqzpaffCPytAXHuP1N4IEpky_gHjrZOjB2Y8Gb9Kk5knsEkkBM4Tv_lBG5HgUjnnVLnnV6XCpjFY2hsW-AKQVqCHoqCBkFM28oRU7-HbtohPO5QO2Ngv4il7Su4jM02cCbpbGVGzYqa0u1zx1WQRM5p9k6q9bsOkEPQjPNP3gqTgwDu_NQvST3OciO9hLL6cPh8Ia5t7OrzugHqISAOiCJhcBKLJLpAIdbZ9Pqq5WSSwlXU7an2ayQG2S7O56Ej95MibB_Nd0D62vGnL9OtM3392vQ4Vo_uXk5uJYQ0_uUhUOH2Q-kZvNiY1Khd4Pvx8c6AEeBfuUjJr27qAmn7S2tecdmUqBfmVUKWjllgQKVYjT66qP7AZtSg4Ze9nQD1il8z9081WoG61RC6KfMC_DzLmsZDTMN9jDOU2yRtoJB9S-eO4AuVDdQfqpnEmQ-nU2uVlvVMWRpvHIETKuU9ay6IMyQoj45_KSLNLAEaN9jNMfuzDCrLjdjqsUFJevet-i4atz8BD5u-Mg2zIcYZybiDRvQjiM-touhzOHIu7wmvomcDwhkDTD2OG_9cVGisqp49Qe_99gk5ZTgd35HurpU0zQzg2uSE65ILgOr1bxajl8_bBszXIbt8JRW63Mw-sIfklREiSy2BGPEP5mNhit1aZSd3-k2pdOVSBHk_I_mE59CcEvC9neofWecsm8WJ8pz5jQ6izVS03OOZ44DyXXBNIHmLD5eOVoMODeUrMmF2BvH6EuaeLwngRj5JNg7n0HhHqdtHE76NL4ggQ5z3_eGtsRRKqshbjLoD8jUZPVHw7hiQqp_jbH5VwtJLAYKMiRUGPIbfuJrEv9M6u6ThrlUOs-hnCJYszt7gbt5jvLowfBS3Dbs30_9fHi4QMMKIwGKK-fqGZ7w9VA-PfOynPGOhngTSyFs3c-bgHWJP324TopnK6uCbRCMjlle3EcHd0Ob8JBIhHuev6jSKLQB04tAovZWU2CBBrwBQv4U-4c0zoKuEtlkMncSGwHnFvXxnE0zQRLe_4s5gmrDuwyDRPskBKqnhWrLpMtzLNiD_EgrgLcg_l45J-S8rq4r8phDfeclSROH3tt_Ex29e-yghnJrhjijrZGCF9r5IcfQJydKdhKDkAPk6DB0qrbau6id3BgJUFyw2Vh3kzR-nYjZRt_ry7O7bSKtqzeGjCchSuag9EL5J-ZY7tGAVWLmEUaK2zMJrNKKzAjyEMrTY11dxBsAdqJH3q7WizFCKIkcVrhgUInqYXCILnrx-2RHRzGtpMb1yz3NaFY0lwNk0K27aWeHbDNiC29kgnyMn26qvUzBM6pvvzXtpEv3nh5U-IBAttfau0jdWspEsRclgBkF1BMbPll83XiLqbyjWw1RRG-XUzNu8BWJn9V1NTPxw43obAgdB_61lxij9xDmig2UDLh-z7Ao6eShlDvCmddagxe7HPpUwUM5dgloQLmMVMpbB66-vE8bWIigrhsN0Up-mSxCFFIIvxuKusi07s1A9FYAZCl6Yy4VCsF4ci6_V_qDU7cxqoVL_3YrBR2L26p4ipcHhsCEehawnlLBmKSXrCP3wzXV4UIkZVVq55iGNbr45I3QSOriJOcGEgvwalMl2vgm6hGYHZj35gRWwt8R3hF81WF65kTYlKMeBUK5lOU0Uo-zNn9FYjTiLjtCplm3gx3TqTMpZQxeXHCKvBfyLFXDufDzkxTFlEdIcnqqdkjRZedeDr8upeGJARLV9BIIQydubDtJLZGHVETpAEXonIGStnMsl5TXpcc_MO_Aam3dBnKM1D_Z_oAJ_m40)](https://editor.plantuml.com/uml/XLVDSjis4BxpARQ-r7RYPZAPNZoTJ6LQSTMnVYegwNJg7Y0Iek6000k0IfnEhts0vWbop26dt7hLc_H9kWl-YtBZWqVS_G0illsm2tnl7JEko2GmytiX78zTOTXPp79cWwyIlX6AGpYVBkQpyMm51lrCfP87WNqjLCuCoo3MMQuLLmx-203_BbZyEZMwK4cefJRVVPSRRj7DOg7Ly-TmBT9RTo4BVXYjUAeHMGEl3EVgC39XJjiQzmkNKhyv31JAyTJqrby8zVems1ccx9ORosGR0xilmTeat7WWN4WSwQqlj7AHUCVXwTFWpoup621RCyiF4mC_ttBc7fWNvt72IGwNWc7e6OE4mwYJ8_yjdOQPs789Pn09wpZYBiHQ2htYyUsDEjuVyGn2IYqyWeYRhK16x4aGvBWYIpaSXQF522x7i5YE8yptA9piti-EO932SZ-_Jf1Nis7lu6U-lb5BRb47LcpPRu1BlE7h4ZLQJ03dMs4uBmeAvCJxMIwyt_zJsd4mn3NeJJCKuFGKDwAGbtJtYPsVdbRcC_XXDRt-zZ64KVJiCVp8jYoAZSXTux_GsbbCPVvaoZ18mIHSSYjIrI12b2rpI1O_X_3Mw8m_XXV2y8r--xW20OoJ5CqHsp1JHijLueEb10rekzwzlvg4_kTiV3KF9tFYhXLqHTjqzpaffCPytAXHuP1N4IEpky_gHjrZOjB2Y8Gb9Kk5knsEkkBM4Tv_lBG5HgUjnnVLnnV6XCpjFY2hsW-AKQVqCHoqCBkFM28oRU7-HbtohPO5QO2Ngv4il7Su4jM02cCbpbGVGzYqa0u1zx1WQRM5p9k6q9bsOkEPQjPNP3gqTgwDu_NQvST3OciO9hLL6cPh8Ia5t7OrzugHqISAOiCJhcBKLJLpAIdbZ9Pqq5WSSwlXU7an2ayQG2S7O56Ej95MibB_Nd0D62vGnL9OtM3392vQ4Vo_uXk5uJYQ0_uUhUOH2Q-kZvNiY1Khd4Pvx8c6AEeBfuUjJr27qAmn7S2tecdmUqBfmVUKWjllgQKVYjT66qP7AZtSg4Ze9nQD1il8z9081WoG61RC6KfMC_DzLmsZDTMN9jDOU2yRtoJB9S-eO4AuVDdQfqpnEmQ-nU2uVlvVMWRpvHIETKuU9ay6IMyQoj45_KSLNLAEaN9jNMfuzDCrLjdjqsUFJevet-i4atz8BD5u-Mg2zIcYZybiDRvQjiM-touhzOHIu7wmvomcDwhkDTD2OG_9cVGisqp49Qe_99gk5ZTgd35HurpU0zQzg2uSE65ILgOr1bxajl8_bBszXIbt8JRW63Mw-sIfklREiSy2BGPEP5mNhit1aZSd3-k2pdOVSBHk_I_mE59CcEvC9neofWecsm8WJ8pz5jQ6izVS03OOZ44DyXXBNIHmLD5eOVoMODeUrMmF2BvH6EuaeLwngRj5JNg7n0HhHqdtHE76NL4ggQ5z3_eGtsRRKqshbjLoD8jUZPVHw7hiQqp_jbH5VwtJLAYKMiRUGPIbfuJrEv9M6u6ThrlUOs-hnCJYszt7gbt5jvLowfBS3Dbs30_9fHi4QMMKIwGKK-fqGZ7w9VA-PfOynPGOhngTSyFs3c-bgHWJP324TopnK6uCbRCMjlle3EcHd0Ob8JBIhHuev6jSKLQB04tAovZWU2CBBrwBQv4U-4c0zoKuEtlkMncSGwHnFvXxnE0zQRLe_4s5gmrDuwyDRPskBKqnhWrLpMtzLNiD_EgrgLcg_l45J-S8rq4r8phDfeclSROH3tt_Ex29e-yghnJrhjijrZGCF9r5IcfQJydKdhKDkAPk6DB0qrbau6id3BgJUFyw2Vh3kzR-nYjZRt_ry7O7bSKtqzeGjCchSuag9EL5J-ZY7tGAVWLmEUaK2zMJrNKKzAjyEMrTY11dxBsAdqJH3q7WizFCKIkcVrhgUInqYXCILnrx-2RHRzGtpMb1yz3NaFY0lwNk0K27aWeHbDNiC29kgnyMn26qvUzBM6pvvzXtpEv3nh5U-IBAttfau0jdWspEsRclgBkF1BMbPll83XiLqbyjWw1RRG-XUzNu8BWJn9V1NTPxw43obAgdB_61lxij9xDmig2UDLh-z7Ao6eShlDvCmddagxe7HPpUwUM5dgloQLmMVMpbB66-vE8bWIigrhsN0Up-mSxCFFIIvxuKusi07s1A9FYAZCl6Yy4VCsF4ci6_V_qDU7cxqoVL_3YrBR2L26p4ipcHhsCEehawnlLBmKSXrCP3wzXV4UIkZVVq55iGNbr45I3QSOriJOcGEgvwalMl2vgm6hGYHZj35gRWwt8R3hF81WF65kTYlKMeBUK5lOU0Uo-zNn9FYjTiLjtCplm3gx3TqTMpZQxeXHCKvBfyLFXDufDzkxTFlEdIcnqqdkjRZedeDr8upeGJARLV9BIIQydubDtJLZGHVETpAEXonIGStnMsl5TXpcc_MO_Aam3dBnKM1D_Z_oAJ_m40)
+<img width="680" height="461" alt="image" src="https://github.com/user-attachments/assets/3be718c2-2213-4a1c-a6ab-d6f145f0e717" />
 
-**4.3.3 Diagrama de Componentes del Sistema**
+**Modelo 4**
 
-**[Incluya diagrama mostrando los principales componentes/módulos del sistema y sus interacciones]
+<img width="934" height="333" alt="image" src="https://github.com/user-attachments/assets/84323015-e7d0-4a5d-8754-8524bd04979e" />
 
-**Módulo de prestamos**
+**Modelo 5**
 
-[![](https://img.plantuml.biz/plantuml/svg/ZLMxRjim5Dtr5RUURC11ban5KIIMtGQ5dRgnaux1DNNZig18bQGC64K_fcE6JDcwwiTAwcN9bjfuiKoUS-xHVVdIMDGsZGKm5ITAahHapZPy8xYonBu5RxXa8eq8teKNv-75GrZ1tWU1vLOGJ3bkDSO83XGUHE0C5jbBb0hbBvOwUtAXOcM285JI8fUa7oOgbH7g_H2JP0o3gqHmXendBn8ckOMrip0OmSy0tASM7oQQSZ6lf9KGf1sx_86Hqks80tUvIZINMrZSXt0W-Oi5IlgEeEb7wZGDNA_NIqXG8oIr0EoTu4w9b74Ntmn6FNPMf7USaG-NFt7LOQJ0m1ptXO5vzh9rR-sHahRAaTx23WMFi8Ws1fRz5ipbqJrgsWeq7bkxEt5Ja5qM3dRkgwD-FpL_KEF1lrMa83KfQgx6477ZC7p3SpM8qPBcACOWikUOsuxCCFJEVMGyk0aFXzxF1rTZxFTIek4nXtb2LGlV9eQssHy9YN8Mh4lZgGMfB7zqDws4DEjpKmBAulRvcCbTzemWM-X_LwBgYrjANFO6_ijmgtHNNtnQNa4DsFkJAyR8A70vGglQaKxVignHTwIxulBLST8AVnobgdXtc4LvIwyE51yOe-1NOpDCDyDeuoWJDBxUCFKChx5KncurhRxCSqKH8oFPdDLnxNxSbg-rXoQsILLbFnEhnNgPLpX6Bi0V5vFPNV74CPZIcdozWriIdTleT2NCXT-Hw8NZxCcgg4X1EVDEgobLqpg6-Sxa8lcEAgvr7xjp_9hy4g3BwUhJwPoXfau5w7LoD0fBqeORIowJicoMaddwmktMTaasgR1vwFP-wXKuwjgcGdkZ7Paly7aVpedEPuPflg7SxdGIbk2MkmfxX6aR-8zWLwxBZYqRadoV5elATUxvUhxodRYw_lprOJxxEBkP3aV19Sd8_Ql_1G00)](https://editor.plantuml.com/uml/ZLMxRjim5Dtr5RUURC11ban5KIIMtGQ5dRgnaux1DNNZig18bQGC64K_fcE6JDcwwiTAwcN9bjfuiKoUS-xHVVdIMDGsZGKm5ITAahHapZPy8xYonBu5RxXa8eq8teKNv-75GrZ1tWU1vLOGJ3bkDSO83XGUHE0C5jbBb0hbBvOwUtAXOcM285JI8fUa7oOgbH7g_H2JP0o3gqHmXendBn8ckOMrip0OmSy0tASM7oQQSZ6lf9KGf1sx_86Hqks80tUvIZINMrZSXt0W-Oi5IlgEeEb7wZGDNA_NIqXG8oIr0EoTu4w9b74Ntmn6FNPMf7USaG-NFt7LOQJ0m1ptXO5vzh9rR-sHahRAaTx23WMFi8Ws1fRz5ipbqJrgsWeq7bkxEt5Ja5qM3dRkgwD-FpL_KEF1lrMa83KfQgx6477ZC7p3SpM8qPBcACOWikUOsuxCCFJEVMGyk0aFXzxF1rTZxFTIek4nXtb2LGlV9eQssHy9YN8Mh4lZgGMfB7zqDws4DEjpKmBAulRvcCbTzemWM-X_LwBgYrjANFO6_ijmgtHNNtnQNa4DsFkJAyR8A70vGglQaKxVignHTwIxulBLST8AVnobgdXtc4LvIwyE51yOe-1NOpDCDyDeuoWJDBxUCFKChx5KncurhRxCSqKH8oFPdDLnxNxSbg-rXoQsILLbFnEhnNgPLpX6Bi0V5vFPNV74CPZIcdozWriIdTleT2NCXT-Hw8NZxCcgg4X1EVDEgobLqpg6-Sxa8lcEAgvr7xjp_9hy4g3BwUhJwPoXfau5w7LoD0fBqeORIowJicoMaddwmktMTaasgR1vwFP-wXKuwjgcGdkZ7Paly7aVpedEPuPflg7SxdGIbk2MkmfxX6aR-8zWLwxBZYqRadoV5elATUxvUhxodRYw_lprOJxxEBkP3aV19Sd8_Ql_1G00)
+<img width="1013" height="419" alt="image" src="https://github.com/user-attachments/assets/fec03dc3-6d39-4f21-a1ed-183af78e88c8" />
 
-**4.3.4 Modelo Entidad-Relación de la Base de Datos**
+**Modelo 6**
 
-[Incluya diagrama ER mostrando entidades principales y sus relaciones]
+<img width="1062" height="424" alt="image" src="https://github.com/user-attachments/assets/6278a6cf-7a84-4f88-9d24-64f5ba6c52d6" />
 
-Ejemplo de entidades principales:
-- Usuario (id, carnet, nombres, apellidos, email, tipo_usuario, fecha_registro, estado)
-- Material (id, isbn, titulo, autor, editorial, año, categoria, ubicacion)
-- Ejemplar (id, material_id, codigo_barras, estado, fecha_adquisicion)
-- Prestamo (id, usuario_id, ejemplar_id, fecha_prestamo, fecha_devolucion_esperada, fecha_devolucion_real, estado)
-- Multa (id, prestamo_id, monto, fecha_generacion, fecha_pago, estado)
-- Reserva (id, usuario_id, material_id, fecha_reserva, estado)
+**Modelo 7**
 
-[![](https://img.plantuml.biz/plantuml/svg/jLbDRzl86RxhLmoCNTWMRCDEugOGDa5eYKgOIAIMaepTee0m8iVA92I76PBEUZUzzjP3sr-mnnvoAFQsL_sJ_fA-yyKlKNRQRGF446VUuRmVp_l95rcEULx44OfPI29sIlZfcguZod8IlEtr3j6G9JTqKt0SqEql2Ge98bbE8vRrilSqIJ77CGeYd6Nefnw2VrSuUB_Xh4Z28OiOHnEwUPj_JwA8VLJxZ8U4gxsh28ZbgiKv-wWMHvY_lueAqljJhvVJF29eAbb3TfBJ48UdFeaqCwTeJhESn1XTIPuNmFCVawCHnHjW2mlU0vBc1OwEXIYskt16rcY0blEbvJlUwigvcZZUmXvQw2Y8A4boaWa98unA9U3Z7gpJ_0uTzFkx1_lz0uGpL6G5vfHf7VHHlq_3bLxizz40EUx2Vcdxw9jlPc-UFvTKfwUQEC0y8JaGNLl-y9Nb7pqwFmR2fUjykxGrSH_bD6Mha0L53FmmeBRTvVJeS6YFbXFhyEHmPisjcUSlxCDZVI81KjuyS-yD2OlN73HGaLsSdvkNuHHiI4EsP_i6L8zN2HWcflgkaRMmzMv8EGa2of862-NXd4JaXYNieicXt3LxZphs-WXiJwCMHtjKPqna56U1tXOUACwUBvOZnm83mOFZZk6NCpbi2iR91f36MsAfFV93IeLxi6GL4wb1Yfjqu34uhDqyN3ZNukRvSZwptP4pykJDUbtT71THZhDLIf9G0nDUQG-TgJK1AKyUAIgspWY_bPTBYeNztQB170u4_EcFM6j_uKn1Nciw4-xLuH9pPxwmf-0FAU4PIt24FXG4u8qHYL2clAtB8_IvfZje-awlMEdD1xsZ00aJ79EQbI-xZ9n23Fe8mMNr5cTlws2vl3Isv2ogcN_gkC2qRuqy7zHVkJI80y-MbCYjkzDlS8ylm-a-dBIWGG4Eu6BPwWQNTneDZkon1RX6vv9o7J4m7xnJA2N73VlNKH9miWiGGQ2s0OeqPe2bW6HiXuQcEmH6p2UW-YREfk0LlcDDQX0oInexCSu9fm2y1chCwWDmeTcw7cCkddP6Wxo8wbm-hfcno1bVfPmc0Krnr1Mk90d9LXa98Cb9c3UWMKKr4NLAQOnH9ywLBspgszS0C16uHzSZ-3iKVxo5RunCGWhtKDn6ZU9X-q-sIWj8KO6nczQ9ETiAjfVw80qfYt77HW1yRiHzgv1y97UTmRQawM8f95d0QMfGPE9GiTOihcve1Z_tk8S4_cf34i9hkXevyvddWcEAoEnwgzgp5YV6S6QLCWxd0QSywZQ5WZ5DDc2uClAO6Dq4gFtQdiucbWyL0KifuF5c-ramBWk38YdXMG-2ven6C7b7uZJ2l8bWixeFmVS3VRnRDR2GRjXgZJd7sVt1KHS29LzDjEp4dORQPxvmTPcXR7VbspFBjuQEvuejszUvwyfwRRKo9Wu_5CBY2WzbCaoX483Wtzhz_-KrnVxKgrdBB6bh0KSWVjogtSpg0zRgBl76BQezfc-JjJ9ZMNJiEzPn92ItB2gQ8U4-z9J2rwDXHynKIgzHT-UHwleLoQ220AUi6t-72D9ErF6oVNbmP5ylRLMqNTlkK67Fe5278IgAfehFEj0Re6e8Oz3Lf6Weyxz68A3Dzg-j6W3rYiOVi27kRC9FB_vFqFV54SMKkegV1yqYIrTRbSskjt36pb35YQ47qT3MGMDekKDxeWF8TpD7r5lQLhfdO3czgV9OL_rHLTYxQ0eOk1RHZ3KFTmQHLZa2jLBTDFBP52AY0czL8MBf0QFiYHnxdFr1ewWgGh9Y5E_RKBNEA-pB8iBQ_jKhGt3CT0ks4rYDbLMgRQlqNXlFh9UMl6lekIFF5R_hTapnfj4UnIHdaDFridgTFRQDBoyi_xKjwnyGnfsFRLzuT9L5xec7NnmDzTqTn5y03GDfaUng2AalQw0q4Dp0Ittdj_bo0m-bFcKKd0e3oV2eyxOp4HB0WaIpx6ri5qWLKguc7aJs2YiuAzgpWR9kYacIuNUaA_obdCaXIxWRARJJ9hUqQ_TUZ06VZWBPs9e8CKmrBFed2CXPJfCwhsKDMVP4ujgwqPiD4U4Swdj3qs7rYVToPIr7piA3bgHcziQwjZike4Pl6ZnYcmSRMcYLP8H8ErGZlPtSjgOrjKfv5-KFUWC6UsY5Dyi-l7Saa-DrXCt1hdP1fYZbZVlU7s9X3fo8vCDKt_nw3gvKxIK59DZ6Ubyqaz1XG7HgTP7o58JvA6hvgm_9HVYYFU-P2S-dJwUdx2TKI_07EOLuTz2cg5BTWQX489Vla9Z8k-SDhUHr8AhRDP3rohvF4zPgR_KgfDgBWntA6bEah0v21kyitz4X8365hAGiToJbfqeA5VQ1eZMXwNYZjYz6HodV_aCk7n_yH-TC_RJz9TbxikJC77kG409FG3ACH73VHwmyioul68eWBcRHYDsO-HIWIbHZBoVM7E84SksN7a1fqE_3nYaQgh7izjU41WofDm7AHVyVRt_EmUfYgaeahItdEvhq3j9BH3TOzEzCRY_g0qY0CU4nJK045cq_vwQvBDKyqBwW9fG3f6OtbsNhIR8JT769mkrdd6dIQePfo1ytoSyRv6RAQOWVDOYVbhGWc8hLrQGIPLJF9j5pzDMZSqarLNDFE8LKhOOkv8n2J0NI0iI27n4o4GF2QYWyXxJDOc1qlrtsjne1Ze8Y4hyoiW5Zg5XMr_rTSofJ5n7CkQOOOQHRYov38o6zl1-fyXzqi9STINzdijqpfDeOUQLLAWEykUOcnlBTZHAyufNdMqVDgGaicxx8hEiuSLOHb1szl7vEuNguEsF0lqO6-jUV_wP1pikokDjCvltIJ6ewC3V6gMuQeBGW4jQ23PufHp7ZX06245yYNcYJtYfVQKmP1i00z7HPoXAwZWW29qyPnr7bURhzW_Vz01A9aeETQ3aKJYML650C8Es40f9eZT_X4_7cW781622HiYohyOvcFXSlGl7srmXm8rAFaPraKc1RFZA8D2D80DyMz1rewW0TNLHp8gbO8BsidGMHRWYNO_szMZRCz_iBP-RDqVTewa6TLsfQTm43zDNvsUKvn18k3IdaqyQjwGU47x8iPsetPMBqeZxdHQZX3BAFWChi5aU5q9PuRVKjJCKpfIljKG78hUD1MSZDLMWmdBgUrgPEiXpfp5_QF-jqn2hej9MqPZdufj2Ipe-IfV5a-TeJ0KCtsEh-YpDaU3MfjJGoS5Q12sWVdHacdbNImFhZC-6oqXzl2K0PrTHsOZwB8Eb-Chn3FLHUTbS9L7N9GFha3CtXHScjZ9eoVm17LMQwhFXM1SEJtxz5udkhC2-4ME5-lplJlWpFWoeUL0quq3oLD0dR9JFjkEBxgDJA1p0MhdkTl9L1vCwEQvQ8o4OyIC1A_KDVA6EdACQKxlk26QXqMJqZeYFG0tANaua8PAf25dGHlYLencaCCcEvCwxlZ1dV_fmGjMF6Kx1xZSLNOvrw8QX4M9Ml1gYkvqCBxFm1uidsxwx1v8A5WDW8_alYJ9nyF7RHqOBmGCGEk0vCweg_qR6Eci9Vn0SvaWHYCWnEbcGK0fVEbOA0ar1y5H04mjTaeMiusVu543K4x_1ji130gnuufP329PJy6JggyWyxhfFSQ4K02HTV1_K7rtUC9faYr20wKn-MJyhdzWTXIMpCVYQ-dSYLCdyqHinoosJeizRyiBbvNqeyLT52voQvK2-YzVh9JfTfb0WW4n_jeDEeLFVA7huPx4cQpv-rXfVt7YbBYNkFgV4Aa9pNLvKFJvmtDZhy-iNNXy9Lb8_qUY_WRn57_mO0)](https://editor.plantuml.com/uml/jLbDRzl86RxhLmoCNTWMRCDEugOGDa5eYKgOIAIMaepTee0m8iVA92I76PBEUZUzzjP3sr-mnnvoAFQsL_sJ_fA-yyKlKNRQRGF446VUuRmVp_l95rcEULx44OfPI29sIlZfcguZod8IlEtr3j6G9JTqKt0SqEql2Ge98bbE8vRrilSqIJ77CGeYd6Nefnw2VrSuUB_Xh4Z28OiOHnEwUPj_JwA8VLJxZ8U4gxsh28ZbgiKv-wWMHvY_lueAqljJhvVJF29eAbb3TfBJ48UdFeaqCwTeJhESn1XTIPuNmFCVawCHnHjW2mlU0vBc1OwEXIYskt16rcY0blEbvJlUwigvcZZUmXvQw2Y8A4boaWa98unA9U3Z7gpJ_0uTzFkx1_lz0uGpL6G5vfHf7VHHlq_3bLxizz40EUx2Vcdxw9jlPc-UFvTKfwUQEC0y8JaGNLl-y9Nb7pqwFmR2fUjykxGrSH_bD6Mha0L53FmmeBRTvVJeS6YFbXFhyEHmPisjcUSlxCDZVI81KjuyS-yD2OlN73HGaLsSdvkNuHHiI4EsP_i6L8zN2HWcflgkaRMmzMv8EGa2of862-NXd4JaXYNieicXt3LxZphs-WXiJwCMHtjKPqna56U1tXOUACwUBvOZnm83mOFZZk6NCpbi2iR91f36MsAfFV93IeLxi6GL4wb1Yfjqu34uhDqyN3ZNukRvSZwptP4pykJDUbtT71THZhDLIf9G0nDUQG-TgJK1AKyUAIgspWY_bPTBYeNztQB170u4_EcFM6j_uKn1Nciw4-xLuH9pPxwmf-0FAU4PIt24FXG4u8qHYL2clAtB8_IvfZje-awlMEdD1xsZ00aJ79EQbI-xZ9n23Fe8mMNr5cTlws2vl3Isv2ogcN_gkC2qRuqy7zHVkJI80y-MbCYjkzDlS8ylm-a-dBIWGG4Eu6BPwWQNTneDZkon1RX6vv9o7J4m7xnJA2N73VlNKH9miWiGGQ2s0OeqPe2bW6HiXuQcEmH6p2UW-YREfk0LlcDDQX0oInexCSu9fm2y1chCwWDmeTcw7cCkddP6Wxo8wbm-hfcno1bVfPmc0Krnr1Mk90d9LXa98Cb9c3UWMKKr4NLAQOnH9ywLBspgszS0C16uHzSZ-3iKVxo5RunCGWhtKDn6ZU9X-q-sIWj8KO6nczQ9ETiAjfVw80qfYt77HW1yRiHzgv1y97UTmRQawM8f95d0QMfGPE9GiTOihcve1Z_tk8S4_cf34i9hkXevyvddWcEAoEnwgzgp5YV6S6QLCWxd0QSywZQ5WZ5DDc2uClAO6Dq4gFtQdiucbWyL0KifuF5c-ramBWk38YdXMG-2ven6C7b7uZJ2l8bWixeFmVS3VRnRDR2GRjXgZJd7sVt1KHS29LzDjEp4dORQPxvmTPcXR7VbspFBjuQEvuejszUvwyfwRRKo9Wu_5CBY2WzbCaoX483Wtzhz_-KrnVxKgrdBB6bh0KSWVjogtSpg0zRgBl76BQezfc-JjJ9ZMNJiEzPn92ItB2gQ8U4-z9J2rwDXHynKIgzHT-UHwleLoQ220AUi6t-72D9ErF6oVNbmP5ylRLMqNTlkK67Fe5278IgAfehFEj0Re6e8Oz3Lf6Weyxz68A3Dzg-j6W3rYiOVi27kRC9FB_vFqFV54SMKkegV1yqYIrTRbSskjt36pb35YQ47qT3MGMDekKDxeWF8TpD7r5lQLhfdO3czgV9OL_rHLTYxQ0eOk1RHZ3KFTmQHLZa2jLBTDFBP52AY0czL8MBf0QFiYHnxdFr1ewWgGh9Y5E_RKBNEA-pB8iBQ_jKhGt3CT0ks4rYDbLMgRQlqNXlFh9UMl6lekIFF5R_hTapnfj4UnIHdaDFridgTFRQDBoyi_xKjwnyGnfsFRLzuT9L5xec7NnmDzTqTn5y03GDfaUng2AalQw0q4Dp0Ittdj_bo0m-bFcKKd0e3oV2eyxOp4HB0WaIpx6ri5qWLKguc7aJs2YiuAzgpWR9kYacIuNUaA_obdCaXIxWRARJJ9hUqQ_TUZ06VZWBPs9e8CKmrBFed2CXPJfCwhsKDMVP4ujgwqPiD4U4Swdj3qs7rYVToPIr7piA3bgHcziQwjZike4Pl6ZnYcmSRMcYLP8H8ErGZlPtSjgOrjKfv5-KFUWC6UsY5Dyi-l7Saa-DrXCt1hdP1fYZbZVlU7s9X3fo8vCDKt_nw3gvKxIK59DZ6Ubyqaz1XG7HgTP7o58JvA6hvgm_9HVYYFU-P2S-dJwUdx2TKI_07EOLuTz2cg5BTWQX489Vla9Z8k-SDhUHr8AhRDP3rohvF4zPgR_KgfDgBWntA6bEah0v21kyitz4X8365hAGiToJbfqeA5VQ1eZMXwNYZjYz6HodV_aCk7n_yH-TC_RJz9TbxikJC77kG409FG3ACH73VHwmyioul68eWBcRHYDsO-HIWIbHZBoVM7E84SksN7a1fqE_3nYaQgh7izjU41WofDm7AHVyVRt_EmUfYgaeahItdEvhq3j9BH3TOzEzCRY_g0qY0CU4nJK045cq_vwQvBDKyqBwW9fG3f6OtbsNhIR8JT769mkrdd6dIQePfo1ytoSyRv6RAQOWVDOYVbhGWc8hLrQGIPLJF9j5pzDMZSqarLNDFE8LKhOOkv8n2J0NI0iI27n4o4GF2QYWyXxJDOc1qlrtsjne1Ze8Y4hyoiW5Zg5XMr_rTSofJ5n7CkQOOOQHRYov38o6zl1-fyXzqi9STINzdijqpfDeOUQLLAWEykUOcnlBTZHAyufNdMqVDgGaicxx8hEiuSLOHb1szl7vEuNguEsF0lqO6-jUV_wP1pikokDjCvltIJ6ewC3V6gMuQeBGW4jQ23PufHp7ZX06245yYNcYJtYfVQKmP1i00z7HPoXAwZWW29qyPnr7bURhzW_Vz01A9aeETQ3aKJYML650C8Es40f9eZT_X4_7cW781622HiYohyOvcFXSlGl7srmXm8rAFaPraKc1RFZA8D2D80DyMz1rewW0TNLHp8gbO8BsidGMHRWYNO_szMZRCz_iBP-RDqVTewa6TLsfQTm43zDNvsUKvn18k3IdaqyQjwGU47x8iPsetPMBqeZxdHQZX3BAFWChi5aU5q9PuRVKjJCKpfIljKG78hUD1MSZDLMWmdBgUrgPEiXpfp5_QF-jqn2hej9MqPZdufj2Ipe-IfV5a-TeJ0KCtsEh-YpDaU3MfjJGoS5Q12sWVdHacdbNImFhZC-6oqXzl2K0PrTHsOZwB8Eb-Chn3FLHUTbS9L7N9GFha3CtXHScjZ9eoVm17LMQwhFXM1SEJtxz5udkhC2-4ME5-lplJlWpFWoeUL0quq3oLD0dR9JFjkEBxgDJA1p0MhdkTl9L1vCwEQvQ8o4OyIC1A_KDVA6EdACQKxlk26QXqMJqZeYFG0tANaua8PAf25dGHlYLencaCCcEvCwxlZ1dV_fmGjMF6Kx1xZSLNOvrw8QX4M9Ml1gYkvqCBxFm1uidsxwx1v8A5WDW8_alYJ9nyF7RHqOBmGCGEk0vCweg_qR6Eci9Vn0SvaWHYCWnEbcGK0fVEbOA0ar1y5H04mjTaeMiusVu543K4x_1ji130gnuufP329PJy6JggyWyxhfFSQ4K02HTV1_K7rtUC9faYr20wKn-MJyhdzWTXIMpCVYQ-dSYLCdyqHinoosJeizRyiBbvNqeyLT52voQvK2-YzVh9JfTfb0WW4n_jeDEeLFVA7huPx4cQpv-rXfVt7YbBYNkFgV4Aa9pNLvKFJvmtDZhy-iNNXy9Lb8_qUY_WRn57_mO0)
-
-**4.3.5 Mockups de Interfaces Principales**
-
-[Incluya bocetos o mockups de las pantallas principales:]
-- Pantalla de login
-- Panel principal / Dashboard
-- Pantalla de préstamos
-- Pantalla de búsqueda de catálogo
-- Pantalla de registro de usuario
-
-[Puede usar herramientas como Figma, Balsamiq, o incluso dibujos escaneados]
-
-<br>
-
-### 4.4 Matriz de trazabilidad
-
-<!--
-La matriz de trazabilidad vincula requisitos con otros artefactos del proyecto
-para asegurar que todos los requisitos están cubiertos en diseño, implementación,
-y pruebas.
-
-TIPOS DE TRAZABILIDAD:
-- Requisitos <-> Casos de Uso
-- Requisitos <-> Casos de Prueba
-- Requisitos <-> Módulos de Código
-- Requisitos <-> Fuente (stakeholder que lo solicitó)
--->
-
-**4.4.1 Matriz Requisitos - Casos de Uso**
-
-| Requisito | Caso de Uso Relacionado | Prioridad |
-|-----------|-------------------------|-----------|
-| RF-001 | CU-000 (Login) | Esencial |
-| RF-010 | CU-003 (Registrar Usuario) | Esencial |
-| RF-030 | CU-001 (Realizar Préstamo) | Esencial |
-| RF-031 | CU-001 (Realizar Préstamo) | Esencial |
-| RF-040 | CU-002 (Realizar Devolución) | Esencial |
-| ... | ... | ... |
-
-**4.4.2 Matriz Requisitos - Casos de Prueba**
-
-| Requisito | Casos de Prueba | Estado Prueba |
-|-----------|-----------------|---------------|
-| RF-001 | TC-001, TC-002, TC-003 | Pendiente |
-| RF-002 | TC-004, TC-005 | Pendiente |
-| RF-010 | TC-010, TC-011, TC-012, TC-013 | Pendiente |
-| ... | ... | ... |
-
-[Esta matriz se completará durante la fase de pruebas]
-
-<br>
-
-
-*Plantilla elaborada con propósitos académicos*  
-*Basada en IEEE Std 830-1998*  
-*Versión  1.0 - Octubre 2025*
+<img width="1039" height="416" alt="image" src="https://github.com/user-attachments/assets/59163192-855a-454b-8daa-9fadf426052e" />
